@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "area": "Physics & maths",
+  "phases": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "p1l1",
+          "title": "Lab screen",
+          "questions": [
+            {
+              "id": "p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the lab screen say hello",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "🔬",
+              "explanation": "Words go inside quote marks. Then print shows them on the lab screen.",
+              "options": [
+                "Hello, lab!",
+                "(Hello, lab!)",
+                "\"Hello, lab!\"",
+                "hello, lab!"
+              ],
+              "answer": [
+                "\"Hello, lab!\""
+              ]
+            },
+            {
+              "id": "p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the lab screen show?",
+              "code": "print(\"Drop\")",
+              "explanation": "print shows the words between the quote marks. The quote marks themselves are not shown.",
+              "options": [
+                "\"Drop\"",
+                "print",
+                "Drop",
+                "Nothing"
+              ],
+              "answer": [
+                "Drop"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Start timer",
+              "picture": "⏲️",
+              "explanation": "Start with print, then brackets, and put the words inside quote marks.",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Start timer",
+                "\"Start timer\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Start timer\"",
+                ")"
+              ]
+            },
+            {
+              "id": "p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "Words need quote marks. Fix: print(\"Go!\")",
+              "options": [
+                "print(\"Drop\")",
+                "print(\"Land\")",
+                "print(Go!)"
+              ],
+              "answer": [
+                "print(Go!)"
+              ],
+              "fix": "print(\"Go!\")",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Drop\")\nprint(\"Land\")",
+              "explanation": "The computer runs the lines from top to bottom, so the first message shows first.",
+              "options": [
+                "Drop, Land",
+                "Drop",
+                "Land, Drop"
+              ],
+              "answer": [
+                "Drop, Land"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p1l2",
+          "title": "Counting readings",
+          "questions": [
+            {
+              "id": "p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Python does the maths.",
+              "code": "print(7 + 5)",
+              "picture": "🔢",
+              "explanation": "Without quote marks, Python does the maths: 7 + 5 = 12.",
+              "options": [
+                "7 + 5",
+                "12",
+                "75"
+              ],
+              "answer": [
+                "12"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 7 + 5.",
+              "code": "print(\"7 + 5\")",
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "7 + 5"
+            },
+            {
+              "id": "p1l2q3",
+              "kind": "choice",
+              "prompt": "There are 7 readings, then 5 more come. Which line shows 12?",
+              "explanation": "Leave off the quote marks so Python adds: 7 + 5 = 12.",
+              "options": [
+                "print(7 - 5)",
+                "print(\"7 + 5\")",
+                "print(7 + 5)"
+              ],
+              "answer": [
+                "print(7 + 5)"
+              ]
+            },
+            {
+              "id": "p1l2q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(20 - 8)",
+              "explanation": "20 - 8 = 12.",
+              "options": [
+                "28",
+                "20 - 8",
+                "12"
+              ],
+              "answer": [
+                "12"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q5",
+              "kind": "build",
+              "prompt": "Build a line that shows 6 times 7",
+              "hint": "Python uses * for times.",
+              "explanation": "Python uses * for times. 6 * 7 = 42.",
+              "options": [
+                ")",
+                "(",
+                "x",
+                "print",
+                "*",
+                "6",
+                "7"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "6",
+                "*",
+                "7",
+                ")"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l3",
+          "title": "Labelled meters",
+          "questions": [
+            {
+              "id": "p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 30 metres per second in the box labelled speed",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "speed ___ 30",
+              "picture": "🧲",
+              "explanation": "One = puts a value into the box. Two == would ask a question instead.",
+              "options": [
+                "==",
+                "=",
+                "+"
+              ],
+              "answer": [
+                "="
+              ]
+            },
+            {
+              "id": "p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "speed = 30\nprint(speed)",
+              "explanation": "speed holds 30, so print(speed) shows 30.",
+              "options": [
+                "\"speed\"",
+                "30",
+                "speed"
+              ],
+              "answer": [
+                "30"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "speed = 30\nspeed = 45\nprint(speed)",
+              "explanation": "The newest value replaces the old one. The box now holds 45.",
+              "options": [
+                "30",
+                "75",
+                "45"
+              ],
+              "answer": [
+                "45"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q4",
+              "kind": "judge",
+              "prompt": "True or false: this shows mass.",
+              "code": "mass = 5\nprint(\"mass\")",
+              "explanation": "Quote marks make mass a word, so the word shows and not what the box holds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "mass"
+            },
+            {
+              "id": "p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "explanation": "= stores a value. print(name) shows the value. Quote marks show the name itself.",
+              "options": [
+                "speed = 30",
+                "print(speed)",
+                "speed = 45",
+                "print(\"speed\")"
+              ],
+              "answer": [
+                "Store 30 in the box",
+                "Show what the box holds",
+                "Swap in 45",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Swap in 45",
+                "Show what the box holds",
+                "Store 30 in the box",
+                "Show the name as a word"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l4",
+          "title": "Speeding up",
+          "questions": [
+            {
+              "id": "p1l4q1",
+              "kind": "choice",
+              "prompt": "The rocket gains 10 m/s. Which line updates speed?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "speed = 50",
+              "picture": "🚀",
+              "explanation": "Take the old value, add 10, and put it back in the same box.",
+              "options": [
+                "speed = 10",
+                "speed = speed + 10",
+                "speed + 10"
+              ],
+              "answer": [
+                "speed = speed + 10"
+              ]
+            },
+            {
+              "id": "p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "speed = 60\nspeed = speed - 15\nprint(speed)",
+              "explanation": "60 - 15 = 45.",
+              "options": [
+                "75",
+                "60",
+                "45"
+              ],
+              "answer": [
+                "45"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l4q3",
+              "kind": "build",
+              "prompt": "Friction takes away 15 m/s. Build the line.",
+              "explanation": "Take the old value, subtract 15, and put it back in the box.",
+              "options": [
+                "=",
+                "speed",
+                "-",
+                "speed",
+                "15",
+                "+"
+              ],
+              "answer": [
+                "speed",
+                "=",
+                "speed",
+                "-",
+                "15"
+              ]
+            },
+            {
+              "id": "p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "The + needs a number after it. Fix: distance = distance + 4",
+              "options": [
+                "distance = 3",
+                "distance = distance +",
+                "print(distance)"
+              ],
+              "answer": [
+                "distance = distance +"
+              ],
+              "fix": "distance = distance + 4",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to energy.",
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box.",
+              "options": [
+                "energy = energy + 1",
+                "energy = energy - 1",
+                "energy = energy * 2",
+                "energy = energy + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Add 10",
+                "Take away 1",
+                "Add 1",
+                "Double it"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Loops: repeat a step",
+      "subtitle": "Repeat a step second after second",
+      "lessons": [
+        {
+          "id": "p2l1",
+          "title": "Ticks pass",
+          "questions": [
+            {
+              "id": "p2l1q1",
+              "kind": "choice",
+              "prompt": "How many times does Tick show?",
+              "hint": "The indented line repeats each time round.",
+              "code": "for second in range(5):\n    print(\"Tick\")",
+              "picture": "⏱️",
+              "explanation": "The indented line runs once each time round. range(5) means 5 times.",
+              "options": [
+                "5",
+                "1",
+                "6"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "lines"
+            },
+            {
+              "id": "p2l1q2",
+              "kind": "choice",
+              "prompt": "The timer must tick 4 times. Fill the blank.",
+              "code": "for second in range(___):\n    print(\"Fall\")",
+              "explanation": "range(4) repeats 4 times.",
+              "options": [
+                "3",
+                "4",
+                "5"
+              ],
+              "answer": [
+                "4"
+              ]
+            },
+            {
+              "id": "p2l1q3",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for second in range(2):\n    print(\"Spin\")\nprint(\"Stop\")",
+              "explanation": "Only the indented line repeats. The last line runs once, after the loop.",
+              "options": [
+                "Spin, Stop, Spin, Stop",
+                "Spin, Stop",
+                "Spin, Spin, Stop"
+              ],
+              "answer": [
+                "Spin, Spin, Stop"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l1q4",
+              "kind": "build",
+              "prompt": "Build the first line of a loop that runs 6 times",
+              "explanation": "A loop starts with for, a name, in, range(6) and a colon.",
+              "options": [
+                "second",
+                "in",
+                "range(6)",
+                ":",
+                "range(7)",
+                "for"
+              ],
+              "answer": [
+                "for",
+                "second",
+                "in",
+                "range(6)",
+                ":"
+              ]
+            },
+            {
+              "id": "p2l1q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows Beep, Done, Beep, Done, Beep, Done.",
+              "code": "for second in range(3):\n    print(\"Beep\")\nprint(\"Done\")",
+              "explanation": "Only the indented line repeats. Beep shows 3 times, then Done shows once.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "Beep, Done, Beep, Done, Beep, Done"
+            }
+          ]
+        },
+        {
+          "id": "p2l2",
+          "title": "Watch it move",
+          "questions": [
+            {
+              "id": "p2l2q1",
+              "kind": "choice",
+              "prompt": "A ball rolls 5 m every second, starting at 10 m. How far is it at the end?",
+              "hint": "Follow the loop one round at a time.",
+              "code": "distance = 10\nfor second in range(3):\n    distance = distance + 5\nprint(distance)",
+              "picture": "📈",
+              "explanation": "Each round adds 5: 10 → 15 → 20 → 25.",
+              "options": [
+                "20",
+                "15",
+                "25"
+              ],
+              "answer": [
+                "25"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q2",
+              "kind": "choice",
+              "prompt": "A battery loses 10 units every second, starting with 50. How much is left?",
+              "code": "charge = 50\nfor second in range(3):\n    charge = charge - 10\nprint(charge)",
+              "explanation": "Each round takes away 10: 50 → 40 → 30 → 20.",
+              "options": [
+                "50",
+                "40",
+                "20"
+              ],
+              "answer": [
+                "20"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q3",
+              "kind": "choice",
+              "prompt": "Each step doubles the number. What shows at the end?",
+              "code": "number = 2\nfor second in range(3):\n    number = number * 2\nprint(number)",
+              "picture": "⚛️",
+              "explanation": "Each round doubles it: 2 → 4 → 8 → 16.",
+              "options": [
+                "8",
+                "16",
+                "12"
+              ],
+              "answer": [
+                "16"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q4",
+              "kind": "choice",
+              "prompt": "The ball should roll 4 m every second. Fill the blank.",
+              "code": "distance = 1\nfor second in range(3):\n    distance = distance + ___",
+              "explanation": "Each round adds the blank. To go up by 4, the blank must be 4.",
+              "options": [
+                "3",
+                "4",
+                "5"
+              ],
+              "answer": [
+                "4"
+              ]
+            },
+            {
+              "id": "p2l2q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows 3.",
+              "code": "total = 0\nfor second in range(3):\n    total = total + 1\nprint(total)",
+              "explanation": "total goes up by 1 each round, and the loop runs 3 times, so it ends at 3.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "3"
+            }
+          ]
+        },
+        {
+          "id": "p2l3",
+          "title": "Counting seconds",
+          "questions": [
+            {
+              "id": "p2l3q1",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "hint": "range(3) starts counting at 0, not 1.",
+              "code": "for second in range(3):\n    print(second)",
+              "explanation": "range(3) starts at 0 and stops before 3: 0, 1, 2.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "0, 1, 2"
+              ],
+              "answer": [
+                "0, 1, 2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q2",
+              "kind": "match",
+              "prompt": "Match each range to the numbers it gives.",
+              "explanation": "range(n) starts at 0. range(a, b) starts at a and stops just before b.",
+              "options": [
+                "range(1, 4)",
+                "range(2, 5)",
+                "range(1, 5)",
+                "range(5)"
+              ],
+              "answer": [
+                "1, 2, 3",
+                "2, 3, 4",
+                "1, 2, 3, 4",
+                "0, 1, 2, 3, 4"
+              ],
+              "right": [
+                "2, 3, 4",
+                "1, 2, 3",
+                "1, 2, 3, 4",
+                "0, 1, 2, 3, 4"
+              ]
+            },
+            {
+              "id": "p2l3q3",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "code": "for second in range(1, 4):\n    print(second)",
+              "picture": "⏱️",
+              "explanation": "range(1, 4) starts at 1 and stops before 4.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3, 4",
+                "1, 2, 3"
+              ],
+              "answer": [
+                "1, 2, 3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "total = 0\nfor second in range(1, 6):\n    total = total + second\nprint(total)",
+              "explanation": "1 + 2 + 3 + 4 + 5 = 15.",
+              "options": [
+                "21",
+                "5",
+                "15"
+              ],
+              "answer": [
+                "15"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q5",
+              "kind": "build",
+              "prompt": "Show seconds 1 to 6. Build the first line of the loop.",
+              "explanation": "range(1, 7) starts at 1 and stops before 7, so it counts 1 to 6.",
+              "options": [
+                "for",
+                "range(1, 6)",
+                ":",
+                "in",
+                "range(1, 7)",
+                "second"
+              ],
+              "answer": [
+                "for",
+                "second",
+                "in",
+                "range(1, 7)",
+                ":"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2l4",
+          "title": "Lab routine",
+          "questions": [
+            {
+              "id": "p2l4q1",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for second in range(2):\n    print(\"Charge\")\n    print(\"Release\")",
+              "explanation": "Both indented lines repeat together, in order, every round.",
+              "options": [
+                "Charge, Release",
+                "Charge, Charge, Release, Release",
+                "Charge, Release, Charge, Release"
+              ],
+              "answer": [
+                "Charge, Release, Charge, Release"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q2",
+              "kind": "choice",
+              "prompt": "The experiment must run for 6 seconds. Which loop fits?",
+              "explanation": "range(6) repeats 6 times.",
+              "options": [
+                "for second in range(7):",
+                "for second in range(6):",
+                "for second in range(5):"
+              ],
+              "answer": [
+                "for second in range(6):"
+              ]
+            },
+            {
+              "id": "p2l4q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "energy = 40\nfor second in range(4):\n    energy = energy + 10\nprint(energy)",
+              "explanation": "Each round adds 10: 40 → 50 → 60 → 70 → 80.",
+              "options": [
+                "50",
+                "90",
+                "80"
+              ],
+              "answer": [
+                "80"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q4",
+              "kind": "bug",
+              "prompt": "This should show Tick 3 times. Tap the line with the mistake.",
+              "hint": "The first line of a loop ends with a colon.",
+              "explanation": "The first line of a loop must end with a colon. Fix: for second in range(3):",
+              "options": [
+                "for second in range(3)",
+                "    print(\"Tick\")"
+              ],
+              "answer": [
+                "for second in range(3)"
+              ],
+              "fix": "for second in range(3):",
+              "verify": "bug"
+            },
+            {
+              "id": "p2l4q5",
+              "kind": "choice",
+              "prompt": "How many lines show in total?",
+              "code": "for second in range(3):\n    print(\"Charge\")\n    print(\"Release\")",
+              "explanation": "3 rounds with 2 lines each is 6 lines.",
+              "options": [
+                "6",
+                "4",
+                "3"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Decisions: if / else",
+      "subtitle": "Light on or light off",
+      "lessons": [
+        {
+          "id": "p3l1",
+          "title": "On or off",
+          "questions": [
+            {
+              "id": "p3l1q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "The indented line runs only when the check is true.",
+              "code": "light = \"on\"\nif light == \"on\":\n    print(\"Bright\")",
+              "picture": "💡",
+              "explanation": "The light is on, so the indented line runs.",
+              "options": [
+                "Nothing",
+                "Bright",
+                "on"
+              ],
+              "answer": [
+                "Bright"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "light = \"off\"\nif light == \"on\":\n    print(\"Bright\")\nelse:\n    print(\"Dark\")",
+              "explanation": "The light is not on, so the else line runs.",
+              "options": [
+                "Bright",
+                "off",
+                "Dark"
+              ],
+              "answer": [
+                "Dark"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q3",
+              "kind": "judge",
+              "prompt": "True or false: == asks \"are these the same?\"",
+              "code": "if light == \"on\":",
+              "explanation": "== asks a question: are these the same? A single = stores a value.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ]
+            },
+            {
+              "id": "p3l1q4",
+              "kind": "build",
+              "prompt": "Build: if the light is on",
+              "explanation": "Start with if, then the name, ==, the word in quote marks, and a colon.",
+              "options": [
+                "==",
+                ":",
+                "if",
+                "light",
+                "\"on\"",
+                "="
+              ],
+              "answer": [
+                "if",
+                "light",
+                "==",
+                "\"on\"",
+                ":"
+              ]
+            },
+            {
+              "id": "p3l1q5",
+              "kind": "choice",
+              "prompt": "Fill the blank so it checks the light",
+              "code": "light = \"on\"\nif light ___ \"on\":\n    print(\"Bright\")",
+              "explanation": "== asks whether the two things are the same.",
+              "options": [
+                "+",
+                "==",
+                "="
+              ],
+              "answer": [
+                "=="
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3l2",
+          "title": "Fast or slow",
+          "questions": [
+            {
+              "id": "p3l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "> means more than. < means less than.",
+              "code": "speed = 30\nif speed > 20:\n    print(\"Fast\")",
+              "picture": "⚡",
+              "explanation": "30 is more than 20, so the message shows.",
+              "options": [
+                "Nothing",
+                "30",
+                "Fast"
+              ],
+              "answer": [
+                "Fast"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "voltage = 3\nif voltage < 5:\n    print(\"Low power\")\nelse:\n    print(\"Powered\")",
+              "explanation": "3 is less than 5, so the first message runs.",
+              "options": [
+                "Powered",
+                "Low power",
+                "3"
+              ],
+              "answer": [
+                "Low power"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q3",
+              "kind": "match",
+              "prompt": "Match each sign to its meaning.",
+              "explanation": "> and < compare sizes. == checks for the same. >= also counts when they are equal.",
+              "options": [
+                ">",
+                "<",
+                "==",
+                ">="
+              ],
+              "answer": [
+                "is more than",
+                "is less than",
+                "is the same as",
+                "is more than or the same as"
+              ],
+              "right": [
+                "is more than",
+                "is more than or the same as",
+                "is less than",
+                "is the same as"
+              ]
+            },
+            {
+              "id": "p3l2q4",
+              "kind": "choice",
+              "prompt": "Show Boiling when temp is over 100. Fill the blank.",
+              "code": "temp = 105\nif temp ___ 100:\n    print(\"Boiling\")",
+              "explanation": "> means more than.",
+              "options": [
+                "=",
+                ">",
+                "<"
+              ],
+              "answer": [
+                ">"
+              ]
+            },
+            {
+              "id": "p3l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "angle = 90\nif angle >= 90:\n    print(\"Right angle\")\nelse:\n    print(\"Not right\")",
+              "explanation": ">= is also true when the two are equal, and 90 equals 90.",
+              "options": [
+                "Nothing",
+                "Not right",
+                "Right angle"
+              ],
+              "answer": [
+                "Right angle"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l3",
+          "title": "Sensor check",
+          "questions": [
+            {
+              "id": "p3l3q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "charge = 0\nfor second in range(6):\n    if charge < 4:\n        charge = charge + 1\nprint(charge)",
+              "picture": "🧲",
+              "explanation": "It goes up only while it is below 4: 0 → 1 → 2 → 3 → 4 → 4 → 4.",
+              "options": [
+                "5",
+                "6",
+                "4"
+              ],
+              "answer": [
+                "4"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q2",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for second in range(1, 4):\n    if second == 2:\n        print(\"Bounce\")\n    else:\n        print(\"Move\")",
+              "explanation": "The loop counts 1, 2, 3. Only 2 matches, so Bounce shows once.",
+              "options": [
+                "Bounce, Move, Bounce",
+                "Move, Move, Move",
+                "Move, Bounce, Move"
+              ],
+              "answer": [
+                "Move, Bounce, Move"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q3",
+              "kind": "choice",
+              "prompt": "A cup of tea cools 1 degree a minute until it reaches 100. What shows?",
+              "code": "temp = 102\nfor step in range(3):\n    if temp > 100:\n        temp = temp - 1\nprint(temp)",
+              "picture": "🌡️",
+              "explanation": "It drops by 1 while it is above 100, then stops: 102 → 101 → 100.",
+              "options": [
+                "99",
+                "101",
+                "100"
+              ],
+              "answer": [
+                "100"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "hint": "Asking a question needs two equals signs.",
+              "explanation": "One = stores a value. To ask a question, use ==. Fix: if light == \"on\":",
+              "options": [
+                "light = \"on\"",
+                "if light = \"on\":",
+                "    print(\"Bright\")"
+              ],
+              "answer": [
+                "if light = \"on\":"
+              ],
+              "fix": "if light == \"on\":",
+              "verify": "bug"
+            },
+            {
+              "id": "p3l3q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "count = 0\nfor second in range(6):\n    if second > 2:\n        count = count + 1\nprint(count)",
+              "explanation": "The loop counts 0 to 5. Only 3, 4, 5 are more than 2, so count is 3.",
+              "options": [
+                "3",
+                "6",
+                "4"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l4",
+          "title": "Lab review",
+          "questions": [
+            {
+              "id": "p3l4q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(\"Land\")",
+              "picture": "⚛️",
+              "explanation": "print shows the words between the quote marks.",
+              "options": [
+                "print",
+                "\"Land\"",
+                "Land"
+              ],
+              "answer": [
+                "Land"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "charge = 6\ncharge = charge + 2\nprint(charge)",
+              "explanation": "6 + 2 = 8, and the new value goes back in the box.",
+              "options": [
+                "2",
+                "6",
+                "8"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q3",
+              "kind": "judge",
+              "prompt": "True or false: this shows Tick.",
+              "code": "for second in range(2):\n    print(\"Tick\")",
+              "explanation": "range(2) repeats the line twice, so Tick shows 2 times.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "Tick"
+            },
+            {
+              "id": "p3l4q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "light = \"off\"\nif light == \"off\":\n    print(\"Dark\")\nelse:\n    print(\"Bright\")",
+              "explanation": "The light is off, so the first message shows.",
+              "options": [
+                "Dark",
+                "off",
+                "Bright"
+              ],
+              "answer": [
+                "Dark"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q5",
+              "kind": "build",
+              "prompt": "Build a line that checks if speed is more than 20",
+              "explanation": "Start with if, then the name, >, the number, and a colon.",
+              "options": [
+                "speed",
+                "<",
+                "20",
+                "if",
+                ":",
+                ">"
+              ],
+              "answer": [
+                "if",
+                "speed",
+                ">",
+                "20",
+                ":"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

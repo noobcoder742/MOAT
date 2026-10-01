@@ -1,0 +1,411 @@
+{
+  "version": 2,
+  "area": "JavaScript",
+  "phases": [
+    {
+      "id": "javascript_p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "javascript_p1l1",
+          "title": "Game start",
+          "questions": [
+            {
+              "id": "javascript_p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the game say hello",
+              "hint": "console.log() shows whatever is inside the brackets.",
+              "code": "console.log(___);",
+              "picture": "🎮",
+              "options": [
+                "Hello, player!",
+                "[Hello, player!]",
+                "\"Hello, player!\"",
+                "\"hello, player!\""
+              ],
+              "answer": [
+                "\"Hello, player!\""
+              ],
+              "explanation": "Words go inside quote marks. Then console.log shows them on the game screen."
+            },
+            {
+              "id": "javascript_p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the game screen show?",
+              "code": "console.log(\"Coin\");",
+              "options": [
+                "\"Coin\"",
+                "console.log",
+                "Nothing",
+                "Coin"
+              ],
+              "answer": [
+                "Coin"
+              ],
+              "explanation": "console.log shows the words between the quote marks. The quote marks themselves are not shown.",
+              "verify": "output"
+            },
+            {
+              "id": "javascript_p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Level 1",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "console.log",
+                "Level 1",
+                "\"Level 1\"",
+                ";"
+              ],
+              "answer": [
+                "console.log",
+                "(",
+                "\"Level 1\"",
+                ")",
+                ";"
+              ],
+              "explanation": "Start with console.log, then brackets, and put the words inside quote marks."
+            },
+            {
+              "id": "javascript_p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "console.log(\"Start\");",
+                "console.log(\"Jump\");",
+                "console.log(Go!);"
+              ],
+              "answer": [
+                "console.log(Go!);"
+              ],
+              "explanation": "Words need quote marks. Fix: console.log(\"Go!\");",
+              "verify": "bug",
+              "fix": "console.log(\"Go!\");"
+            },
+            {
+              "id": "javascript_p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "console.log(\"Ready\");\nconsole.log(\"Go\");",
+              "options": [
+                "Ready, Go",
+                "Go, Ready",
+                "Ready"
+              ],
+              "answer": [
+                "Ready, Go"
+              ],
+              "explanation": "The computer runs the lines from top to bottom, so Ready shows first.",
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "javascript_p1l2",
+          "title": "Coins and text",
+          "questions": [
+            {
+              "id": "javascript_p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, JavaScript does the maths.",
+              "code": "console.log(3 + 2);",
+              "picture": "🪙",
+              "options": [
+                "32",
+                "5",
+                "3 + 2"
+              ],
+              "answer": [
+                "5"
+              ],
+              "explanation": "Without quote marks, JavaScript does the maths: 3 + 2 = 5.",
+              "verify": "output"
+            },
+            {
+              "id": "javascript_p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 3 + 2.",
+              "code": "console.log(\"3 + 2\");",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "verify": "judge",
+              "claim": "3 + 2"
+            },
+            {
+              "id": "javascript_p1l2q3",
+              "kind": "choice",
+              "prompt": "What does the console show?",
+              "hint": "Numbers add. Text joins.",
+              "code": "console.log(\"3\" + 2);",
+              "options": [
+                "3 + 2",
+                "Error",
+                "32",
+                "5"
+              ],
+              "answer": [
+                "32"
+              ],
+              "explanation": "\"3\" is in quotes, so it is text. With text, + joins instead of adding.",
+              "verify": "output"
+            },
+            {
+              "id": "javascript_p1l2q4",
+              "kind": "build",
+              "prompt": "Build the line that shows the total of 4 + 6.",
+              "options": [
+                "console.log",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")",
+                ";",
+                "\"4 + 6\"",
+                "-"
+              ],
+              "answer": [
+                "console.log",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")",
+                ";"
+              ],
+              "explanation": "Numbers without quote marks are added, so the console shows 10."
+            },
+            {
+              "id": "javascript_p1l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "console.log(10 - 4);",
+              "options": [
+                "6",
+                "14",
+                "10 - 4"
+              ],
+              "answer": [
+                "6"
+              ],
+              "explanation": "10 - 4 = 6.",
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "javascript_p1l3",
+          "title": "Named boxes",
+          "questions": [
+            {
+              "id": "javascript_p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 3 lives in the box labelled lives",
+              "hint": "let makes a labelled box that holds a value.",
+              "code": "let lives ___ 3;",
+              "picture": "❤️",
+              "options": [
+                "+",
+                "=",
+                "=="
+              ],
+              "answer": [
+                "="
+              ],
+              "explanation": "One = puts a value into the box. Two == would ask a question instead."
+            },
+            {
+              "id": "javascript_p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "let coins = 5;\nconsole.log(coins);",
+              "options": [
+                "coins",
+                "\"coins\"",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "explanation": "coins holds 5, so console.log(coins) shows 5.",
+              "verify": "output"
+            },
+            {
+              "id": "javascript_p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "let score = 2;\nscore = 7;\nconsole.log(score);",
+              "options": [
+                "7",
+                "2",
+                "9"
+              ],
+              "answer": [
+                "7"
+              ],
+              "explanation": "The newest value replaces the old one. The box now holds 7.",
+              "verify": "output"
+            },
+            {
+              "id": "javascript_p1l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "let score = 3;",
+                "let coins = 5;",
+                "let 2lives = 3;"
+              ],
+              "answer": [
+                "let 2lives = 3;"
+              ],
+              "explanation": "A name cannot start with a number. Fix: let lives = 3;",
+              "verify": "bug",
+              "fix": "let lives = 3;"
+            },
+            {
+              "id": "javascript_p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "options": [
+                "let score = 2;",
+                "console.log(score);",
+                "score = 5;",
+                "console.log(\"score\");"
+              ],
+              "answer": [
+                "Store 2 in the box",
+                "Show what the box holds",
+                "Swap in 5",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Show what the box holds",
+                "Swap in 5",
+                "Show the name as a word",
+                "Store 2 in the box"
+              ],
+              "explanation": "= stores a value. console.log(score) shows the value. Quote marks show the name itself."
+            }
+          ]
+        },
+        {
+          "id": "javascript_p1l4",
+          "title": "Level up",
+          "questions": [
+            {
+              "id": "javascript_p1l4q1",
+              "kind": "choice",
+              "prompt": "Add 5 points. Which line updates the score?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "let score = 10;",
+              "picture": "⭐",
+              "options": [
+                "score + 5;",
+                "score = score + 5;",
+                "score = 5;"
+              ],
+              "answer": [
+                "score = score + 5;"
+              ],
+              "explanation": "Take the old value, add 5, and put it back in the same box."
+            },
+            {
+              "id": "javascript_p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "let lives = 3;\nlives = lives - 1;\nconsole.log(lives);",
+              "options": [
+                "3",
+                "4",
+                "2"
+              ],
+              "answer": [
+                "2"
+              ],
+              "explanation": "3 - 1 = 2.",
+              "verify": "output"
+            },
+            {
+              "id": "javascript_p1l4q3",
+              "kind": "build",
+              "prompt": "Build the score message.",
+              "code": "let score = 3;",
+              "options": [
+                "\"score\"",
+                "score",
+                "console.log",
+                "+",
+                "\"Score: \"",
+                "-",
+                ")",
+                ";",
+                "("
+              ],
+              "answer": [
+                "console.log",
+                "(",
+                "\"Score: \"",
+                "+",
+                "score",
+                ")",
+                ";"
+              ],
+              "explanation": "The + joins the text and the score, so the console shows Score: 3."
+            },
+            {
+              "id": "javascript_p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "let coins = 2;",
+                "coins = coins +;",
+                "console.log(coins);"
+              ],
+              "answer": [
+                "coins = coins +;"
+              ],
+              "explanation": "The + needs a number after it. Fix: coins = coins + 3;",
+              "verify": "bug",
+              "fix": "coins = coins + 3;"
+            },
+            {
+              "id": "javascript_p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to the score.",
+              "options": [
+                "score = score + 1;",
+                "score = score - 1;",
+                "score = score * 2;",
+                "score = score + 10;"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Take away 1",
+                "Double it",
+                "Add 10",
+                "Add 1"
+              ],
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

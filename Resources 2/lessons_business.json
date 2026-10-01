@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "area": "Business",
+  "phases": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "p1l1",
+          "title": "Shop screen",
+          "questions": [
+            {
+              "id": "p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the shop screen say hello",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "🏪",
+              "explanation": "Words go inside quote marks. Then print shows them on the shop screen.",
+              "options": [
+                "Hello, shop!",
+                "(Hello, shop!)",
+                "\"Hello, shop!\"",
+                "hello, shop!"
+              ],
+              "answer": [
+                "\"Hello, shop!\""
+              ]
+            },
+            {
+              "id": "p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the shop screen show?",
+              "code": "print(\"Order\")",
+              "explanation": "print shows the words between the quote marks. The quote marks themselves are not shown.",
+              "options": [
+                "\"Order\"",
+                "print",
+                "Order",
+                "Nothing"
+              ],
+              "answer": [
+                "Order"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Sale today!",
+              "picture": "🏷️",
+              "explanation": "Start with print, then brackets, and put the words inside quote marks.",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Sale today!",
+                "\"Sale today!\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Sale today!\"",
+                ")"
+              ]
+            },
+            {
+              "id": "p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "Words need quote marks. Fix: print(\"Open!\")",
+              "options": [
+                "print(\"Order\")",
+                "print(\"Ship\")",
+                "print(Open!)"
+              ],
+              "answer": [
+                "print(Open!)"
+              ],
+              "fix": "print(\"Open!\")",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Order\")\nprint(\"Ship\")",
+              "explanation": "The computer runs the lines from top to bottom, so the first message shows first.",
+              "options": [
+                "Order, Ship",
+                "Order",
+                "Ship, Order"
+              ],
+              "answer": [
+                "Order, Ship"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p1l2",
+          "title": "Counting orders",
+          "questions": [
+            {
+              "id": "p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Python does the maths.",
+              "code": "print(12 + 8)",
+              "picture": "📦",
+              "explanation": "Without quote marks, Python does the maths: 12 + 8 = 20.",
+              "options": [
+                "12 + 8",
+                "20",
+                "128"
+              ],
+              "answer": [
+                "20"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 20.",
+              "code": "print(\"12 + 8\")",
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "20"
+            },
+            {
+              "id": "p1l2q3",
+              "kind": "choice",
+              "prompt": "There are 12 orders, then 8 more come. Which line shows 20?",
+              "explanation": "Leave off the quote marks so Python adds: 12 + 8 = 20.",
+              "options": [
+                "print(12 - 8)",
+                "print(\"12 + 8\")",
+                "print(12 + 8)"
+              ],
+              "answer": [
+                "print(12 + 8)"
+              ]
+            },
+            {
+              "id": "p1l2q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(50 - 15)",
+              "explanation": "50 - 15 = 35.",
+              "options": [
+                "65",
+                "50 - 15",
+                "35"
+              ],
+              "answer": [
+                "35"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q5",
+              "kind": "build",
+              "prompt": "Build a line that shows 3 times 10",
+              "hint": "Python uses * for times.",
+              "explanation": "Python uses * for times. 3 * 10 = 30.",
+              "options": [
+                ")",
+                "(",
+                "x",
+                "print",
+                "*",
+                "3",
+                "10"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "3",
+                "*",
+                "10",
+                ")"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l3",
+          "title": "Labelled shelves",
+          "questions": [
+            {
+              "id": "p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 100 boxes on the shelf labelled stock",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "stock ___ 100",
+              "picture": "🧾",
+              "explanation": "One = puts a value into the box. Two == would ask a question instead.",
+              "options": [
+                "==",
+                "=",
+                "+"
+              ],
+              "answer": [
+                "="
+              ]
+            },
+            {
+              "id": "p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "stock = 100\nprint(stock)",
+              "explanation": "stock holds 100, so print(stock) shows 100.",
+              "options": [
+                "\"stock\"",
+                "100",
+                "stock"
+              ],
+              "answer": [
+                "100"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "stock = 100\nstock = 60\nprint(stock)",
+              "explanation": "The newest value replaces the old one. The box now holds 60.",
+              "options": [
+                "100",
+                "160",
+                "60"
+              ],
+              "answer": [
+                "60"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q4",
+              "kind": "judge",
+              "prompt": "True or false: this shows 9.",
+              "code": "price = 9\nprint(\"price\")",
+              "explanation": "Quote marks make price a word, so the word shows and not what the box holds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "9"
+            },
+            {
+              "id": "p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "explanation": "= stores a value. print(name) shows the value. Quote marks show the name itself.",
+              "options": [
+                "stock = 100",
+                "print(stock)",
+                "stock = 60",
+                "print(\"stock\")"
+              ],
+              "answer": [
+                "Store 100 in the box",
+                "Show what the box holds",
+                "Swap in 60",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Swap in 60",
+                "Show what the box holds",
+                "Store 100 in the box",
+                "Show the name as a word"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l4",
+          "title": "Restock day",
+          "questions": [
+            {
+              "id": "p1l4q1",
+              "kind": "choice",
+              "prompt": "A delivery adds 25 boxes. Which line updates stock?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "stock = 90",
+              "picture": "🚚",
+              "explanation": "Take the old value, add 25, and put it back in the same box.",
+              "options": [
+                "stock = 25",
+                "stock = stock + 25",
+                "stock + 25"
+              ],
+              "answer": [
+                "stock = stock + 25"
+              ]
+            },
+            {
+              "id": "p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "stock = 90\nstock = stock - 25\nprint(stock)",
+              "explanation": "90 - 25 = 65.",
+              "options": [
+                "115",
+                "90",
+                "65"
+              ],
+              "answer": [
+                "65"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l4q3",
+              "kind": "build",
+              "prompt": "A customer buys 25 boxes. Build the line.",
+              "explanation": "Take the old value, subtract 25, and put it back in the box.",
+              "options": [
+                "=",
+                "stock",
+                "-",
+                "stock",
+                "25",
+                "+"
+              ],
+              "answer": [
+                "stock",
+                "=",
+                "stock",
+                "-",
+                "25"
+              ]
+            },
+            {
+              "id": "p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "The + needs a number after it. Fix: profit = profit + 15",
+              "options": [
+                "profit = 20",
+                "profit = profit +",
+                "print(profit)"
+              ],
+              "answer": [
+                "profit = profit +"
+              ],
+              "fix": "profit = profit + 15",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to sales.",
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box.",
+              "options": [
+                "sales = sales + 1",
+                "sales = sales - 1",
+                "sales = sales * 2",
+                "sales = sales + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Add 10",
+                "Take away 1",
+                "Add 1",
+                "Double it"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Loops: repeat a step",
+      "subtitle": "Repeat a task week after week",
+      "lessons": [
+        {
+          "id": "p2l1",
+          "title": "Weeks pass",
+          "questions": [
+            {
+              "id": "p2l1q1",
+              "kind": "choice",
+              "prompt": "How many times does Order show?",
+              "hint": "The indented line repeats each time round.",
+              "code": "for week in range(4):\n    print(\"Order\")",
+              "picture": "📅",
+              "explanation": "The indented line runs once each time round. range(4) means 4 times.",
+              "options": [
+                "4",
+                "1",
+                "5"
+              ],
+              "answer": [
+                "4"
+              ],
+              "verify": "lines"
+            },
+            {
+              "id": "p2l1q2",
+              "kind": "choice",
+              "prompt": "The shop sends its newsletter 7 times. Fill the blank.",
+              "code": "for week in range(___):\n    print(\"Pack\")",
+              "explanation": "range(7) repeats 7 times.",
+              "options": [
+                "6",
+                "7",
+                "8"
+              ],
+              "answer": [
+                "7"
+              ]
+            },
+            {
+              "id": "p2l1q3",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for week in range(2):\n    print(\"Sell\")\nprint(\"Close\")",
+              "explanation": "Only the indented line repeats. The last line runs once, after the loop.",
+              "options": [
+                "Sell, Close, Sell, Close",
+                "Sell, Close",
+                "Sell, Sell, Close"
+              ],
+              "answer": [
+                "Sell, Sell, Close"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l1q4",
+              "kind": "build",
+              "prompt": "Build the first line of a loop that runs 3 times",
+              "explanation": "A loop starts with for, a name, in, range(3) and a colon.",
+              "options": [
+                "week",
+                "in",
+                "range(3)",
+                ":",
+                "range(4)",
+                "for"
+              ],
+              "answer": [
+                "for",
+                "week",
+                "in",
+                "range(3)",
+                ":"
+              ]
+            },
+            {
+              "id": "p2l1q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows Ship, Ship, Ship, Done.",
+              "code": "for week in range(3):\n    print(\"Ship\")\nprint(\"Done\")",
+              "explanation": "Only the indented line repeats. Ship shows 3 times, then Done shows once.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Ship, Ship, Ship, Done"
+            }
+          ]
+        },
+        {
+          "id": "p2l2",
+          "title": "Watch sales grow",
+          "questions": [
+            {
+              "id": "p2l2q1",
+              "kind": "choice",
+              "prompt": "Revenue grows 10 every week, starting at 20. What is it at the end?",
+              "hint": "Follow the loop one round at a time.",
+              "code": "revenue = 20\nfor week in range(3):\n    revenue = revenue + 10\nprint(revenue)",
+              "picture": "📈",
+              "explanation": "Each round adds 10: 20 → 30 → 40 → 50.",
+              "options": [
+                "40",
+                "30",
+                "50"
+              ],
+              "answer": [
+                "50"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q2",
+              "kind": "choice",
+              "prompt": "Rent takes 20 every week, starting with 100 in cash. How much is left?",
+              "code": "cash = 100\nfor week in range(2):\n    cash = cash - 20\nprint(cash)",
+              "explanation": "Each round takes away 20: 100 → 80 → 60.",
+              "options": [
+                "100",
+                "80",
+                "60"
+              ],
+              "answer": [
+                "60"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q3",
+              "kind": "choice",
+              "prompt": "The shop's followers double every week. What shows?",
+              "code": "followers = 5\nfor week in range(2):\n    followers = followers * 2\nprint(followers)",
+              "picture": "🎯",
+              "explanation": "Each round doubles it: 5 → 10 → 20.",
+              "options": [
+                "10",
+                "20",
+                "40"
+              ],
+              "answer": [
+                "20"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q4",
+              "kind": "choice",
+              "prompt": "Revenue should rise 5 every week. Fill the blank.",
+              "code": "revenue = 1\nfor week in range(3):\n    revenue = revenue + ___",
+              "explanation": "Each round adds the blank. To go up by 5, the blank must be 5.",
+              "options": [
+                "4",
+                "5",
+                "6"
+              ],
+              "answer": [
+                "5"
+              ]
+            },
+            {
+              "id": "p2l2q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows 4.",
+              "code": "total = 0\nfor week in range(4):\n    total = total + 1\nprint(total)",
+              "explanation": "total goes up by 1 each round, and the loop runs 4 times, so it ends at 4.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "4"
+            }
+          ]
+        },
+        {
+          "id": "p2l3",
+          "title": "Counting weeks",
+          "questions": [
+            {
+              "id": "p2l3q1",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "hint": "range(3) starts counting at 0, not 1.",
+              "code": "for week in range(3):\n    print(week)",
+              "explanation": "range(3) starts at 0 and stops before 3: 0, 1, 2.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "0, 1, 2"
+              ],
+              "answer": [
+                "0, 1, 2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q2",
+              "kind": "match",
+              "prompt": "Match each range to the numbers it gives.",
+              "explanation": "range(n) starts at 0. range(a, b) starts at a and stops just before b.",
+              "options": [
+                "range(2, 5)",
+                "range(1, 5)",
+                "range(5)",
+                "range(3)"
+              ],
+              "answer": [
+                "2, 3, 4",
+                "1, 2, 3, 4",
+                "0, 1, 2, 3, 4",
+                "0, 1, 2"
+              ],
+              "right": [
+                "1, 2, 3, 4",
+                "2, 3, 4",
+                "0, 1, 2, 3, 4",
+                "0, 1, 2"
+              ]
+            },
+            {
+              "id": "p2l3q3",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "code": "for week in range(1, 4):\n    print(week)",
+              "picture": "📅",
+              "explanation": "range(1, 4) starts at 1 and stops before 4.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3, 4",
+                "1, 2, 3"
+              ],
+              "answer": [
+                "1, 2, 3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "total = 0\nfor week in range(1, 5):\n    total = total + week\nprint(total)",
+              "explanation": "1 + 2 + 3 + 4 = 10.",
+              "options": [
+                "15",
+                "4",
+                "10"
+              ],
+              "answer": [
+                "10"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q5",
+              "kind": "build",
+              "prompt": "Show weeks 1 to 7. Build the first line of the loop.",
+              "explanation": "range(1, 8) starts at 1 and stops before 8, so it counts 1 to 7.",
+              "options": [
+                "for",
+                "range(1, 7)",
+                ":",
+                "in",
+                "range(1, 8)",
+                "week"
+              ],
+              "answer": [
+                "for",
+                "week",
+                "in",
+                "range(1, 8)",
+                ":"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2l4",
+          "title": "Shop routine",
+          "questions": [
+            {
+              "id": "p2l4q1",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for week in range(2):\n    print(\"Order\")\n    print(\"Ship\")",
+              "explanation": "Both indented lines repeat together, in order, every round.",
+              "options": [
+                "Order, Ship",
+                "Order, Order, Ship, Ship",
+                "Order, Ship, Order, Ship"
+              ],
+              "answer": [
+                "Order, Ship, Order, Ship"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q2",
+              "kind": "choice",
+              "prompt": "The sale runs 7 weeks in a row. Which loop fits?",
+              "explanation": "range(7) repeats 7 times.",
+              "options": [
+                "for week in range(8):",
+                "for week in range(7):",
+                "for week in range(6):"
+              ],
+              "answer": [
+                "for week in range(7):"
+              ]
+            },
+            {
+              "id": "p2l4q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "revenue = 200\nfor week in range(3):\n    revenue = revenue + 50\nprint(revenue)",
+              "explanation": "Each round adds 50: 200 → 250 → 300 → 350.",
+              "options": [
+                "250",
+                "400",
+                "350"
+              ],
+              "answer": [
+                "350"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q4",
+              "kind": "bug",
+              "prompt": "This should show Sell 3 times. Tap the line with the mistake.",
+              "hint": "The first line of a loop ends with a colon.",
+              "explanation": "The first line of a loop must end with a colon. Fix: for week in range(3):",
+              "options": [
+                "for week in range(3)",
+                "    print(\"Sell\")"
+              ],
+              "answer": [
+                "for week in range(3)"
+              ],
+              "fix": "for week in range(3):",
+              "verify": "bug"
+            },
+            {
+              "id": "p2l4q5",
+              "kind": "choice",
+              "prompt": "How many lines show in total?",
+              "code": "for week in range(5):\n    print(\"Order\")\n    print(\"Ship\")",
+              "explanation": "5 rounds with 2 lines each is 10 lines.",
+              "options": [
+                "10",
+                "6",
+                "5"
+              ],
+              "answer": [
+                "10"
+              ],
+              "verify": "lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Decisions: if / else",
+      "subtitle": "Full shelf or empty shelf",
+      "lessons": [
+        {
+          "id": "p3l1",
+          "title": "Full or empty",
+          "questions": [
+            {
+              "id": "p3l1q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "The indented line runs only when the check is true.",
+              "code": "shelf = \"empty\"\nif shelf == \"empty\":\n    print(\"Reorder\")",
+              "picture": "🛒",
+              "explanation": "The shelf is empty, so the indented line runs.",
+              "options": [
+                "Nothing",
+                "Reorder",
+                "empty"
+              ],
+              "answer": [
+                "Reorder"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "shelf = \"full\"\nif shelf == \"empty\":\n    print(\"Reorder\")\nelse:\n    print(\"Hold\")",
+              "explanation": "The shelf is not empty, so the else line runs.",
+              "options": [
+                "Reorder",
+                "full",
+                "Hold"
+              ],
+              "answer": [
+                "Hold"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q3",
+              "kind": "judge",
+              "prompt": "True or false: == asks \"are these the same?\"",
+              "code": "if shelf == \"empty\":",
+              "explanation": "== asks a question: are these the same? A single = stores a value.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ]
+            },
+            {
+              "id": "p3l1q4",
+              "kind": "build",
+              "prompt": "Build: if the shelf is empty",
+              "explanation": "Start with if, then the name, ==, the word in quote marks, and a colon.",
+              "options": [
+                "==",
+                ":",
+                "if",
+                "shelf",
+                "\"empty\"",
+                "="
+              ],
+              "answer": [
+                "if",
+                "shelf",
+                "==",
+                "\"empty\"",
+                ":"
+              ]
+            },
+            {
+              "id": "p3l1q5",
+              "kind": "choice",
+              "prompt": "Fill the blank so it checks the shelf",
+              "code": "shelf = \"empty\"\nif shelf ___ \"empty\":\n    print(\"Reorder\")",
+              "explanation": "== asks whether the two things are the same.",
+              "options": [
+                "+",
+                "==",
+                "="
+              ],
+              "answer": [
+                "=="
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3l2",
+          "title": "Busy or quiet",
+          "questions": [
+            {
+              "id": "p3l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "> means more than. < means less than.",
+              "code": "sales = 40\nif sales > 25:\n    print(\"Great week\")",
+              "picture": "💰",
+              "explanation": "40 is more than 25, so the message shows.",
+              "options": [
+                "Nothing",
+                "40",
+                "Great week"
+              ],
+              "answer": [
+                "Great week"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "stock = 5\nif stock < 10:\n    print(\"Reorder\")\nelse:\n    print(\"Fine\")",
+              "explanation": "5 is less than 10, so the first message runs.",
+              "options": [
+                "Fine",
+                "Reorder",
+                "5"
+              ],
+              "answer": [
+                "Reorder"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q3",
+              "kind": "match",
+              "prompt": "Match each sign to its meaning.",
+              "explanation": "> and < compare sizes. == checks for the same. >= also counts when they are equal.",
+              "options": [
+                ">",
+                "<",
+                "==",
+                ">="
+              ],
+              "answer": [
+                "is more than",
+                "is less than",
+                "is the same as",
+                "is more than or the same as"
+              ],
+              "right": [
+                "is more than",
+                "is more than or the same as",
+                "is less than",
+                "is the same as"
+              ]
+            },
+            {
+              "id": "p3l2q4",
+              "kind": "choice",
+              "prompt": "Show Too dear when price is over 50. Fill the blank.",
+              "code": "price = 55\nif price ___ 50:\n    print(\"Too dear\")",
+              "explanation": "> means more than.",
+              "options": [
+                "=",
+                ">",
+                "<"
+              ],
+              "answer": [
+                ">"
+              ]
+            },
+            {
+              "id": "p3l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "profit = 100\nif profit >= 100:\n    print(\"Target hit\")\nelse:\n    print(\"Keep going\")",
+              "explanation": ">= is also true when the two are equal, and 100 equals 100.",
+              "options": [
+                "Nothing",
+                "Keep going",
+                "Target hit"
+              ],
+              "answer": [
+                "Target hit"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l3",
+          "title": "Weekly check",
+          "questions": [
+            {
+              "id": "p3l3q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "stock = 0\nfor week in range(4):\n    if stock < 2:\n        stock = stock + 1\nprint(stock)",
+              "picture": "🧾",
+              "explanation": "It goes up only while it is below 2: 0 → 1 → 2 → 2 → 2.",
+              "options": [
+                "3",
+                "4",
+                "2"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q2",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for week in range(1, 4):\n    if week == 2:\n        print(\"Holiday\")\n    else:\n        print(\"Open\")",
+              "explanation": "The loop counts 1, 2, 3. Only 2 matches, so Holiday shows once.",
+              "options": [
+                "Holiday, Open, Holiday",
+                "Open, Open, Open",
+                "Open, Holiday, Open"
+              ],
+              "answer": [
+                "Open, Holiday, Open"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q3",
+              "kind": "choice",
+              "prompt": "A discount cuts the price by 1 a day until it reaches 50. What shows?",
+              "code": "price = 52\nfor step in range(3):\n    if price > 50:\n        price = price - 1\nprint(price)",
+              "picture": "🏦",
+              "explanation": "It drops by 1 while it is above 50, then stops: 52 → 51 → 50.",
+              "options": [
+                "49",
+                "51",
+                "50"
+              ],
+              "answer": [
+                "50"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "hint": "Asking a question needs two equals signs.",
+              "explanation": "One = stores a value. To ask a question, use ==. Fix: if shelf == \"empty\":",
+              "options": [
+                "shelf = \"empty\"",
+                "if shelf = \"empty\":",
+                "    print(\"Reorder\")"
+              ],
+              "answer": [
+                "if shelf = \"empty\":"
+              ],
+              "fix": "if shelf == \"empty\":",
+              "verify": "bug"
+            },
+            {
+              "id": "p3l3q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "count = 0\nfor week in range(5):\n    if week > 1:\n        count = count + 1\nprint(count)",
+              "explanation": "The loop counts 0 to 4. Only 2, 3, 4 are more than 1, so count is 3.",
+              "options": [
+                "3",
+                "5",
+                "4"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l4",
+          "title": "Shop review",
+          "questions": [
+            {
+              "id": "p3l4q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(\"Ship\")",
+              "picture": "🎯",
+              "explanation": "print shows the words between the quote marks.",
+              "options": [
+                "print",
+                "\"Ship\"",
+                "Ship"
+              ],
+              "answer": [
+                "Ship"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "cash = 4\ncash = cash + 2\nprint(cash)",
+              "explanation": "4 + 2 = 6, and the new value goes back in the box.",
+              "options": [
+                "2",
+                "4",
+                "6"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q3",
+              "kind": "judge",
+              "prompt": "True or false: this shows Order, Order.",
+              "code": "for week in range(2):\n    print(\"Order\")",
+              "explanation": "range(2) repeats the line twice, so Order shows 2 times.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Order, Order"
+            },
+            {
+              "id": "p3l4q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "shelf = \"full\"\nif shelf == \"full\":\n    print(\"Hold\")\nelse:\n    print(\"Reorder\")",
+              "explanation": "The shelf is full, so the first message shows.",
+              "options": [
+                "Hold",
+                "full",
+                "Reorder"
+              ],
+              "answer": [
+                "Hold"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q5",
+              "kind": "build",
+              "prompt": "Build a line that checks if sales is more than 25",
+              "explanation": "Start with if, then the name, >, the number, and a colon.",
+              "options": [
+                "sales",
+                "<",
+                "25",
+                "if",
+                ":",
+                ">"
+              ],
+              "answer": [
+                "if",
+                "sales",
+                ">",
+                "25",
+                ":"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

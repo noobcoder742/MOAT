@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "area": "Computing",
+  "phases": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "p1l1",
+          "title": "Terminal",
+          "questions": [
+            {
+              "id": "p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the terminal say hello",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "🖥️",
+              "explanation": "Words go inside quote marks. Then print shows them on the terminal.",
+              "options": [
+                "Hello, world!",
+                "(Hello, world!)",
+                "\"Hello, world!\"",
+                "hello, world!"
+              ],
+              "answer": [
+                "\"Hello, world!\""
+              ]
+            },
+            {
+              "id": "p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the terminal show?",
+              "code": "print(\"Boot\")",
+              "explanation": "print shows the words between the quote marks. The quote marks themselves are not shown.",
+              "options": [
+                "\"Boot\"",
+                "print",
+                "Boot",
+                "Nothing"
+              ],
+              "answer": [
+                "Boot"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Server up",
+              "picture": "⌨️",
+              "explanation": "Start with print, then brackets, and put the words inside quote marks.",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Server up",
+                "\"Server up\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Server up\"",
+                ")"
+              ]
+            },
+            {
+              "id": "p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "Words need quote marks. Fix: print(\"Error!\")",
+              "options": [
+                "print(\"Boot\")",
+                "print(\"Run\")",
+                "print(Error!)"
+              ],
+              "answer": [
+                "print(Error!)"
+              ],
+              "fix": "print(\"Error!\")",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Boot\")\nprint(\"Run\")",
+              "explanation": "The computer runs the lines from top to bottom, so the first message shows first.",
+              "options": [
+                "Boot, Run",
+                "Boot",
+                "Run, Boot"
+              ],
+              "answer": [
+                "Boot, Run"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p1l2",
+          "title": "Counting files",
+          "questions": [
+            {
+              "id": "p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Python does the maths.",
+              "code": "print(9 + 6)",
+              "picture": "💾",
+              "explanation": "Without quote marks, Python does the maths: 9 + 6 = 15.",
+              "options": [
+                "9 + 6",
+                "15",
+                "96"
+              ],
+              "answer": [
+                "15"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 15.",
+              "code": "print(\"9 + 6\")",
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "15"
+            },
+            {
+              "id": "p1l2q3",
+              "kind": "choice",
+              "prompt": "There are 9 files, then 6 more come. Which line shows 15?",
+              "explanation": "Leave off the quote marks so Python adds: 9 + 6 = 15.",
+              "options": [
+                "print(9 - 6)",
+                "print(\"9 + 6\")",
+                "print(9 + 6)"
+              ],
+              "answer": [
+                "print(9 + 6)"
+              ]
+            },
+            {
+              "id": "p1l2q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(16 - 9)",
+              "explanation": "16 - 9 = 7.",
+              "options": [
+                "25",
+                "16 - 9",
+                "7"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q5",
+              "kind": "build",
+              "prompt": "Build a line that shows 8 times 4",
+              "hint": "Python uses * for times.",
+              "explanation": "Python uses * for times. 8 * 4 = 32.",
+              "options": [
+                ")",
+                "(",
+                "x",
+                "print",
+                "*",
+                "8",
+                "4"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "8",
+                "*",
+                "4",
+                ")"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l3",
+          "title": "Labelled boxes",
+          "questions": [
+            {
+              "id": "p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 512 MB in the box labelled memory",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "memory ___ 512",
+              "picture": "🗂️",
+              "explanation": "One = puts a value into the box. Two == would ask a question instead.",
+              "options": [
+                "==",
+                "=",
+                "+"
+              ],
+              "answer": [
+                "="
+              ]
+            },
+            {
+              "id": "p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "memory = 512\nprint(memory)",
+              "explanation": "memory holds 512, so print(memory) shows 512.",
+              "options": [
+                "\"memory\"",
+                "512",
+                "memory"
+              ],
+              "answer": [
+                "512"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "memory = 512\nmemory = 256\nprint(memory)",
+              "explanation": "The newest value replaces the old one. The box now holds 256.",
+              "options": [
+                "512",
+                "768",
+                "256"
+              ],
+              "answer": [
+                "256"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q4",
+              "kind": "judge",
+              "prompt": "True or false: this shows users.",
+              "code": "users = 8\nprint(\"users\")",
+              "explanation": "Quote marks make users a word, so the word shows and not what the box holds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "users"
+            },
+            {
+              "id": "p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "explanation": "= stores a value. print(name) shows the value. Quote marks show the name itself.",
+              "options": [
+                "memory = 512",
+                "print(memory)",
+                "memory = 256",
+                "print(\"memory\")"
+              ],
+              "answer": [
+                "Store 512 in the box",
+                "Show what the box holds",
+                "Swap in 256",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Swap in 256",
+                "Show what the box holds",
+                "Store 512 in the box",
+                "Show the name as a word"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l4",
+          "title": "Loading day",
+          "questions": [
+            {
+              "id": "p1l4q1",
+              "kind": "choice",
+              "prompt": "Load 128 more MB. Which line updates memory?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "memory = 100",
+              "picture": "📡",
+              "explanation": "Take the old value, add 128, and put it back in the same box.",
+              "options": [
+                "memory = 128",
+                "memory = memory + 128",
+                "memory + 128"
+              ],
+              "answer": [
+                "memory = memory + 128"
+              ]
+            },
+            {
+              "id": "p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "memory = 100\nmemory = memory - 30\nprint(memory)",
+              "explanation": "100 - 30 = 70.",
+              "options": [
+                "130",
+                "100",
+                "70"
+              ],
+              "answer": [
+                "70"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l4q3",
+              "kind": "build",
+              "prompt": "A program frees 30 MB. Build the line.",
+              "explanation": "Take the old value, subtract 30, and put it back in the box.",
+              "options": [
+                "=",
+                "memory",
+                "-",
+                "memory",
+                "30",
+                "+"
+              ],
+              "answer": [
+                "memory",
+                "=",
+                "memory",
+                "-",
+                "30"
+              ]
+            },
+            {
+              "id": "p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "The + needs a number after it. Fix: score = score + 5",
+              "options": [
+                "score = 10",
+                "score = score +",
+                "print(score)"
+              ],
+              "answer": [
+                "score = score +"
+              ],
+              "fix": "score = score + 5",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to level.",
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box.",
+              "options": [
+                "level = level + 1",
+                "level = level - 1",
+                "level = level * 2",
+                "level = level + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Add 10",
+                "Take away 1",
+                "Add 1",
+                "Double it"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Loops: repeat a step",
+      "subtitle": "Repeat a step tick after tick",
+      "lessons": [
+        {
+          "id": "p2l1",
+          "title": "Ticks pass",
+          "questions": [
+            {
+              "id": "p2l1q1",
+              "kind": "choice",
+              "prompt": "How many times does Ping show?",
+              "hint": "The indented line repeats each time round.",
+              "code": "for tick in range(6):\n    print(\"Ping\")",
+              "picture": "🔁",
+              "explanation": "The indented line runs once each time round. range(6) means 6 times.",
+              "options": [
+                "6",
+                "1",
+                "7"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "lines"
+            },
+            {
+              "id": "p2l1q2",
+              "kind": "choice",
+              "prompt": "The server checks in 8 times. Fill the blank.",
+              "code": "for tick in range(___):\n    print(\"Save\")",
+              "explanation": "range(8) repeats 8 times.",
+              "options": [
+                "7",
+                "8",
+                "9"
+              ],
+              "answer": [
+                "8"
+              ]
+            },
+            {
+              "id": "p2l1q3",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for tick in range(2):\n    print(\"Load\")\nprint(\"Exit\")",
+              "explanation": "Only the indented line repeats. The last line runs once, after the loop.",
+              "options": [
+                "Load, Exit, Load, Exit",
+                "Load, Exit",
+                "Load, Load, Exit"
+              ],
+              "answer": [
+                "Load, Load, Exit"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l1q4",
+              "kind": "build",
+              "prompt": "Build the first line of a loop that runs 4 times",
+              "explanation": "A loop starts with for, a name, in, range(4) and a colon.",
+              "options": [
+                "tick",
+                "in",
+                "range(4)",
+                ":",
+                "range(5)",
+                "for"
+              ],
+              "answer": [
+                "for",
+                "tick",
+                "in",
+                "range(4)",
+                ":"
+              ]
+            },
+            {
+              "id": "p2l1q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows Beep, Done, Beep, Done, Beep, Done.",
+              "code": "for tick in range(3):\n    print(\"Beep\")\nprint(\"Done\")",
+              "explanation": "Only the indented line repeats. Beep shows 3 times, then Done shows once.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "Beep, Done, Beep, Done, Beep, Done"
+            }
+          ]
+        },
+        {
+          "id": "p2l2",
+          "title": "Watch it count",
+          "questions": [
+            {
+              "id": "p2l2q1",
+              "kind": "choice",
+              "prompt": "A counter goes up 2 every tick, starting at 3. What is it at the end?",
+              "hint": "Follow the loop one round at a time.",
+              "code": "counter = 3\nfor tick in range(5):\n    counter = counter + 2\nprint(counter)",
+              "picture": "📊",
+              "explanation": "Each round adds 2: 3 → 5 → 7 → 9 → 11 → 13.",
+              "options": [
+                "11",
+                "5",
+                "13"
+              ],
+              "answer": [
+                "13"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q2",
+              "kind": "choice",
+              "prompt": "A battery loses 16 units every tick, starting with 64. How much is left?",
+              "code": "battery = 64\nfor tick in range(2):\n    battery = battery - 16\nprint(battery)",
+              "explanation": "Each round takes away 16: 64 → 48 → 32.",
+              "options": [
+                "64",
+                "48",
+                "32"
+              ],
+              "answer": [
+                "32"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q3",
+              "kind": "choice",
+              "prompt": "Every copy makes another copy each tick. What shows at the end?",
+              "code": "copies = 1\nfor tick in range(5):\n    copies = copies * 2\nprint(copies)",
+              "picture": "🧠",
+              "explanation": "Each round doubles it: 1 → 2 → 4 → 8 → 16 → 32.",
+              "options": [
+                "16",
+                "32",
+                "10"
+              ],
+              "answer": [
+                "32"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q4",
+              "kind": "choice",
+              "prompt": "The counter should go up 4 every tick. Fill the blank.",
+              "code": "counter = 1\nfor tick in range(3):\n    counter = counter + ___",
+              "explanation": "Each round adds the blank. To go up by 4, the blank must be 4.",
+              "options": [
+                "3",
+                "4",
+                "5"
+              ],
+              "answer": [
+                "4"
+              ]
+            },
+            {
+              "id": "p2l2q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows 6.",
+              "code": "total = 0\nfor tick in range(5):\n    total = total + 1\nprint(total)",
+              "explanation": "total goes up by 1 each round, and the loop runs 5 times, so it ends at 5.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "6"
+            }
+          ]
+        },
+        {
+          "id": "p2l3",
+          "title": "Counting steps",
+          "questions": [
+            {
+              "id": "p2l3q1",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "hint": "range(3) starts counting at 0, not 1.",
+              "code": "for tick in range(3):\n    print(tick)",
+              "explanation": "range(3) starts at 0 and stops before 3: 0, 1, 2.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "0, 1, 2"
+              ],
+              "answer": [
+                "0, 1, 2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q2",
+              "kind": "match",
+              "prompt": "Match each range to the numbers it gives.",
+              "explanation": "range(n) starts at 0. range(a, b) starts at a and stops just before b.",
+              "options": [
+                "range(5)",
+                "range(3)",
+                "range(4)",
+                "range(1, 4)"
+              ],
+              "answer": [
+                "0, 1, 2, 3, 4",
+                "0, 1, 2",
+                "0, 1, 2, 3",
+                "1, 2, 3"
+              ],
+              "right": [
+                "0, 1, 2",
+                "0, 1, 2, 3, 4",
+                "0, 1, 2, 3",
+                "1, 2, 3"
+              ]
+            },
+            {
+              "id": "p2l3q3",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "code": "for tick in range(1, 4):\n    print(tick)",
+              "picture": "🔁",
+              "explanation": "range(1, 4) starts at 1 and stops before 4.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3, 4",
+                "1, 2, 3"
+              ],
+              "answer": [
+                "1, 2, 3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "total = 0\nfor tick in range(1, 6):\n    total = total + tick\nprint(total)",
+              "explanation": "1 + 2 + 3 + 4 + 5 = 15.",
+              "options": [
+                "21",
+                "5",
+                "15"
+              ],
+              "answer": [
+                "15"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q5",
+              "kind": "build",
+              "prompt": "Show ticks 1 to 4. Build the first line of the loop.",
+              "explanation": "range(1, 5) starts at 1 and stops before 5, so it counts 1 to 4.",
+              "options": [
+                "for",
+                "range(1, 4)",
+                ":",
+                "in",
+                "range(1, 5)",
+                "tick"
+              ],
+              "answer": [
+                "for",
+                "tick",
+                "in",
+                "range(1, 5)",
+                ":"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2l4",
+          "title": "Server routine",
+          "questions": [
+            {
+              "id": "p2l4q1",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for tick in range(2):\n    print(\"Send\")\n    print(\"Wait\")",
+              "explanation": "Both indented lines repeat together, in order, every round.",
+              "options": [
+                "Send, Wait",
+                "Send, Send, Wait, Wait",
+                "Send, Wait, Send, Wait"
+              ],
+              "answer": [
+                "Send, Wait, Send, Wait"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q2",
+              "kind": "choice",
+              "prompt": "The job must repeat 8 times. Which loop fits?",
+              "explanation": "range(8) repeats 8 times.",
+              "options": [
+                "for tick in range(9):",
+                "for tick in range(8):",
+                "for tick in range(7):"
+              ],
+              "answer": [
+                "for tick in range(8):"
+              ]
+            },
+            {
+              "id": "p2l4q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "downloads = 1000\nfor tick in range(2):\n    downloads = downloads + 500\nprint(downloads)",
+              "explanation": "Each round adds 500: 1000 → 1500 → 2000.",
+              "options": [
+                "1500",
+                "2500",
+                "2000"
+              ],
+              "answer": [
+                "2000"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q4",
+              "kind": "bug",
+              "prompt": "This should show Ping 3 times. Tap the line with the mistake.",
+              "hint": "The first line of a loop ends with a colon.",
+              "explanation": "The first line of a loop must end with a colon. Fix: for tick in range(3):",
+              "options": [
+                "for tick in range(3)",
+                "    print(\"Ping\")"
+              ],
+              "answer": [
+                "for tick in range(3)"
+              ],
+              "fix": "for tick in range(3):",
+              "verify": "bug"
+            },
+            {
+              "id": "p2l4q5",
+              "kind": "choice",
+              "prompt": "How many lines show in total?",
+              "code": "for tick in range(4):\n    print(\"Send\")\n    print(\"Wait\")",
+              "explanation": "4 rounds with 2 lines each is 8 lines.",
+              "options": [
+                "8",
+                "5",
+                "4"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Decisions: if / else",
+      "subtitle": "Server up or server down",
+      "lessons": [
+        {
+          "id": "p3l1",
+          "title": "Up or down",
+          "questions": [
+            {
+              "id": "p3l1q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "The indented line runs only when the check is true.",
+              "code": "server = \"up\"\nif server == \"up\":\n    print(\"All good\")",
+              "picture": "🔌",
+              "explanation": "The server is up, so the indented line runs.",
+              "options": [
+                "Nothing",
+                "All good",
+                "up"
+              ],
+              "answer": [
+                "All good"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "server = \"down\"\nif server == \"up\":\n    print(\"All good\")\nelse:\n    print(\"Restart\")",
+              "explanation": "The server is not up, so the else line runs.",
+              "options": [
+                "All good",
+                "down",
+                "Restart"
+              ],
+              "answer": [
+                "Restart"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q3",
+              "kind": "judge",
+              "prompt": "True or false: == asks \"are these the same?\"",
+              "code": "if server == \"up\":",
+              "explanation": "== asks a question: are these the same? A single = stores a value.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ]
+            },
+            {
+              "id": "p3l1q4",
+              "kind": "build",
+              "prompt": "Build: if the server is up",
+              "explanation": "Start with if, then the name, ==, the word in quote marks, and a colon.",
+              "options": [
+                "==",
+                ":",
+                "if",
+                "server",
+                "\"up\"",
+                "="
+              ],
+              "answer": [
+                "if",
+                "server",
+                "==",
+                "\"up\"",
+                ":"
+              ]
+            },
+            {
+              "id": "p3l1q5",
+              "kind": "choice",
+              "prompt": "Fill the blank so it checks the server",
+              "code": "server = \"up\"\nif server ___ \"up\":\n    print(\"All good\")",
+              "explanation": "== asks whether the two things are the same.",
+              "options": [
+                "+",
+                "==",
+                "="
+              ],
+              "answer": [
+                "=="
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3l2",
+          "title": "Fast or slow",
+          "questions": [
+            {
+              "id": "p3l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "> means more than. < means less than.",
+              "code": "ping = 150\nif ping > 100:\n    print(\"Slow\")",
+              "picture": "🌐",
+              "explanation": "150 is more than 100, so the message shows.",
+              "options": [
+                "Nothing",
+                "150",
+                "Slow"
+              ],
+              "answer": [
+                "Slow"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "battery = 10\nif battery < 20:\n    print(\"Charge now\")\nelse:\n    print(\"Fine\")",
+              "explanation": "10 is less than 20, so the first message runs.",
+              "options": [
+                "Fine",
+                "Charge now",
+                "10"
+              ],
+              "answer": [
+                "Charge now"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q3",
+              "kind": "match",
+              "prompt": "Match each sign to its meaning.",
+              "explanation": "> and < compare sizes. == checks for the same. >= also counts when they are equal.",
+              "options": [
+                ">",
+                "<",
+                "==",
+                ">="
+              ],
+              "answer": [
+                "is more than",
+                "is less than",
+                "is the same as",
+                "is more than or the same as"
+              ],
+              "right": [
+                "is more than",
+                "is more than or the same as",
+                "is less than",
+                "is the same as"
+              ]
+            },
+            {
+              "id": "p3l2q4",
+              "kind": "choice",
+              "prompt": "Show Overheating when cpu is over 90. Fill the blank.",
+              "code": "cpu = 95\nif cpu ___ 90:\n    print(\"Overheating\")",
+              "explanation": "> means more than.",
+              "options": [
+                "=",
+                ">",
+                "<"
+              ],
+              "answer": [
+                ">"
+              ]
+            },
+            {
+              "id": "p3l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "level = 5\nif level >= 5:\n    print(\"Level up\")\nelse:\n    print(\"Keep playing\")",
+              "explanation": ">= is also true when the two are equal, and 5 equals 5.",
+              "options": [
+                "Nothing",
+                "Keep playing",
+                "Level up"
+              ],
+              "answer": [
+                "Level up"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l3",
+          "title": "Health check",
+          "questions": [
+            {
+              "id": "p3l3q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "jobs = 0\nfor tick in range(4):\n    if jobs < 3:\n        jobs = jobs + 1\nprint(jobs)",
+              "picture": "🗂️",
+              "explanation": "It goes up only while it is below 3: 0 → 1 → 2 → 3 → 3.",
+              "options": [
+                "2",
+                "4",
+                "3"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q2",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for tick in range(1, 4):\n    if tick == 2:\n        print(\"Crash\")\n    else:\n        print(\"Run\")",
+              "explanation": "The loop counts 1, 2, 3. Only 2 matches, so Crash shows once.",
+              "options": [
+                "Crash, Run, Crash",
+                "Run, Run, Run",
+                "Run, Crash, Run"
+              ],
+              "answer": [
+                "Run, Crash, Run"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q3",
+              "kind": "choice",
+              "prompt": "A fan cools the CPU by 1 degree every tick until it reaches 40. What shows?",
+              "code": "cpu = 42\nfor step in range(3):\n    if cpu > 40:\n        cpu = cpu - 1\nprint(cpu)",
+              "picture": "🔥",
+              "explanation": "It drops by 1 while it is above 40, then stops: 42 → 41 → 40.",
+              "options": [
+                "39",
+                "41",
+                "40"
+              ],
+              "answer": [
+                "40"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "hint": "Asking a question needs two equals signs.",
+              "explanation": "One = stores a value. To ask a question, use ==. Fix: if server == \"up\":",
+              "options": [
+                "server = \"up\"",
+                "if server = \"up\":",
+                "    print(\"All good\")"
+              ],
+              "answer": [
+                "if server = \"up\":"
+              ],
+              "fix": "if server == \"up\":",
+              "verify": "bug"
+            },
+            {
+              "id": "p3l3q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "count = 0\nfor tick in range(6):\n    if tick > 3:\n        count = count + 1\nprint(count)",
+              "explanation": "The loop counts 0 to 5. Only 4, 5 are more than 3, so count is 2.",
+              "options": [
+                "2",
+                "6",
+                "3"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l4",
+          "title": "Code review",
+          "questions": [
+            {
+              "id": "p3l4q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(\"Run\")",
+              "picture": "🧠",
+              "explanation": "print shows the words between the quote marks.",
+              "options": [
+                "print",
+                "\"Run\"",
+                "Run"
+              ],
+              "answer": [
+                "Run"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "battery = 7\nbattery = battery + 2\nprint(battery)",
+              "explanation": "7 + 2 = 9, and the new value goes back in the box.",
+              "options": [
+                "2",
+                "7",
+                "9"
+              ],
+              "answer": [
+                "9"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q3",
+              "kind": "judge",
+              "prompt": "True or false: this shows Ping, Ping.",
+              "code": "for tick in range(2):\n    print(\"Ping\")",
+              "explanation": "range(2) repeats the line twice, so Ping shows 2 times.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Ping, Ping"
+            },
+            {
+              "id": "p3l4q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "server = \"down\"\nif server == \"down\":\n    print(\"Restart\")\nelse:\n    print(\"All good\")",
+              "explanation": "The server is down, so the first message shows.",
+              "options": [
+                "Restart",
+                "down",
+                "All good"
+              ],
+              "answer": [
+                "Restart"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q5",
+              "kind": "build",
+              "prompt": "Build a line that checks if ping is more than 100",
+              "explanation": "Start with if, then the name, >, the number, and a colon.",
+              "options": [
+                "ping",
+                "<",
+                "100",
+                "if",
+                ":",
+                ">"
+              ],
+              "answer": [
+                "if",
+                "ping",
+                ">",
+                "100",
+                ":"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

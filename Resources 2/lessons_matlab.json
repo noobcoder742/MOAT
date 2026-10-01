@@ -1,0 +1,399 @@
+{
+  "version": 2,
+  "area": "MATLAB",
+  "phases": [
+    {
+      "id": "matlab_p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "matlab_p1l1",
+          "title": "Bench display",
+          "questions": [
+            {
+              "id": "matlab_p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the bench say hello",
+              "hint": "disp() shows whatever is inside the brackets.",
+              "code": "disp(___)",
+              "picture": "📟",
+              "options": [
+                "Hello, sensor!",
+                "'hello, sensor!'",
+                "'Hello, sensor!'",
+                "{Hello, sensor!}"
+              ],
+              "answer": [
+                "'Hello, sensor!'"
+              ],
+              "explanation": "Text goes inside single quote marks. Then disp shows it on the bench display."
+            },
+            {
+              "id": "matlab_p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the bench display show?",
+              "code": "disp('Volt')",
+              "options": [
+                "disp",
+                "'Volt'",
+                "Nothing",
+                "Volt"
+              ],
+              "answer": [
+                "Volt"
+              ],
+              "explanation": "disp shows the words between the quote marks. The quote marks themselves are not shown."
+            },
+            {
+              "id": "matlab_p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Ready",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "disp",
+                "Ready",
+                "'Ready'"
+              ],
+              "answer": [
+                "disp",
+                "(",
+                "'Ready'",
+                ")"
+              ],
+              "explanation": "Start with disp, then brackets, and put the words inside single quote marks."
+            },
+            {
+              "id": "matlab_p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "disp('Start')",
+                "disp('Stop')",
+                "disp(Reset)"
+              ],
+              "answer": [
+                "disp(Reset)"
+              ],
+              "explanation": "Words need quote marks. Fix: disp('Reset')",
+              "verify": "bug",
+              "fix": "disp('Reset')"
+            },
+            {
+              "id": "matlab_p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "disp('Warm up')\ndisp('Measure')",
+              "options": [
+                "Measure, then Warm up",
+                "Warm up",
+                "Warm up, then Measure"
+              ],
+              "answer": [
+                "Warm up, then Measure"
+              ],
+              "explanation": "The computer runs the lines from top to bottom, so Warm up shows first."
+            }
+          ]
+        },
+        {
+          "id": "matlab_p1l2",
+          "title": "Numbers and text",
+          "questions": [
+            {
+              "id": "matlab_p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, MATLAB does the maths.",
+              "code": "disp(3 + 2)",
+              "picture": "🔢",
+              "options": [
+                "5",
+                "3 + 2",
+                "32"
+              ],
+              "answer": [
+                "5"
+              ],
+              "explanation": "Without quote marks, MATLAB does the maths: 3 + 2 = 5."
+            },
+            {
+              "id": "matlab_p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 6.",
+              "code": "disp('10 - 4')",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "explanation": "Quote marks make it text. The words 10 - 4 show, and no sum is worked out.",
+              "verify": "judge",
+              "claim": "6"
+            },
+            {
+              "id": "matlab_p1l2q3",
+              "kind": "choice",
+              "prompt": "What does the bench show?",
+              "hint": "Quotes make text. Text is not worked out.",
+              "code": "disp('3 + 2')",
+              "options": [
+                "'3 + 2'",
+                "32",
+                "3 + 2",
+                "5"
+              ],
+              "answer": [
+                "3 + 2"
+              ],
+              "explanation": "The quotes make 3 + 2 plain text, so it shows exactly as written."
+            },
+            {
+              "id": "matlab_p1l2q4",
+              "kind": "build",
+              "prompt": "Build the line that shows the total of 4 + 6.",
+              "options": [
+                "disp",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")",
+                "'4 + 6'",
+                "-"
+              ],
+              "answer": [
+                "disp",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")"
+              ],
+              "explanation": "Numbers without quote marks are added, so the bench shows 10."
+            },
+            {
+              "id": "matlab_p1l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "disp(10 - 4)",
+              "options": [
+                "14",
+                "10 - 4",
+                "6"
+              ],
+              "answer": [
+                "6"
+              ],
+              "explanation": "10 - 4 = 6."
+            }
+          ]
+        },
+        {
+          "id": "matlab_p1l3",
+          "title": "Bench readings",
+          "questions": [
+            {
+              "id": "matlab_p1l3q1",
+              "kind": "choice",
+              "prompt": "Store a speed of 20 in the box labelled speed",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "speed ___ 20;",
+              "picture": "📈",
+              "options": [
+                "=",
+                "==",
+                "+"
+              ],
+              "answer": [
+                "="
+              ],
+              "explanation": "One = puts a value into the box. Two == would ask a question instead."
+            },
+            {
+              "id": "matlab_p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "speed = 20;\ndisp(speed)",
+              "options": [
+                "speed",
+                "20",
+                "'speed'"
+              ],
+              "answer": [
+                "20"
+              ],
+              "explanation": "speed holds 20, so disp(speed) shows 20."
+            },
+            {
+              "id": "matlab_p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows on the bench?",
+              "hint": "A semicolon at the end hides the result.",
+              "code": "speed = 20;\ntime = 3",
+              "options": [
+                "speed = 20 and time = 3",
+                "Nothing",
+                "time = 3",
+                "speed = 20"
+              ],
+              "answer": [
+                "time = 3"
+              ],
+              "explanation": "A semicolon hides the result. speed has one, so only time is shown."
+            },
+            {
+              "id": "matlab_p1l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "speed = 20;",
+                "time = 3;",
+                "2volts = 5;"
+              ],
+              "answer": [
+                "2volts = 5;"
+              ],
+              "explanation": "A name cannot start with a number. Fix: volts = 5;",
+              "verify": "bug",
+              "fix": "volts = 5;"
+            },
+            {
+              "id": "matlab_p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "options": [
+                "speed = 20;",
+                "disp(speed)",
+                "speed = 30;",
+                "disp('speed')"
+              ],
+              "answer": [
+                "Store 20 in the box",
+                "Show what the box holds",
+                "Swap in 30",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Show what the box holds",
+                "Swap in 30",
+                "Show the name as a word",
+                "Store 20 in the box"
+              ],
+              "explanation": "= stores a value. disp(speed) shows the value. Quote marks show the name itself."
+            }
+          ]
+        },
+        {
+          "id": "matlab_p1l4",
+          "title": "Distance",
+          "questions": [
+            {
+              "id": "matlab_p1l4q1",
+              "kind": "choice",
+              "prompt": "Add 5 to the speed. Which line updates it?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "speed = 10;",
+              "picture": "🚗",
+              "options": [
+                "speed = speed + 5;",
+                "speed + 5;",
+                "speed = 5;"
+              ],
+              "answer": [
+                "speed = speed + 5;"
+              ],
+              "explanation": "Take the old value, add 5, and put it back in the same box."
+            },
+            {
+              "id": "matlab_p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "speed = 3;\nspeed = speed - 1;\ndisp(speed)",
+              "options": [
+                "3",
+                "2",
+                "4"
+              ],
+              "answer": [
+                "2"
+              ],
+              "explanation": "3 - 1 = 2."
+            },
+            {
+              "id": "matlab_p1l4q3",
+              "kind": "build",
+              "prompt": "Find the distance. Build the line.",
+              "code": "speed = 20;\ntime = 3;",
+              "options": [
+                "'time'",
+                "*",
+                ")",
+                "speed",
+                "disp",
+                "time",
+                "+",
+                "("
+              ],
+              "answer": [
+                "disp",
+                "(",
+                "speed",
+                "*",
+                "time",
+                ")"
+              ],
+              "explanation": "speed * time is 60, and disp shows it."
+            },
+            {
+              "id": "matlab_p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "time = 2;",
+                "time = time +;",
+                "disp(time)"
+              ],
+              "answer": [
+                "time = time +;"
+              ],
+              "explanation": "The + needs a number after it. Fix: time = time + 1;",
+              "verify": "bug",
+              "fix": "time = time + 1;"
+            },
+            {
+              "id": "matlab_p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to the speed.",
+              "options": [
+                "speed = speed + 1;",
+                "speed = speed - 1;",
+                "speed = speed * 2;",
+                "speed = speed + 10;"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Take away 1",
+                "Double it",
+                "Add 10",
+                "Add 1"
+              ],
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
