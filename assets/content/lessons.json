@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "area": "Life sciences",
+  "phases": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "p1l1",
+          "title": "Garden sign",
+          "questions": [
+            {
+              "id": "p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the garden sign say hello",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "🪧",
+              "explanation": "Words go inside quote marks. Then print shows them on the garden sign.",
+              "options": [
+                "Hello, plant!",
+                "(Hello, plant!)",
+                "\"Hello, plant!\"",
+                "hello, plant!"
+              ],
+              "answer": [
+                "\"Hello, plant!\""
+              ]
+            },
+            {
+              "id": "p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the garden sign show?",
+              "code": "print(\"Seed\")",
+              "explanation": "print shows the words between the quote marks. The quote marks themselves are not shown.",
+              "options": [
+                "\"Seed\"",
+                "print",
+                "Seed",
+                "Nothing"
+              ],
+              "answer": [
+                "Seed"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Water me!",
+              "picture": "💧",
+              "explanation": "Start with print, then brackets, and put the words inside quote marks.",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Water me!",
+                "\"Water me!\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Water me!\"",
+                ")"
+              ]
+            },
+            {
+              "id": "p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "Words need quote marks. Fix: print(\"Grow!\")",
+              "options": [
+                "print(\"Seed\")",
+                "print(\"Sprout\")",
+                "print(Grow!)"
+              ],
+              "answer": [
+                "print(Grow!)"
+              ],
+              "fix": "print(\"Grow!\")",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Seed\")\nprint(\"Sprout\")",
+              "explanation": "The computer runs the lines from top to bottom, so the first message shows first.",
+              "options": [
+                "Seed, Sprout",
+                "Seed",
+                "Sprout, Seed"
+              ],
+              "answer": [
+                "Seed, Sprout"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p1l2",
+          "title": "Counting leaves",
+          "questions": [
+            {
+              "id": "p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Python does the maths.",
+              "code": "print(3 + 2)",
+              "picture": "🍃",
+              "explanation": "Without quote marks, Python does the maths: 3 + 2 = 5.",
+              "options": [
+                "3 + 2",
+                "5",
+                "32"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 3 + 2.",
+              "code": "print(\"3 + 2\")",
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "3 + 2"
+            },
+            {
+              "id": "p1l2q3",
+              "kind": "choice",
+              "prompt": "There are 3 leaves, then 2 more come. Which line shows 5?",
+              "explanation": "Leave off the quote marks so Python adds: 3 + 2 = 5.",
+              "options": [
+                "print(3 - 2)",
+                "print(\"3 + 2\")",
+                "print(3 + 2)"
+              ],
+              "answer": [
+                "print(3 + 2)"
+              ]
+            },
+            {
+              "id": "p1l2q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(10 - 3)",
+              "explanation": "10 - 3 = 7.",
+              "options": [
+                "13",
+                "10 - 3",
+                "7"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q5",
+              "kind": "build",
+              "prompt": "Build a line that shows 2 times 3",
+              "hint": "Python uses * for times.",
+              "explanation": "Python uses * for times. 2 * 3 = 6.",
+              "options": [
+                ")",
+                "(",
+                "x",
+                "print",
+                "*",
+                "2",
+                "3"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "2",
+                "*",
+                "3",
+                ")"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l3",
+          "title": "Labelled pots",
+          "questions": [
+            {
+              "id": "p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 2 cups of water in the pot labelled water",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "water ___ 2",
+              "picture": "🪴",
+              "explanation": "One = puts a value into the box. Two == would ask a question instead.",
+              "options": [
+                "==",
+                "=",
+                "+"
+              ],
+              "answer": [
+                "="
+              ]
+            },
+            {
+              "id": "p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "water = 2\nprint(water)",
+              "explanation": "water holds 2, so print(water) shows 2.",
+              "options": [
+                "\"water\"",
+                "2",
+                "water"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "water = 2\nwater = 5\nprint(water)",
+              "explanation": "The newest value replaces the old one. The box now holds 5.",
+              "options": [
+                "2",
+                "7",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q4",
+              "kind": "judge",
+              "prompt": "True or false: this shows 4.",
+              "code": "leaves = 4\nprint(\"leaves\")",
+              "explanation": "Quote marks make leaves a word, so the word shows and not what the box holds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "4"
+            },
+            {
+              "id": "p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "explanation": "= stores a value. print(name) shows the value. Quote marks show the name itself.",
+              "options": [
+                "water = 2",
+                "print(water)",
+                "water = 5",
+                "print(\"water\")"
+              ],
+              "answer": [
+                "Store 2 in the box",
+                "Show what the box holds",
+                "Swap in 5",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Swap in 5",
+                "Show what the box holds",
+                "Store 2 in the box",
+                "Show the name as a word"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l4",
+          "title": "Watering day",
+          "questions": [
+            {
+              "id": "p1l4q1",
+              "kind": "choice",
+              "prompt": "Add 5 cups to the pot. Which line updates it?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "water = 10",
+              "picture": "💧",
+              "explanation": "Take the old value, add 5, and put it back in the same box.",
+              "options": [
+                "water = 5",
+                "water = water + 5",
+                "water + 5"
+              ],
+              "answer": [
+                "water = water + 5"
+              ]
+            },
+            {
+              "id": "p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "water = 3\nwater = water - 1\nprint(water)",
+              "explanation": "3 - 1 = 2.",
+              "options": [
+                "4",
+                "3",
+                "2"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l4q3",
+              "kind": "build",
+              "prompt": "The plant drinks 1 cup. Build the line.",
+              "explanation": "Take the old value, subtract 1, and put it back in the box.",
+              "options": [
+                "=",
+                "water",
+                "-",
+                "water",
+                "1",
+                "+"
+              ],
+              "answer": [
+                "water",
+                "=",
+                "water",
+                "-",
+                "1"
+              ]
+            },
+            {
+              "id": "p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "The + needs a number after it. Fix: height = height + 3",
+              "options": [
+                "height = 2",
+                "height = height +",
+                "print(height)"
+              ],
+              "answer": [
+                "height = height +"
+              ],
+              "fix": "height = height + 3",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to seeds.",
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box.",
+              "options": [
+                "seeds = seeds + 1",
+                "seeds = seeds - 1",
+                "seeds = seeds * 2",
+                "seeds = seeds + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Add 10",
+                "Take away 1",
+                "Add 1",
+                "Double it"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Loops: repeat a step",
+      "subtitle": "Repeat something day after day",
+      "lessons": [
+        {
+          "id": "p2l1",
+          "title": "Days pass",
+          "questions": [
+            {
+              "id": "p2l1q1",
+              "kind": "choice",
+              "prompt": "How many times does Grow show?",
+              "hint": "The indented line repeats each time round.",
+              "code": "for day in range(3):\n    print(\"Grow\")",
+              "picture": "📅",
+              "explanation": "The indented line runs once each time round. range(3) means 3 times.",
+              "options": [
+                "3",
+                "1",
+                "4"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "lines"
+            },
+            {
+              "id": "p2l1q2",
+              "kind": "choice",
+              "prompt": "Water the plant 5 times. Fill the blank.",
+              "code": "for day in range(___):\n    print(\"Water\")",
+              "explanation": "range(5) repeats 5 times.",
+              "options": [
+                "4",
+                "5",
+                "6"
+              ],
+              "answer": [
+                "5"
+              ]
+            },
+            {
+              "id": "p2l1q3",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for day in range(2):\n    print(\"Sun\")\nprint(\"Night\")",
+              "explanation": "Only the indented line repeats. The last line runs once, after the loop.",
+              "options": [
+                "Sun, Night, Sun, Night",
+                "Sun, Night",
+                "Sun, Sun, Night"
+              ],
+              "answer": [
+                "Sun, Sun, Night"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l1q4",
+              "kind": "build",
+              "prompt": "Build the first line of a loop that runs 4 times",
+              "explanation": "A loop starts with for, a name, in, range(4) and a colon.",
+              "options": [
+                "day",
+                "in",
+                "range(4)",
+                ":",
+                "range(5)",
+                "for"
+              ],
+              "answer": [
+                "for",
+                "day",
+                "in",
+                "range(4)",
+                ":"
+              ]
+            },
+            {
+              "id": "p2l1q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows Leaf, Done, Leaf, Done, Leaf, Done.",
+              "code": "for day in range(3):\n    print(\"Leaf\")\nprint(\"Done\")",
+              "explanation": "Only the indented line repeats. Leaf shows 3 times, then Done shows once.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "Leaf, Done, Leaf, Done, Leaf, Done"
+            }
+          ]
+        },
+        {
+          "id": "p2l2",
+          "title": "Watch it grow",
+          "questions": [
+            {
+              "id": "p2l2q1",
+              "kind": "choice",
+              "prompt": "The plant grows 1 cm a day, starting at 2 cm. How tall is it at the end?",
+              "hint": "Follow the loop one round at a time.",
+              "code": "height = 2\nfor day in range(3):\n    height = height + 1\nprint(height)",
+              "picture": "🌱",
+              "explanation": "Each round adds 1: 2 → 3 → 4 → 5.",
+              "options": [
+                "4",
+                "3",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q2",
+              "kind": "choice",
+              "prompt": "The plant drinks 3 cups a day, starting with 10. How much is left?",
+              "code": "water = 10\nfor day in range(2):\n    water = water - 3\nprint(water)",
+              "explanation": "Each round takes away 3: 10 → 7 → 4.",
+              "options": [
+                "10",
+                "7",
+                "4"
+              ],
+              "answer": [
+                "4"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q3",
+              "kind": "choice",
+              "prompt": "The leaves double every day. What shows?",
+              "code": "leaves = 1\nfor day in range(3):\n    leaves = leaves * 2\nprint(leaves)",
+              "picture": "🌸",
+              "explanation": "Each round doubles it: 1 → 2 → 4 → 8.",
+              "options": [
+                "4",
+                "8",
+                "6"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q4",
+              "kind": "choice",
+              "prompt": "The plant should grow 2 cm a day. Fill the blank.",
+              "code": "height = 1\nfor day in range(3):\n    height = height + ___",
+              "explanation": "Each round adds the blank. To go up by 2, the blank must be 2.",
+              "options": [
+                "1",
+                "2",
+                "3"
+              ],
+              "answer": [
+                "2"
+              ]
+            },
+            {
+              "id": "p2l2q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows 4.",
+              "code": "total = 0\nfor day in range(4):\n    total = total + 1\nprint(total)",
+              "explanation": "total goes up by 1 each round, and the loop runs 4 times, so it ends at 4.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "4"
+            }
+          ]
+        },
+        {
+          "id": "p2l3",
+          "title": "Counting days",
+          "questions": [
+            {
+              "id": "p2l3q1",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "hint": "range(3) starts counting at 0, not 1.",
+              "code": "for day in range(3):\n    print(day)",
+              "explanation": "range(3) starts at 0 and stops before 3: 0, 1, 2.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "0, 1, 2"
+              ],
+              "answer": [
+                "0, 1, 2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q2",
+              "kind": "match",
+              "prompt": "Match each range to the numbers it gives.",
+              "explanation": "range(n) starts at 0. range(a, b) starts at a and stops just before b.",
+              "options": [
+                "range(3)",
+                "range(4)",
+                "range(1, 4)",
+                "range(2, 5)"
+              ],
+              "answer": [
+                "0, 1, 2",
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "2, 3, 4"
+              ],
+              "right": [
+                "0, 1, 2, 3",
+                "0, 1, 2",
+                "1, 2, 3",
+                "2, 3, 4"
+              ]
+            },
+            {
+              "id": "p2l3q3",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "code": "for day in range(1, 4):\n    print(day)",
+              "picture": "📅",
+              "explanation": "range(1, 4) starts at 1 and stops before 4.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3, 4",
+                "1, 2, 3"
+              ],
+              "answer": [
+                "1, 2, 3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "total = 0\nfor day in range(1, 4):\n    total = total + day\nprint(total)",
+              "explanation": "1 + 2 + 3 = 6.",
+              "options": [
+                "10",
+                "3",
+                "6"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q5",
+              "kind": "build",
+              "prompt": "Show days 1 to 5. Build the first line of the loop.",
+              "explanation": "range(1, 6) starts at 1 and stops before 6, so it counts 1 to 5.",
+              "options": [
+                "for",
+                "range(1, 5)",
+                ":",
+                "in",
+                "range(1, 6)",
+                "day"
+              ],
+              "answer": [
+                "for",
+                "day",
+                "in",
+                "range(1, 6)",
+                ":"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2l4",
+          "title": "Garden routine",
+          "questions": [
+            {
+              "id": "p2l4q1",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for day in range(2):\n    print(\"Water\")\n    print(\"Sun\")",
+              "explanation": "Both indented lines repeat together, in order, every round.",
+              "options": [
+                "Water, Sun",
+                "Water, Water, Sun, Sun",
+                "Water, Sun, Water, Sun"
+              ],
+              "answer": [
+                "Water, Sun, Water, Sun"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q2",
+              "kind": "choice",
+              "prompt": "The plant needs water 7 days in a row. Which loop fits?",
+              "explanation": "range(7) repeats 7 times.",
+              "options": [
+                "for day in range(8):",
+                "for day in range(7):",
+                "for day in range(6):"
+              ],
+              "answer": [
+                "for day in range(7):"
+              ]
+            },
+            {
+              "id": "p2l4q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "height = 10\nfor day in range(3):\n    height = height + 2\nprint(height)",
+              "explanation": "Each round adds 2: 10 → 12 → 14 → 16.",
+              "options": [
+                "12",
+                "18",
+                "16"
+              ],
+              "answer": [
+                "16"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q4",
+              "kind": "bug",
+              "prompt": "This should show Grow 3 times. Tap the line with the mistake.",
+              "hint": "The first line of a loop ends with a colon.",
+              "explanation": "The first line of a loop must end with a colon. Fix: for day in range(3):",
+              "options": [
+                "for day in range(3)",
+                "    print(\"Grow\")"
+              ],
+              "answer": [
+                "for day in range(3)"
+              ],
+              "fix": "for day in range(3):",
+              "verify": "bug"
+            },
+            {
+              "id": "p2l4q5",
+              "kind": "choice",
+              "prompt": "How many lines show in total?",
+              "code": "for day in range(3):\n    print(\"Water\")\n    print(\"Sun\")",
+              "explanation": "3 rounds with 2 lines each is 6 lines.",
+              "options": [
+                "6",
+                "4",
+                "3"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Decisions: if / else",
+      "subtitle": "Wet soil or dry soil",
+      "lessons": [
+        {
+          "id": "p3l1",
+          "title": "Wet or dry",
+          "questions": [
+            {
+              "id": "p3l1q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "The indented line runs only when the check is true.",
+              "code": "soil = \"dry\"\nif soil == \"dry\":\n    print(\"Water it\")",
+              "picture": "🟫",
+              "explanation": "The soil is dry, so the indented line runs.",
+              "options": [
+                "Nothing",
+                "Water it",
+                "dry"
+              ],
+              "answer": [
+                "Water it"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "soil = \"wet\"\nif soil == \"dry\":\n    print(\"Water it\")\nelse:\n    print(\"Skip it\")",
+              "explanation": "The soil is not dry, so the else line runs.",
+              "options": [
+                "Water it",
+                "wet",
+                "Skip it"
+              ],
+              "answer": [
+                "Skip it"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q3",
+              "kind": "judge",
+              "prompt": "True or false: a single = asks \"are these the same?\"",
+              "code": "if soil = \"dry\":",
+              "explanation": "A single = stores a value. Use == to ask if two things are the same.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ]
+            },
+            {
+              "id": "p3l1q4",
+              "kind": "build",
+              "prompt": "Build: if the soil is dry",
+              "explanation": "Start with if, then the name, ==, the word in quote marks, and a colon.",
+              "options": [
+                "==",
+                ":",
+                "if",
+                "soil",
+                "\"dry\"",
+                "="
+              ],
+              "answer": [
+                "if",
+                "soil",
+                "==",
+                "\"dry\"",
+                ":"
+              ]
+            },
+            {
+              "id": "p3l1q5",
+              "kind": "choice",
+              "prompt": "Fill the blank so it checks the soil",
+              "code": "soil = \"dry\"\nif soil ___ \"dry\":\n    print(\"Water it\")",
+              "explanation": "== asks whether the two things are the same.",
+              "options": [
+                "+",
+                "==",
+                "="
+              ],
+              "answer": [
+                "=="
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3l2",
+          "title": "Sunny or not",
+          "questions": [
+            {
+              "id": "p3l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "> means more than. < means less than.",
+              "code": "sun = 8\nif sun > 5:\n    print(\"Happy plant\")",
+              "picture": "☀️",
+              "explanation": "8 is more than 5, so the message shows.",
+              "options": [
+                "Nothing",
+                "8",
+                "Happy plant"
+              ],
+              "answer": [
+                "Happy plant"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "water = 1\nif water < 2:\n    print(\"Thirsty\")\nelse:\n    print(\"Fine\")",
+              "explanation": "1 is less than 2, so the first message runs.",
+              "options": [
+                "Fine",
+                "Thirsty",
+                "1"
+              ],
+              "answer": [
+                "Thirsty"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q3",
+              "kind": "match",
+              "prompt": "Match each sign to its meaning.",
+              "explanation": "> and < compare sizes. == checks for the same. >= also counts when they are equal.",
+              "options": [
+                ">",
+                "<",
+                "==",
+                ">="
+              ],
+              "answer": [
+                "is more than",
+                "is less than",
+                "is the same as",
+                "is more than or the same as"
+              ],
+              "right": [
+                "is more than",
+                "is more than or the same as",
+                "is less than",
+                "is the same as"
+              ]
+            },
+            {
+              "id": "p3l2q4",
+              "kind": "choice",
+              "prompt": "Show Too hot when temp is over 30. Fill the blank.",
+              "code": "temp = 35\nif temp ___ 30:\n    print(\"Too hot\")",
+              "explanation": "> means more than.",
+              "options": [
+                "=",
+                ">",
+                "<"
+              ],
+              "answer": [
+                ">"
+              ]
+            },
+            {
+              "id": "p3l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "height = 12\nif height >= 12:\n    print(\"Tall\")\nelse:\n    print(\"Short\")",
+              "explanation": ">= is also true when the two are equal, and 12 equals 12.",
+              "options": [
+                "Nothing",
+                "Short",
+                "Tall"
+              ],
+              "answer": [
+                "Tall"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l3",
+          "title": "Daily check",
+          "questions": [
+            {
+              "id": "p3l3q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "water = 0\nfor day in range(3):\n    if water < 2:\n        water = water + 1\nprint(water)",
+              "picture": "🪴",
+              "explanation": "It goes up only while it is below 2: 0 → 1 → 2 → 2.",
+              "options": [
+                "1",
+                "3",
+                "2"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q2",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for day in range(1, 4):\n    if day == 2:\n        print(\"Rain\")\n    else:\n        print(\"Sun\")",
+              "explanation": "The loop counts 1, 2, 3. Only 2 matches, so Rain shows once.",
+              "options": [
+                "Rain, Sun, Rain",
+                "Sun, Sun, Sun",
+                "Sun, Rain, Sun"
+              ],
+              "answer": [
+                "Sun, Rain, Sun"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q3",
+              "kind": "choice",
+              "prompt": "The greenhouse cools by 1 degree a minute until it reaches 30. What shows?",
+              "code": "temp = 32\nfor step in range(3):\n    if temp > 30:\n        temp = temp - 1\nprint(temp)",
+              "picture": "🌡️",
+              "explanation": "It drops by 1 while it is above 30, then stops: 32 → 31 → 30.",
+              "options": [
+                "29",
+                "31",
+                "30"
+              ],
+              "answer": [
+                "30"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "hint": "Asking a question needs two equals signs.",
+              "explanation": "One = stores a value. To ask a question, use ==. Fix: if soil == \"dry\":",
+              "options": [
+                "soil = \"dry\"",
+                "if soil = \"dry\":",
+                "    print(\"Water it\")"
+              ],
+              "answer": [
+                "if soil = \"dry\":"
+              ],
+              "fix": "if soil == \"dry\":",
+              "verify": "bug"
+            },
+            {
+              "id": "p3l3q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "count = 0\nfor day in range(4):\n    if day > 1:\n        count = count + 1\nprint(count)",
+              "explanation": "The loop counts 0 to 3. Only 2, 3 are more than 1, so count is 2.",
+              "options": [
+                "2",
+                "4",
+                "3"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l4",
+          "title": "Garden review",
+          "questions": [
+            {
+              "id": "p3l4q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(\"Sprout\")",
+              "picture": "🌸",
+              "explanation": "print shows the words between the quote marks.",
+              "options": [
+                "print",
+                "\"Sprout\"",
+                "Sprout"
+              ],
+              "answer": [
+                "Sprout"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "water = 3\nwater = water + 2\nprint(water)",
+              "explanation": "3 + 2 = 5, and the new value goes back in the box.",
+              "options": [
+                "2",
+                "3",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q3",
+              "kind": "judge",
+              "prompt": "True or false: this shows Grow, Grow.",
+              "code": "for day in range(2):\n    print(\"Grow\")",
+              "explanation": "range(2) repeats the line twice, so Grow shows 2 times.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Grow, Grow"
+            },
+            {
+              "id": "p3l4q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "soil = \"wet\"\nif soil == \"wet\":\n    print(\"Skip it\")\nelse:\n    print(\"Water it\")",
+              "explanation": "The soil is wet, so the first message shows.",
+              "options": [
+                "Skip it",
+                "wet",
+                "Water it"
+              ],
+              "answer": [
+                "Skip it"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q5",
+              "kind": "build",
+              "prompt": "Build a line that checks if sun is more than 5",
+              "explanation": "Start with if, then the name, >, the number, and a colon.",
+              "options": [
+                "sun",
+                "<",
+                "5",
+                "if",
+                ":",
+                ">"
+              ],
+              "answer": [
+                "if",
+                "sun",
+                ">",
+                "5",
+                ":"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

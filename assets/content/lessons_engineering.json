@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "area": "Engineering",
+  "phases": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "p1l1",
+          "title": "Site board",
+          "questions": [
+            {
+              "id": "p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the site board say hello",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "📋",
+              "explanation": "Words go inside quote marks. Then print shows them on the site board.",
+              "options": [
+                "Hello, site!",
+                "(Hello, site!)",
+                "\"Hello, site!\"",
+                "hello, site!"
+              ],
+              "answer": [
+                "\"Hello, site!\""
+              ]
+            },
+            {
+              "id": "p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the site board show?",
+              "code": "print(\"Dig\")",
+              "explanation": "print shows the words between the quote marks. The quote marks themselves are not shown.",
+              "options": [
+                "\"Dig\"",
+                "print",
+                "Dig",
+                "Nothing"
+              ],
+              "answer": [
+                "Dig"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Hard hats on",
+              "picture": "⛑️",
+              "explanation": "Start with print, then brackets, and put the words inside quote marks.",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Hard hats on",
+                "\"Hard hats on\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Hard hats on\"",
+                ")"
+              ]
+            },
+            {
+              "id": "p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "Words need quote marks. Fix: print(\"Stop!\")",
+              "options": [
+                "print(\"Dig\")",
+                "print(\"Pour\")",
+                "print(Stop!)"
+              ],
+              "answer": [
+                "print(Stop!)"
+              ],
+              "fix": "print(\"Stop!\")",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Dig\")\nprint(\"Pour\")",
+              "explanation": "The computer runs the lines from top to bottom, so the first message shows first.",
+              "options": [
+                "Dig, Pour",
+                "Dig",
+                "Pour, Dig"
+              ],
+              "answer": [
+                "Dig, Pour"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p1l2",
+          "title": "Counting beams",
+          "questions": [
+            {
+              "id": "p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Python does the maths.",
+              "code": "print(6 + 4)",
+              "picture": "🔩",
+              "explanation": "Without quote marks, Python does the maths: 6 + 4 = 10.",
+              "options": [
+                "6 + 4",
+                "10",
+                "64"
+              ],
+              "answer": [
+                "10"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 10.",
+              "code": "print(\"6 + 4\")",
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "10"
+            },
+            {
+              "id": "p1l2q3",
+              "kind": "choice",
+              "prompt": "There are 6 beams, then 4 more come. Which line shows 10?",
+              "explanation": "Leave off the quote marks so Python adds: 6 + 4 = 10.",
+              "options": [
+                "print(6 - 4)",
+                "print(\"6 + 4\")",
+                "print(6 + 4)"
+              ],
+              "answer": [
+                "print(6 + 4)"
+              ]
+            },
+            {
+              "id": "p1l2q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(15 - 6)",
+              "explanation": "15 - 6 = 9.",
+              "options": [
+                "21",
+                "15 - 6",
+                "9"
+              ],
+              "answer": [
+                "9"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q5",
+              "kind": "build",
+              "prompt": "Build a line that shows 4 times 5",
+              "hint": "Python uses * for times.",
+              "explanation": "Python uses * for times. 4 * 5 = 20.",
+              "options": [
+                ")",
+                "(",
+                "x",
+                "print",
+                "*",
+                "4",
+                "5"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "4",
+                "*",
+                "5",
+                ")"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l3",
+          "title": "Labelled crates",
+          "questions": [
+            {
+              "id": "p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 8 tonnes in the crane box labelled load",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "load ___ 8",
+              "picture": "📐",
+              "explanation": "One = puts a value into the box. Two == would ask a question instead.",
+              "options": [
+                "==",
+                "=",
+                "+"
+              ],
+              "answer": [
+                "="
+              ]
+            },
+            {
+              "id": "p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "load = 8\nprint(load)",
+              "explanation": "load holds 8, so print(load) shows 8.",
+              "options": [
+                "\"load\"",
+                "8",
+                "load"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "load = 8\nload = 12\nprint(load)",
+              "explanation": "The newest value replaces the old one. The box now holds 12.",
+              "options": [
+                "8",
+                "20",
+                "12"
+              ],
+              "answer": [
+                "12"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q4",
+              "kind": "judge",
+              "prompt": "True or false: this shows bolts.",
+              "code": "bolts = 6\nprint(\"bolts\")",
+              "explanation": "Quote marks make bolts a word, so the word shows and not what the box holds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "bolts"
+            },
+            {
+              "id": "p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "explanation": "= stores a value. print(name) shows the value. Quote marks show the name itself.",
+              "options": [
+                "load = 8",
+                "print(load)",
+                "load = 12",
+                "print(\"load\")"
+              ],
+              "answer": [
+                "Store 8 in the box",
+                "Show what the box holds",
+                "Swap in 12",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Swap in 12",
+                "Show what the box holds",
+                "Store 8 in the box",
+                "Show the name as a word"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l4",
+          "title": "Crane lifts",
+          "questions": [
+            {
+              "id": "p1l4q1",
+              "kind": "choice",
+              "prompt": "The crane lifts 5 more tonnes. Which line updates load?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "load = 20",
+              "picture": "🏗️",
+              "explanation": "Take the old value, add 5, and put it back in the same box.",
+              "options": [
+                "load = 5",
+                "load = load + 5",
+                "load + 5"
+              ],
+              "answer": [
+                "load = load + 5"
+              ]
+            },
+            {
+              "id": "p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "load = 20\nload = load - 5\nprint(load)",
+              "explanation": "20 - 5 = 15.",
+              "options": [
+                "25",
+                "20",
+                "15"
+              ],
+              "answer": [
+                "15"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l4q3",
+              "kind": "build",
+              "prompt": "The crane drops off 5 tonnes. Build the line.",
+              "explanation": "Take the old value, subtract 5, and put it back in the box.",
+              "options": [
+                "=",
+                "load",
+                "-",
+                "load",
+                "5",
+                "+"
+              ],
+              "answer": [
+                "load",
+                "=",
+                "load",
+                "-",
+                "5"
+              ]
+            },
+            {
+              "id": "p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "The + needs a number after it. Fix: rows = rows + 2",
+              "options": [
+                "rows = 4",
+                "rows = rows +",
+                "print(rows)"
+              ],
+              "answer": [
+                "rows = rows +"
+              ],
+              "fix": "rows = rows + 2",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to planks.",
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box.",
+              "options": [
+                "planks = planks + 1",
+                "planks = planks - 1",
+                "planks = planks * 2",
+                "planks = planks + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Add 10",
+                "Take away 1",
+                "Add 1",
+                "Double it"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Loops: repeat a step",
+      "subtitle": "Repeat a job hour after hour",
+      "lessons": [
+        {
+          "id": "p2l1",
+          "title": "Shifts pass",
+          "questions": [
+            {
+              "id": "p2l1q1",
+              "kind": "choice",
+              "prompt": "How many times does Lift show?",
+              "hint": "The indented line repeats each time round.",
+              "code": "for hour in range(4):\n    print(\"Lift\")",
+              "picture": "⏱️",
+              "explanation": "The indented line runs once each time round. range(4) means 4 times.",
+              "options": [
+                "4",
+                "1",
+                "5"
+              ],
+              "answer": [
+                "4"
+              ],
+              "verify": "lines"
+            },
+            {
+              "id": "p2l1q2",
+              "kind": "choice",
+              "prompt": "The crane must lift 6 times. Fill the blank.",
+              "code": "for hour in range(___):\n    print(\"Weld\")",
+              "explanation": "range(6) repeats 6 times.",
+              "options": [
+                "5",
+                "6",
+                "7"
+              ],
+              "answer": [
+                "6"
+              ]
+            },
+            {
+              "id": "p2l1q3",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for hour in range(2):\n    print(\"Drill\")\nprint(\"Rest\")",
+              "explanation": "Only the indented line repeats. The last line runs once, after the loop.",
+              "options": [
+                "Drill, Rest, Drill, Rest",
+                "Drill, Rest",
+                "Drill, Drill, Rest"
+              ],
+              "answer": [
+                "Drill, Drill, Rest"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l1q4",
+              "kind": "build",
+              "prompt": "Build the first line of a loop that runs 5 times",
+              "explanation": "A loop starts with for, a name, in, range(5) and a colon.",
+              "options": [
+                "hour",
+                "in",
+                "range(5)",
+                ":",
+                "range(6)",
+                "for"
+              ],
+              "answer": [
+                "for",
+                "hour",
+                "in",
+                "range(5)",
+                ":"
+              ]
+            },
+            {
+              "id": "p2l1q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows Bolt, Bolt, Bolt, Done.",
+              "code": "for hour in range(3):\n    print(\"Bolt\")\nprint(\"Done\")",
+              "explanation": "Only the indented line repeats. Bolt shows 3 times, then Done shows once.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Bolt, Bolt, Bolt, Done"
+            }
+          ]
+        },
+        {
+          "id": "p2l2",
+          "title": "Watch it rise",
+          "questions": [
+            {
+              "id": "p2l2q1",
+              "kind": "choice",
+              "prompt": "A wall rises 2 rows an hour, starting at 5 rows. How many rows at the end?",
+              "hint": "Follow the loop one round at a time.",
+              "code": "rows = 5\nfor hour in range(4):\n    rows = rows + 2\nprint(rows)",
+              "picture": "🧱",
+              "explanation": "Each round adds 2: 5 → 7 → 9 → 11 → 13.",
+              "options": [
+                "11",
+                "7",
+                "13"
+              ],
+              "answer": [
+                "13"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q2",
+              "kind": "choice",
+              "prompt": "The generator burns 4 litres an hour, starting with 20. How much is left?",
+              "code": "fuel = 20\nfor hour in range(3):\n    fuel = fuel - 4\nprint(fuel)",
+              "explanation": "Each round takes away 4: 20 → 16 → 12 → 8.",
+              "options": [
+                "20",
+                "16",
+                "8"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q3",
+              "kind": "choice",
+              "prompt": "The amplifier doubles the signal every hour. What shows at the end?",
+              "code": "gain = 1\nfor hour in range(4):\n    gain = gain * 2\nprint(gain)",
+              "picture": "🏁",
+              "explanation": "Each round doubles it: 1 → 2 → 4 → 8 → 16.",
+              "options": [
+                "8",
+                "16",
+                "32"
+              ],
+              "answer": [
+                "16"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q4",
+              "kind": "choice",
+              "prompt": "The wall should rise 3 rows an hour. Fill the blank.",
+              "code": "rows = 1\nfor hour in range(3):\n    rows = rows + ___",
+              "explanation": "Each round adds the blank. To go up by 3, the blank must be 3.",
+              "options": [
+                "2",
+                "3",
+                "4"
+              ],
+              "answer": [
+                "3"
+              ]
+            },
+            {
+              "id": "p2l2q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows 6.",
+              "code": "total = 0\nfor hour in range(5):\n    total = total + 1\nprint(total)",
+              "explanation": "total goes up by 1 each round, and the loop runs 5 times, so it ends at 5.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "6"
+            }
+          ]
+        },
+        {
+          "id": "p2l3",
+          "title": "Counting hours",
+          "questions": [
+            {
+              "id": "p2l3q1",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "hint": "range(3) starts counting at 0, not 1.",
+              "code": "for hour in range(3):\n    print(hour)",
+              "explanation": "range(3) starts at 0 and stops before 3: 0, 1, 2.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "0, 1, 2"
+              ],
+              "answer": [
+                "0, 1, 2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q2",
+              "kind": "match",
+              "prompt": "Match each range to the numbers it gives.",
+              "explanation": "range(n) starts at 0. range(a, b) starts at a and stops just before b.",
+              "options": [
+                "range(4)",
+                "range(1, 4)",
+                "range(2, 5)",
+                "range(1, 5)"
+              ],
+              "answer": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "2, 3, 4",
+                "1, 2, 3, 4"
+              ],
+              "right": [
+                "1, 2, 3",
+                "0, 1, 2, 3",
+                "2, 3, 4",
+                "1, 2, 3, 4"
+              ]
+            },
+            {
+              "id": "p2l3q3",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "code": "for hour in range(1, 4):\n    print(hour)",
+              "picture": "⏱️",
+              "explanation": "range(1, 4) starts at 1 and stops before 4.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3, 4",
+                "1, 2, 3"
+              ],
+              "answer": [
+                "1, 2, 3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "total = 0\nfor hour in range(1, 5):\n    total = total + hour\nprint(total)",
+              "explanation": "1 + 2 + 3 + 4 = 10.",
+              "options": [
+                "15",
+                "4",
+                "10"
+              ],
+              "answer": [
+                "10"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q5",
+              "kind": "build",
+              "prompt": "Show hours 1 to 4. Build the first line of the loop.",
+              "explanation": "range(1, 5) starts at 1 and stops before 5, so it counts 1 to 4.",
+              "options": [
+                "for",
+                "range(1, 4)",
+                ":",
+                "in",
+                "range(1, 5)",
+                "hour"
+              ],
+              "answer": [
+                "for",
+                "hour",
+                "in",
+                "range(1, 5)",
+                ":"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2l4",
+          "title": "Site routine",
+          "questions": [
+            {
+              "id": "p2l4q1",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for hour in range(2):\n    print(\"Measure\")\n    print(\"Cut\")",
+              "explanation": "Both indented lines repeat together, in order, every round.",
+              "options": [
+                "Measure, Cut",
+                "Measure, Measure, Cut, Cut",
+                "Measure, Cut, Measure, Cut"
+              ],
+              "answer": [
+                "Measure, Cut, Measure, Cut"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q2",
+              "kind": "choice",
+              "prompt": "The inspection must run 5 hours in a row. Which loop fits?",
+              "explanation": "range(5) repeats 5 times.",
+              "options": [
+                "for hour in range(6):",
+                "for hour in range(5):",
+                "for hour in range(4):"
+              ],
+              "answer": [
+                "for hour in range(5):"
+              ]
+            },
+            {
+              "id": "p2l4q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "weight = 100\nfor hour in range(3):\n    weight = weight + 25\nprint(weight)",
+              "explanation": "Each round adds 25: 100 → 125 → 150 → 175.",
+              "options": [
+                "125",
+                "200",
+                "175"
+              ],
+              "answer": [
+                "175"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q4",
+              "kind": "bug",
+              "prompt": "This should show Lift 3 times. Tap the line with the mistake.",
+              "hint": "The first line of a loop ends with a colon.",
+              "explanation": "The first line of a loop must end with a colon. Fix: for hour in range(3):",
+              "options": [
+                "for hour in range(3)",
+                "    print(\"Lift\")"
+              ],
+              "answer": [
+                "for hour in range(3)"
+              ],
+              "fix": "for hour in range(3):",
+              "verify": "bug"
+            },
+            {
+              "id": "p2l4q5",
+              "kind": "choice",
+              "prompt": "How many lines show in total?",
+              "code": "for hour in range(4):\n    print(\"Measure\")\n    print(\"Cut\")",
+              "explanation": "4 rounds with 2 lines each is 8 lines.",
+              "options": [
+                "8",
+                "5",
+                "4"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Decisions: if / else",
+      "subtitle": "Wet concrete or set concrete",
+      "lessons": [
+        {
+          "id": "p3l1",
+          "title": "Wet or set",
+          "questions": [
+            {
+              "id": "p3l1q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "The indented line runs only when the check is true.",
+              "code": "concrete = \"wet\"\nif concrete == \"wet\":\n    print(\"Keep off\")",
+              "picture": "🚧",
+              "explanation": "The concrete is wet, so the indented line runs.",
+              "options": [
+                "Nothing",
+                "Keep off",
+                "wet"
+              ],
+              "answer": [
+                "Keep off"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "concrete = \"set\"\nif concrete == \"wet\":\n    print(\"Keep off\")\nelse:\n    print(\"Build on it\")",
+              "explanation": "The concrete is not wet, so the else line runs.",
+              "options": [
+                "Keep off",
+                "set",
+                "Build on it"
+              ],
+              "answer": [
+                "Build on it"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q3",
+              "kind": "judge",
+              "prompt": "True or false: == asks \"are these the same?\"",
+              "code": "if concrete == \"wet\":",
+              "explanation": "== asks a question: are these the same? A single = stores a value.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ]
+            },
+            {
+              "id": "p3l1q4",
+              "kind": "build",
+              "prompt": "Build: if the concrete is wet",
+              "explanation": "Start with if, then the name, ==, the word in quote marks, and a colon.",
+              "options": [
+                "==",
+                ":",
+                "if",
+                "concrete",
+                "\"wet\"",
+                "="
+              ],
+              "answer": [
+                "if",
+                "concrete",
+                "==",
+                "\"wet\"",
+                ":"
+              ]
+            },
+            {
+              "id": "p3l1q5",
+              "kind": "choice",
+              "prompt": "Fill the blank so it checks the concrete",
+              "code": "concrete = \"wet\"\nif concrete ___ \"wet\":\n    print(\"Keep off\")",
+              "explanation": "== asks whether the two things are the same.",
+              "options": [
+                "+",
+                "==",
+                "="
+              ],
+              "answer": [
+                "=="
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3l2",
+          "title": "Safe or not",
+          "questions": [
+            {
+              "id": "p3l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "> means more than. < means less than.",
+              "code": "load = 12\nif load > 10:\n    print(\"Too heavy\")",
+              "picture": "🔧",
+              "explanation": "12 is more than 10, so the message shows.",
+              "options": [
+                "Nothing",
+                "12",
+                "Too heavy"
+              ],
+              "answer": [
+                "Too heavy"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "bolts = 3\nif bolts < 4:\n    print(\"Add bolts\")\nelse:\n    print(\"Enough bolts\")",
+              "explanation": "3 is less than 4, so the first message runs.",
+              "options": [
+                "Enough bolts",
+                "Add bolts",
+                "3"
+              ],
+              "answer": [
+                "Add bolts"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q3",
+              "kind": "match",
+              "prompt": "Match each sign to its meaning.",
+              "explanation": "> and < compare sizes. == checks for the same. >= also counts when they are equal.",
+              "options": [
+                ">",
+                "<",
+                "==",
+                ">="
+              ],
+              "answer": [
+                "is more than",
+                "is less than",
+                "is the same as",
+                "is more than or the same as"
+              ],
+              "right": [
+                "is more than",
+                "is more than or the same as",
+                "is less than",
+                "is the same as"
+              ]
+            },
+            {
+              "id": "p3l2q4",
+              "kind": "choice",
+              "prompt": "Show Too high when pressure is over 60. Fill the blank.",
+              "code": "pressure = 65\nif pressure ___ 60:\n    print(\"Too high\")",
+              "explanation": "> means more than.",
+              "options": [
+                "=",
+                ">",
+                "<"
+              ],
+              "answer": [
+                ">"
+              ]
+            },
+            {
+              "id": "p3l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "height = 20\nif height >= 20:\n    print(\"Full height\")\nelse:\n    print(\"Keep building\")",
+              "explanation": ">= is also true when the two are equal, and 20 equals 20.",
+              "options": [
+                "Nothing",
+                "Keep building",
+                "Full height"
+              ],
+              "answer": [
+                "Full height"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l3",
+          "title": "Site check",
+          "questions": [
+            {
+              "id": "p3l3q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "bolts = 0\nfor hour in range(5):\n    if bolts < 3:\n        bolts = bolts + 1\nprint(bolts)",
+              "picture": "📐",
+              "explanation": "It goes up only while it is below 3: 0 → 1 → 2 → 3 → 3 → 3.",
+              "options": [
+                "4",
+                "5",
+                "3"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q2",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for hour in range(1, 4):\n    if hour == 2:\n        print(\"Storm\")\n    else:\n        print(\"Work\")",
+              "explanation": "The loop counts 1, 2, 3. Only 2 matches, so Storm shows once.",
+              "options": [
+                "Storm, Work, Storm",
+                "Work, Work, Work",
+                "Work, Storm, Work"
+              ],
+              "answer": [
+                "Work, Storm, Work"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q3",
+              "kind": "choice",
+              "prompt": "The boiler vents 1 bar a minute until the pressure reaches 25. What shows?",
+              "code": "pressure = 27\nfor step in range(3):\n    if pressure > 25:\n        pressure = pressure - 1\nprint(pressure)",
+              "picture": "🌉",
+              "explanation": "It drops by 1 while it is above 25, then stops: 27 → 26 → 25.",
+              "options": [
+                "24",
+                "26",
+                "25"
+              ],
+              "answer": [
+                "25"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "hint": "Asking a question needs two equals signs.",
+              "explanation": "One = stores a value. To ask a question, use ==. Fix: if concrete == \"wet\":",
+              "options": [
+                "concrete = \"wet\"",
+                "if concrete = \"wet\":",
+                "    print(\"Keep off\")"
+              ],
+              "answer": [
+                "if concrete = \"wet\":"
+              ],
+              "fix": "if concrete == \"wet\":",
+              "verify": "bug"
+            },
+            {
+              "id": "p3l3q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "count = 0\nfor hour in range(5):\n    if hour > 2:\n        count = count + 1\nprint(count)",
+              "explanation": "The loop counts 0 to 4. Only 3, 4 are more than 2, so count is 2.",
+              "options": [
+                "2",
+                "5",
+                "3"
+              ],
+              "answer": [
+                "2"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l4",
+          "title": "Site review",
+          "questions": [
+            {
+              "id": "p3l4q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(\"Pour\")",
+              "picture": "🏁",
+              "explanation": "print shows the words between the quote marks.",
+              "options": [
+                "print",
+                "\"Pour\"",
+                "Pour"
+              ],
+              "answer": [
+                "Pour"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "fuel = 3\nfuel = fuel + 2\nprint(fuel)",
+              "explanation": "3 + 2 = 5, and the new value goes back in the box.",
+              "options": [
+                "2",
+                "3",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q3",
+              "kind": "judge",
+              "prompt": "True or false: this shows Lift.",
+              "code": "for hour in range(2):\n    print(\"Lift\")",
+              "explanation": "range(2) repeats the line twice, so Lift shows 2 times.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "Lift"
+            },
+            {
+              "id": "p3l4q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "concrete = \"set\"\nif concrete == \"set\":\n    print(\"Build on it\")\nelse:\n    print(\"Keep off\")",
+              "explanation": "The concrete is set, so the first message shows.",
+              "options": [
+                "Build on it",
+                "set",
+                "Keep off"
+              ],
+              "answer": [
+                "Build on it"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q5",
+              "kind": "build",
+              "prompt": "Build a line that checks if load is more than 10",
+              "explanation": "Start with if, then the name, >, the number, and a colon.",
+              "options": [
+                "load",
+                "<",
+                "10",
+                "if",
+                ":",
+                ">"
+              ],
+              "answer": [
+                "if",
+                "load",
+                ">",
+                "10",
+                ":"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

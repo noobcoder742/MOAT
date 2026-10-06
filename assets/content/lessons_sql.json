@@ -1,0 +1,389 @@
+{
+  "version": 2,
+  "area": "SQL",
+  "phases": [
+    {
+      "id": "sql_p1",
+      "number": 1,
+      "title": "Ask the data",
+      "subtitle": "Read a table with SELECT",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "sql_p1l1",
+          "title": "Read the menu",
+          "questions": [
+            {
+              "id": "sql_p1l1q1",
+              "kind": "choice",
+              "prompt": "Show the drink names",
+              "hint": "SELECT picks a column. FROM says which table.",
+              "code": "-- menu has name and price\nSELECT ___ FROM menu;",
+              "picture": "☕",
+              "options": [
+                "menu",
+                "'name'",
+                "price",
+                "name"
+              ],
+              "answer": [
+                "name"
+              ],
+              "explanation": "SELECT picks a column. name is the column that holds the drink names."
+            },
+            {
+              "id": "sql_p1l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT price FROM menu;",
+              "options": [
+                "price, price, price",
+                "4.50, 5.00, 3.00",
+                "Latte, Mocha, Tea"
+              ],
+              "answer": [
+                "4.50, 5.00, 3.00"
+              ],
+              "explanation": "SELECT price shows the price column: one price for each drink.",
+              "verify": "output"
+            },
+            {
+              "id": "sql_p1l1q3",
+              "kind": "build",
+              "prompt": "Build the query that shows every name.",
+              "options": [
+                "SELECT",
+                "FROM",
+                "menu",
+                "name",
+                ";",
+                "price",
+                "WHERE"
+              ],
+              "answer": [
+                "SELECT",
+                "name",
+                "FROM",
+                "menu",
+                ";"
+              ],
+              "explanation": "SELECT says what to show, FROM says which table, and the semicolon ends the query."
+            },
+            {
+              "id": "sql_p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "SELECT name FROM menu;",
+                "SELECT price FROM menu;",
+                "SELECT name menu;"
+              ],
+              "answer": [
+                "SELECT name menu;"
+              ],
+              "explanation": "FROM is missing, so the database does not know which table to look in. Fix: SELECT name FROM menu;",
+              "verify": "bug",
+              "fix": "SELECT name FROM menu;"
+            },
+            {
+              "id": "sql_p1l1q5",
+              "kind": "choice",
+              "prompt": "Which line shows both name and price?",
+              "hint": "Columns are separated by commas.",
+              "options": [
+                "SELECT name + price FROM menu;",
+                "SELECT name price FROM menu;",
+                "SELECT name, price FROM menu;"
+              ],
+              "answer": [
+                "SELECT name, price FROM menu;"
+              ],
+              "explanation": "A comma separates the columns you want."
+            }
+          ]
+        },
+        {
+          "id": "sql_p1l2",
+          "title": "Pick the rows",
+          "questions": [
+            {
+              "id": "sql_p1l2q1",
+              "kind": "choice",
+              "prompt": "Which drinks show?",
+              "hint": "WHERE keeps only the rows that match.",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT name FROM menu\nWHERE price > 4;",
+              "picture": "🔎",
+              "options": [
+                "Mocha",
+                "Latte, Mocha, Tea",
+                "Latte, Mocha",
+                "Tea"
+              ],
+              "answer": [
+                "Latte, Mocha"
+              ],
+              "explanation": "WHERE keeps only the rows that match. Latte (4.50) and Mocha (5.00) cost more than 4.",
+              "verify": "output"
+            },
+            {
+              "id": "sql_p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: Tea shows.",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT name FROM menu\nWHERE price < 4;",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "explanation": "Tea costs 3.00, which is less than 4, so it matches.",
+              "verify": "judge",
+              "claim": "Tea"
+            },
+            {
+              "id": "sql_p1l2q3",
+              "kind": "choice",
+              "prompt": "Show the price of the drink named Tea.",
+              "hint": "Text goes in single quotes.",
+              "code": "SELECT price FROM menu\nWHERE name ___;",
+              "options": [
+                "== Tea",
+                "= 'Tea'",
+                "= Tea"
+              ],
+              "answer": [
+                "= 'Tea'"
+              ],
+              "explanation": "Text goes in single quotes. Without them, SQL looks for a column called Tea."
+            },
+            {
+              "id": "sql_p1l2q4",
+              "kind": "build",
+              "prompt": "Build the condition: price is more than 4.",
+              "code": "SELECT name FROM menu",
+              "options": [
+                "WHERE",
+                "price",
+                ">",
+                "4",
+                "<",
+                "\"4\"",
+                ";"
+              ],
+              "answer": [
+                "WHERE",
+                "price",
+                ">",
+                "4",
+                ";"
+              ],
+              "explanation": "WHERE starts the condition. Numbers do not need quote marks."
+            },
+            {
+              "id": "sql_p1l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT name FROM menu\nWHERE price = 5;",
+              "options": [
+                "Nothing",
+                "Latte, Mocha",
+                "Mocha"
+              ],
+              "answer": [
+                "Mocha"
+              ],
+              "explanation": "Only Mocha costs exactly 5.",
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "sql_p1l3",
+          "title": "Put in order",
+          "questions": [
+            {
+              "id": "sql_p1l3q1",
+              "kind": "choice",
+              "prompt": "Sort the drinks from cheapest to most expensive.",
+              "code": "SELECT name FROM menu\nORDER BY ___;",
+              "picture": "📊",
+              "options": [
+                "price",
+                "SELECT",
+                "menu"
+              ],
+              "answer": [
+                "price"
+              ],
+              "explanation": "ORDER BY price sorts the rows by the price column."
+            },
+            {
+              "id": "sql_p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT name FROM menu\nORDER BY price;",
+              "options": [
+                "Mocha, Latte, Tea",
+                "Tea, Latte, Mocha",
+                "Latte, Mocha, Tea"
+              ],
+              "answer": [
+                "Tea, Latte, Mocha"
+              ],
+              "explanation": "Cheapest first: Tea 3.00, Latte 4.50, Mocha 5.00.",
+              "verify": "output"
+            },
+            {
+              "id": "sql_p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT name FROM menu\nORDER BY price DESC;",
+              "options": [
+                "Mocha, Tea, Latte",
+                "Tea, Latte, Mocha",
+                "Mocha, Latte, Tea"
+              ],
+              "answer": [
+                "Mocha, Latte, Tea"
+              ],
+              "explanation": "DESC flips the order: most expensive first.",
+              "verify": "output"
+            },
+            {
+              "id": "sql_p1l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "SELECT name FROM menu;",
+                "SELECT name FROM menu WHERE price > 4;",
+                "SELECT name FROM menu ORDER price;"
+              ],
+              "answer": [
+                "SELECT name FROM menu ORDER price;"
+              ],
+              "explanation": "Sorting needs ORDER BY. Fix: ORDER BY price",
+              "verify": "bug",
+              "fix": "SELECT name FROM menu ORDER BY price;"
+            },
+            {
+              "id": "sql_p1l3q5",
+              "kind": "choice",
+              "prompt": "Show only the two cheapest drinks.",
+              "code": "SELECT name FROM menu\nORDER BY price\n___ 2;",
+              "options": [
+                "LIMIT",
+                "COUNT",
+                "WHERE"
+              ],
+              "answer": [
+                "LIMIT"
+              ],
+              "explanation": "LIMIT 2 stops after the first two rows."
+            }
+          ]
+        },
+        {
+          "id": "sql_p1l4",
+          "title": "Count and add",
+          "questions": [
+            {
+              "id": "sql_p1l4q1",
+              "kind": "choice",
+              "prompt": "How many drinks are on the menu?",
+              "code": "SELECT ___(*) FROM menu;",
+              "picture": "🧮",
+              "options": [
+                "SUM",
+                "COUNT",
+                "MAX"
+              ],
+              "answer": [
+                "COUNT"
+              ],
+              "explanation": "COUNT(*) counts the rows."
+            },
+            {
+              "id": "sql_p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "-- menu: Latte 4.50, Mocha 5.00, Tea 3.00\nSELECT SUM(price) FROM menu;",
+              "options": [
+                "3",
+                "4.5",
+                "12.5"
+              ],
+              "answer": [
+                "12.5"
+              ],
+              "explanation": "SUM adds the prices up: 4.50 + 5.00 + 3.00 = 12.50.",
+              "verify": "output"
+            },
+            {
+              "id": "sql_p1l4q3",
+              "kind": "build",
+              "prompt": "Count the drinks. Build the query.",
+              "options": [
+                "SUM(*)",
+                "FROM",
+                ";",
+                "COUNT(*)",
+                "SELECT",
+                "WHERE",
+                "menu"
+              ],
+              "answer": [
+                "SELECT",
+                "COUNT(*)",
+                "FROM",
+                "menu",
+                ";"
+              ],
+              "explanation": "COUNT(*) counts the rows in menu: 3 drinks."
+            },
+            {
+              "id": "sql_p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "SELECT COUNT(*) FROM menu;",
+                "SELECT SUM(price) FROM menu;",
+                "SELECT COUNT FROM menu;"
+              ],
+              "answer": [
+                "SELECT COUNT FROM menu;"
+              ],
+              "explanation": "COUNT needs brackets. Fix: COUNT(*)",
+              "verify": "bug",
+              "fix": "SELECT COUNT(*) FROM menu;"
+            },
+            {
+              "id": "sql_p1l4q5",
+              "kind": "match",
+              "prompt": "Match each function to what it gives.",
+              "options": [
+                "COUNT(*)",
+                "SUM(price)",
+                "MAX(price)",
+                "MIN(price)"
+              ],
+              "answer": [
+                "How many rows",
+                "Add the prices up",
+                "The biggest price",
+                "The smallest price"
+              ],
+              "right": [
+                "Add the prices up",
+                "The biggest price",
+                "The smallest price",
+                "How many rows"
+              ],
+              "explanation": "COUNT counts rows, SUM adds, MAX finds the biggest, and MIN finds the smallest."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

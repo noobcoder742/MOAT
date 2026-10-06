@@ -1,0 +1,16 @@
+{
+  "expo": {
+    "name": "MOAT",
+    "slug": "moat",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "supportsTablet": false
+    },
+    "android": {},
+    "plugins": [
+      "expo-font"
+    ]
+  }
+}

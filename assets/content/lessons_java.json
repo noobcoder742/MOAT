@@ -1,0 +1,411 @@
+{
+  "version": 2,
+  "area": "Java",
+  "phases": [
+    {
+      "id": "java_p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "java_p1l1",
+          "title": "Workshop screen",
+          "questions": [
+            {
+              "id": "java_p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the robot say hello",
+              "hint": "System.out.println() shows whatever is inside the brackets.",
+              "code": "System.out.println(___);",
+              "picture": "🤖",
+              "options": [
+                "\"Hello, robot!\"",
+                "'Hello, robot!'",
+                "Hello, robot!",
+                "\"hello, robot!\""
+              ],
+              "answer": [
+                "\"Hello, robot!\""
+              ],
+              "explanation": "Text goes in double quotes. Then println shows it on the workshop screen."
+            },
+            {
+              "id": "java_p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the workshop screen show?",
+              "code": "System.out.println(\"Gear\");",
+              "options": [
+                "\"Gear\"",
+                "Gear",
+                "Nothing",
+                "println"
+              ],
+              "answer": [
+                "Gear"
+              ],
+              "explanation": "println shows the words between the quote marks. The quote marks themselves are not shown.",
+              "verify": "output"
+            },
+            {
+              "id": "java_p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Power on",
+              "options": [
+                "[",
+                "Power on",
+                "System.out.println",
+                "(",
+                "\"Power on\"",
+                ")",
+                ";"
+              ],
+              "answer": [
+                "System.out.println",
+                "(",
+                "\"Power on\"",
+                ")",
+                ";"
+              ],
+              "explanation": "Start with System.out.println, then brackets, put the words in double quotes, and end with a semicolon."
+            },
+            {
+              "id": "java_p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "System.out.println(\"Start\");",
+                "System.out.println(\"Spin\");",
+                "System.out.println(Stop);"
+              ],
+              "answer": [
+                "System.out.println(Stop);"
+              ],
+              "explanation": "Words need double quote marks. Fix: System.out.println(\"Stop\");",
+              "verify": "bug",
+              "fix": "System.out.println(\"Stop\");"
+            },
+            {
+              "id": "java_p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "System.out.println(\"Ready\");\nSystem.out.println(\"Go\");",
+              "options": [
+                "Ready, Go",
+                "Go, Ready",
+                "Ready"
+              ],
+              "answer": [
+                "Ready, Go"
+              ],
+              "explanation": "The computer runs the lines from top to bottom, so Ready shows first.",
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "java_p1l2",
+          "title": "Numbers and text",
+          "questions": [
+            {
+              "id": "java_p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Java does the maths.",
+              "code": "System.out.println(3 + 2);",
+              "picture": "⚙️",
+              "options": [
+                "32",
+                "5",
+                "3 + 2"
+              ],
+              "answer": [
+                "5"
+              ],
+              "explanation": "Without quote marks, Java does the maths: 3 + 2 = 5.",
+              "verify": "output"
+            },
+            {
+              "id": "java_p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 3 + 2.",
+              "code": "System.out.println(\"3 + 2\");",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "verify": "judge",
+              "claim": "3 + 2"
+            },
+            {
+              "id": "java_p1l2q3",
+              "kind": "choice",
+              "prompt": "What does the screen show?",
+              "hint": "Numbers add. Text joins.",
+              "code": "System.out.println(\"3\" + 2);",
+              "options": [
+                "32",
+                "Error",
+                "3 + 2",
+                "5"
+              ],
+              "answer": [
+                "32"
+              ],
+              "explanation": "\"3\" is in quotes, so it is text. With text, + joins instead of adding.",
+              "verify": "output"
+            },
+            {
+              "id": "java_p1l2q4",
+              "kind": "build",
+              "prompt": "Build the line that shows the total of 4 + 6.",
+              "options": [
+                "System.out.println",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")",
+                ";",
+                "\"4 + 6\"",
+                "-"
+              ],
+              "answer": [
+                "System.out.println",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")",
+                ";"
+              ],
+              "explanation": "Numbers without quote marks are added, so the screen shows 10."
+            },
+            {
+              "id": "java_p1l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "System.out.println(10 - 4);",
+              "options": [
+                "6",
+                "14",
+                "10 - 4"
+              ],
+              "answer": [
+                "6"
+              ],
+              "explanation": "10 - 4 = 6.",
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "java_p1l3",
+          "title": "Typed boxes",
+          "questions": [
+            {
+              "id": "java_p1l3q1",
+              "kind": "choice",
+              "prompt": "Make a whole-number box labelled lives that holds 3",
+              "hint": "Java boxes have a type. The type comes first.",
+              "code": "___ lives = 3;",
+              "picture": "❤️",
+              "options": [
+                "print",
+                "int",
+                "String"
+              ],
+              "answer": [
+                "int"
+              ],
+              "explanation": "int holds whole numbers, so it fits 3. String holds text."
+            },
+            {
+              "id": "java_p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "int coins = 5;\nSystem.out.println(coins);",
+              "options": [
+                "coins",
+                "\"coins\"",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "explanation": "coins holds 5, so println(coins) shows 5.",
+              "verify": "output"
+            },
+            {
+              "id": "java_p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "int gears = 2;\ngears = 7;\nSystem.out.println(gears);",
+              "options": [
+                "7",
+                "2",
+                "9"
+              ],
+              "answer": [
+                "7"
+              ],
+              "explanation": "The newest value replaces the old one. The box now holds 7.",
+              "verify": "output"
+            },
+            {
+              "id": "java_p1l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "int lives = 3;",
+                "String name = \"Robo\";",
+                "int coins = \"5\";"
+              ],
+              "answer": [
+                "int coins = \"5\";"
+              ],
+              "explanation": "An int holds a whole number, not text. Fix: int coins = 5;",
+              "verify": "bug",
+              "fix": "int coins = 5;"
+            },
+            {
+              "id": "java_p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "options": [
+                "int gears = 2;",
+                "gears = 5;",
+                "System.out.println(gears);",
+                "String name = \"Robo\";"
+              ],
+              "answer": [
+                "Make a whole-number box holding 2",
+                "Swap in 5",
+                "Show what the box holds",
+                "Make a text box holding Robo"
+              ],
+              "right": [
+                "Swap in 5",
+                "Show what the box holds",
+                "Make a text box holding Robo",
+                "Make a whole-number box holding 2"
+              ],
+              "explanation": "int makes a whole-number box, String makes a text box, = stores a value, and println shows it."
+            }
+          ]
+        },
+        {
+          "id": "java_p1l4",
+          "title": "Robot maths",
+          "questions": [
+            {
+              "id": "java_p1l4q1",
+              "kind": "choice",
+              "prompt": "Add 5 to the coins. Which line updates them?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "int coins = 10;",
+              "picture": "🪙",
+              "options": [
+                "coins = 5;",
+                "coins = coins + 5;",
+                "coins + 5;"
+              ],
+              "answer": [
+                "coins = coins + 5;"
+              ],
+              "explanation": "Take the old value, add 5, and put it back in the same box."
+            },
+            {
+              "id": "java_p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "int lives = 3;\nlives = lives - 1;\nSystem.out.println(lives);",
+              "options": [
+                "3",
+                "4",
+                "2"
+              ],
+              "answer": [
+                "2"
+              ],
+              "explanation": "3 - 1 = 2.",
+              "verify": "output"
+            },
+            {
+              "id": "java_p1l4q3",
+              "kind": "build",
+              "prompt": "Add the numbers. Build the line.",
+              "code": "int a = 3;\nint b = 4;",
+              "options": [
+                "\"a\"",
+                "a",
+                "System.out.println",
+                "+",
+                "b",
+                ")",
+                ";",
+                "-",
+                "("
+              ],
+              "answer": [
+                "System.out.println",
+                "(",
+                "a",
+                "+",
+                "b",
+                ")",
+                ";"
+              ],
+              "explanation": "a + b is 7, and println shows it."
+            },
+            {
+              "id": "java_p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "int lives = 2;",
+                "lives = lives +;",
+                "System.out.println(lives);"
+              ],
+              "answer": [
+                "lives = lives +;"
+              ],
+              "explanation": "The + needs a number after it. Fix: lives = lives + 1;",
+              "verify": "bug",
+              "fix": "lives = lives + 1;"
+            },
+            {
+              "id": "java_p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to the coins.",
+              "options": [
+                "coins = coins + 1;",
+                "coins = coins - 1;",
+                "coins = coins * 2;",
+                "coins = coins + 10;"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Take away 1",
+                "Double it",
+                "Add 10",
+                "Add 1"
+              ],
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

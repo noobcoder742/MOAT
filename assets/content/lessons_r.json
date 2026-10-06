@@ -1,0 +1,398 @@
+{
+  "version": 2,
+  "area": "R",
+  "phases": [
+    {
+      "id": "r_p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "r_p1l1",
+          "title": "Ward sign",
+          "questions": [
+            {
+              "id": "r_p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the ward board say Ward A",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "🏥",
+              "options": [
+                "(Ward A)",
+                "\"Ward A\"",
+                "Ward A",
+                "\"ward a\""
+              ],
+              "answer": [
+                "\"Ward A\""
+              ],
+              "explanation": "Words go inside quote marks. Then print shows them on the ward board. R also puts [1] first, which means the first item."
+            },
+            {
+              "id": "r_p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the ward board show?",
+              "code": "print(\"Bed 4\")",
+              "options": [
+                "print",
+                "\"Bed 4\"",
+                "[1] \"Bed 4\"",
+                "Nothing"
+              ],
+              "answer": [
+                "[1] \"Bed 4\""
+              ],
+              "explanation": "R shows text inside quote marks, with [1] in front for the first item."
+            },
+            {
+              "id": "r_p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Ward B",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Ward B",
+                "\"Ward B\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Ward B\"",
+                ")"
+              ],
+              "explanation": "Start with print, then brackets, and put the words inside quote marks."
+            },
+            {
+              "id": "r_p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "print(\"Ward A\")",
+                "print(\"Ward B\")",
+                "print(Ward C)"
+              ],
+              "answer": [
+                "print(Ward C)"
+              ],
+              "explanation": "Words need quote marks. Fix: print(\"Ward C\")",
+              "verify": "bug",
+              "fix": "print(\"Ward C\")"
+            },
+            {
+              "id": "r_p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Check in\")\nprint(\"Check out\")",
+              "options": [
+                "Check in, then Check out",
+                "Check out, then Check in",
+                "Check in"
+              ],
+              "answer": [
+                "Check in, then Check out"
+              ],
+              "explanation": "The computer runs the lines from top to bottom, so Check in shows first."
+            }
+          ]
+        },
+        {
+          "id": "r_p1l2",
+          "title": "Reading numbers",
+          "questions": [
+            {
+              "id": "r_p1l2q1",
+              "kind": "choice",
+              "prompt": "What does the monitor show?",
+              "hint": "Without quotes, R does the maths.",
+              "code": "print(37 + 1)",
+              "picture": "🩺",
+              "options": [
+                "[1] 38",
+                "[1] 37 + 1",
+                "[1] \"38\"",
+                "38"
+              ],
+              "answer": [
+                "[1] 38"
+              ],
+              "explanation": "Without quote marks, R does the maths: 37 + 1 = 38. The [1] means first item."
+            },
+            {
+              "id": "r_p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows the words 37 + 1, not 38.",
+              "code": "print(\"37 + 1\")",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "verify": "judge",
+              "claim": "37 + 1"
+            },
+            {
+              "id": "r_p1l2q3",
+              "kind": "choice",
+              "prompt": "What happens?",
+              "hint": "Numbers add. Text does not.",
+              "code": "print(\"2\" + 3)",
+              "options": [
+                "[1] \"23\"",
+                "An error",
+                "[1] \"2 + 3\"",
+                "[1] 5"
+              ],
+              "answer": [
+                "An error"
+              ],
+              "explanation": "\"2\" is in quote marks, so it is text. R will not add text to a number, so it stops with an error."
+            },
+            {
+              "id": "r_p1l2q4",
+              "kind": "build",
+              "prompt": "Build the line that shows the total of 4 + 6.",
+              "options": [
+                "print",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")",
+                "\"4 + 6\"",
+                "-"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "4",
+                "+",
+                "6",
+                ")"
+              ],
+              "explanation": "Numbers without quote marks are added, so R shows [1] 10."
+            },
+            {
+              "id": "r_p1l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(10 - 4)",
+              "options": [
+                "[1] 6",
+                "[1] 10 - 4",
+                "[1] 14"
+              ],
+              "answer": [
+                "[1] 6"
+              ],
+              "explanation": "10 - 4 = 6."
+            }
+          ]
+        },
+        {
+          "id": "r_p1l3",
+          "title": "Patient labels",
+          "questions": [
+            {
+              "id": "r_p1l3q1",
+              "kind": "choice",
+              "prompt": "Store a pulse of 72 in the box labelled pulse",
+              "hint": "A variable is a labelled box that holds a value. In R, the arrow points into the box.",
+              "code": "pulse ___ 72",
+              "picture": "💓",
+              "options": [
+                "==",
+                "<-",
+                "->"
+              ],
+              "answer": [
+                "<-"
+              ],
+              "explanation": "The arrow <- puts a value into the box. == would ask a question instead."
+            },
+            {
+              "id": "r_p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "weight <- 62\nprint(weight)",
+              "options": [
+                "[1] \"weight\"",
+                "weight",
+                "[1] 62"
+              ],
+              "answer": [
+                "[1] 62"
+              ],
+              "explanation": "weight holds 62, so print(weight) shows [1] 62."
+            },
+            {
+              "id": "r_p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "dose <- 2\ndose <- 5\nprint(dose)",
+              "options": [
+                "[1] 5",
+                "[1] 2",
+                "[1] 7"
+              ],
+              "answer": [
+                "[1] 5"
+              ],
+              "explanation": "The newest value replaces the old one. The box now holds 5."
+            },
+            {
+              "id": "r_p1l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "weight <- 62",
+                "height <- 1.7",
+                "62 <- weight"
+              ],
+              "answer": [
+                "62 <- weight"
+              ],
+              "explanation": "The arrow points into the name. Fix: weight <- 62",
+              "verify": "bug",
+              "fix": "weight <- 62"
+            },
+            {
+              "id": "r_p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "options": [
+                "pulse <- 72",
+                "print(pulse)",
+                "pulse <- 80",
+                "print(\"pulse\")"
+              ],
+              "answer": [
+                "Store 72 in the box",
+                "Show what the box holds",
+                "Swap in 80",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Show what the box holds",
+                "Swap in 80",
+                "Show the name as a word",
+                "Store 72 in the box"
+              ],
+              "explanation": "<- stores a value. print(pulse) shows the value. Quote marks show the name itself."
+            }
+          ]
+        },
+        {
+          "id": "r_p1l4",
+          "title": "Dosing",
+          "questions": [
+            {
+              "id": "r_p1l4q1",
+              "kind": "choice",
+              "prompt": "Add 5 to the dose. Which line updates it?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "dose <- 10",
+              "picture": "💊",
+              "options": [
+                "dose <- 5",
+                "dose <- dose + 5",
+                "dose + 5"
+              ],
+              "answer": [
+                "dose <- dose + 5"
+              ],
+              "explanation": "Take the old value, add 5, and put it back in the same box."
+            },
+            {
+              "id": "r_p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "dose <- 3\ndose <- dose - 1\nprint(dose)",
+              "options": [
+                "[1] 4",
+                "[1] 3",
+                "[1] 2"
+              ],
+              "answer": [
+                "[1] 2"
+              ],
+              "explanation": "3 - 1 = 2."
+            },
+            {
+              "id": "r_p1l4q3",
+              "kind": "build",
+              "prompt": "Double the weight. Build the line.",
+              "code": "weight <- 62",
+              "options": [
+                "\"weight\"",
+                "weight",
+                ")",
+                "*",
+                "print",
+                "+",
+                "2",
+                "("
+              ],
+              "answer": [
+                "print",
+                "(",
+                "weight",
+                "*",
+                "2",
+                ")"
+              ],
+              "explanation": "weight * 2 is 124, and print shows [1] 124."
+            },
+            {
+              "id": "r_p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "options": [
+                "temp <- 37",
+                "temp <- temp +",
+                "print(temp)"
+              ],
+              "answer": [
+                "temp <- temp +"
+              ],
+              "explanation": "The + needs a number after it. Fix: temp <- temp + 1",
+              "verify": "bug",
+              "fix": "temp <- temp + 1"
+            },
+            {
+              "id": "r_p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to the dose.",
+              "options": [
+                "dose <- dose + 1",
+                "dose <- dose - 1",
+                "dose <- dose * 2",
+                "dose <- dose + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Take away 1",
+                "Double it",
+                "Add 10",
+                "Add 1"
+              ],
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

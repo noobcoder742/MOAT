@@ -1,0 +1,5481 @@
+{
+ "id": "bio_r",
+ "title": "Biology research",
+ "language": "R",
+ "phases": [
+  {
+   "number": 1,
+   "area": "Bioinformatics",
+   "project": "DNA sequence report",
+   "picture": "helix",
+   "skill": "Basics",
+   "parts": [
+    [
+     "Sequence",
+     "ATGCGC"
+    ],
+    [
+     "GC content",
+     "66.66667 %"
+    ],
+    [
+     "AT bases",
+     "2"
+    ],
+    [
+     "Both strands",
+     "20 bases"
+    ]
+   ],
+   "code": [
+    "print(\"ATGCGC\")",
+    "print(4 / 6 * 100)",
+    "gc_count = 4",
+    "seq_length = 6",
+    "print(seq_length - gc_count)",
+    "seq_length = seq_length + 4",
+    "print(seq_length * 2)"
+   ],
+   "lessons": [
+    {
+     "id": "bio_p1_l1",
+     "part": 1,
+     "title": "Print the sequence",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "print() shows text with [1] in front.",
+       "ok": "R shows text in quote marks, with [1] in front for the first item.",
+       "code": [
+        "print(\"ATGC\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"ATGC\""
+        },
+        {
+         "id": "b",
+         "label": "ATGC"
+        },
+        {
+         "id": "c",
+         "label": "print"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"ATGC\""
+       },
+       "fb": {
+        "b": "R keeps the quote marks when it prints text.",
+        "c": "print is the function, not what it shows.",
+        "d": "The line is valid R."
+       },
+       "answerLine": "[1] \"ATGC\"",
+       "id": "bio_p1_l1_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Label the sample",
+       "hint": "Text needs quote marks.",
+       "ok": "Text goes in quote marks, so R prints it as written.",
+       "code": [
+        "print(___)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "\"Sample 1\""
+        },
+        {
+         "id": "b",
+         "label": "Sample 1"
+        },
+        {
+         "id": "c",
+         "label": "[Sample 1]"
+        },
+        {
+         "id": "d",
+         "label": "\"sample 1\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] \"Sample 1\""
+       },
+       "fb": {
+        "b": "Without quote marks, R looks for something called Sample.",
+        "c": "Square brackets do not make text.",
+        "d": "The label needs a capital S."
+       },
+       "answerLine": "print(\"Sample 1\")",
+       "id": "bio_p1_l1_q2"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "DNA letters are text.",
+       "ok": "Without quote marks, R looks for an object called TAA. Fix: print(\"TAA\")",
+       "lines": [
+        {
+         "id": "a",
+         "label": "print(\"ATG\")"
+        },
+        {
+         "id": "b",
+         "label": "print(\"CCG\")"
+        },
+        {
+         "id": "c",
+         "label": "print(TAA)"
+        }
+       ],
+       "correct": "c",
+       "screen": {
+        "err": "object 'TAA' not found",
+        "done": "[1] \"TAA\""
+       },
+       "fb": {
+        "a": "That line is fine.",
+        "b": "That line is fine."
+       },
+       "answerLine": "print(TAA)",
+       "id": "bio_p1_l1_q3"
+      },
+      {
+       "kind": "build",
+       "prompt": "Print the sequence GATTACA",
+       "hint": "print, brackets, and text in quote marks.",
+       "ok": "print, then brackets around the quoted text.",
+       "code": [],
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "\"GATTACA\""
+        },
+        {
+         "id": "t3",
+         "label": ")"
+        },
+        {
+         "id": "t4",
+         "label": "GATTACA"
+        },
+        {
+         "id": "t5",
+         "label": "["
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3"
+       ],
+       "screen": {
+        "goal": "[1] \"GATTACA\""
+       },
+       "wrongBuild": "print, then the text in quote marks inside brackets.",
+       "answerLine": "print ( \"GATTACA\" )",
+       "fb": {},
+       "id": "bio_p1_l1_q4"
+      },
+      {
+       "lang": "R",
+       "kind": "fill",
+       "prompt": "Print the DNA sample",
+       "hint": "print() shows what is inside the brackets. Text needs quote marks.",
+       "code": [
+        "print(___)"
+       ],
+       "screen": {
+        "goal": "[1] \"ATGCGC\""
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "\"ATGCGC\""
+        },
+        {
+         "id": "b",
+         "label": "ATGCGC"
+        },
+        {
+         "id": "c",
+         "label": "(ATGCGC)"
+        },
+        {
+         "id": "d",
+         "label": "\"atgcgc\""
+        }
+       ],
+       "correct": "a",
+       "ok": "DNA letters are text, so they go in quote marks. R shows them with [1] in front.",
+       "fb": {
+        "b": "Without quote marks, R looks for an object called ATGCGC.",
+        "c": "Brackets do not make text. Text needs quote marks.",
+        "d": "This sample is written in capital letters."
+       },
+       "answerLine": "print(\"ATGCGC\")",
+       "id": "bio_p1_l1_q5",
+       "note": "Good to know: in other R code you may see paste(). It joins pieces of text into one, while print() shows the result. In this app we use print()."
+      }
+     ]
+    },
+    {
+     "id": "bio_p1_l2",
+     "part": 2,
+     "title": "GC content",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "No quote marks means R does the maths.",
+       "ok": "Without quote marks, R adds the numbers.",
+       "code": [
+        "print(6 + 4)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 10"
+        },
+        {
+         "id": "b",
+         "label": "[1] 64"
+        },
+        {
+         "id": "c",
+         "label": "[1] \"6 + 4\""
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 10"
+       },
+       "fb": {
+        "b": "R adds numbers; it does not join them.",
+        "c": "There are no quote marks, so R works it out.",
+        "d": "The line is valid R."
+       },
+       "answerLine": "[1] 10",
+       "id": "bio_p1_l2_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Divide G and C by the length",
+       "hint": "/ divides.",
+       "ok": "4 / 6 gives the share of G and C bases: 0.6666667.",
+       "code": [
+        "print(4 ___ 6)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "/"
+        },
+        {
+         "id": "b",
+         "label": "*"
+        },
+        {
+         "id": "c",
+         "label": "+"
+        },
+        {
+         "id": "d",
+         "label": "-"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 0.6666667"
+       },
+       "fb": {
+        "b": "* multiplies, giving 24.",
+        "c": "+ adds, giving 10.",
+        "d": "- subtracts, giving -2."
+       },
+       "answerLine": "print(4 / 6)",
+       "id": "bio_p1_l2_q2"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "Text cannot be divided.",
+       "ok": "\"4\" is text, so R cannot divide it. Fix: print(4 / 6)",
+       "lines": [
+        {
+         "id": "a",
+         "label": "print(4 / 6)"
+        },
+        {
+         "id": "b",
+         "label": "print(\"4\" / 6)"
+        },
+        {
+         "id": "c",
+         "label": "print(6 - 4)"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "non-numeric argument to binary operator",
+        "done": "[1] 0.6666667"
+       },
+       "fb": {
+        "a": "That line is fine.",
+        "c": "That line is fine."
+       },
+       "answerLine": "print(\"4\" / 6)",
+       "id": "bio_p1_l2_q3"
+      },
+      {
+       "kind": "build",
+       "prompt": "Show the A and T count: 6 bases minus 4",
+       "hint": "print the subtraction.",
+       "ok": "6 - 4 = 2 bases are A or T.",
+       "code": [],
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "6"
+        },
+        {
+         "id": "t3",
+         "label": "-"
+        },
+        {
+         "id": "t4",
+         "label": "4"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": "\"6\""
+        },
+        {
+         "id": "t7",
+         "label": "+"
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+       ],
+       "screen": {
+        "goal": "[1] 2"
+       },
+       "wrongBuild": "print, then brackets around 6 - 4.",
+       "answerLine": "print ( 6 - 4 )",
+       "fb": {},
+       "id": "bio_p1_l2_q4"
+      },
+      {
+       "lang": "R",
+       "kind": "predict",
+       "prompt": "What GC content does the report show?",
+       "hint": "R works left to right: divide first, then multiply.",
+       "code": [
+        "# 4 of 6 bases are G or C",
+        "print(4 / 6 * 100)"
+       ],
+       "screen": {
+        "done": "[1] 66.66667"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 66.66667"
+        },
+        {
+         "id": "b",
+         "label": "[1] 0.6666667"
+        },
+        {
+         "id": "c",
+         "label": "[1] \"4 / 6 * 100\""
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "ok": "4 / 6 is 0.6666667, then * 100 gives 66.66667. That is the GC content as a percentage.",
+       "fb": {
+        "b": "That is the value before * 100. R carries on left to right.",
+        "c": "There are no quote marks here, so R works it out.",
+        "d": "The code runs fine."
+       },
+       "answerLine": "[1] 66.66667",
+       "id": "bio_p1_l2_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p1_l3",
+     "part": 3,
+     "title": "Count the AT bases",
+     "questions": [
+      {
+       "kind": "fill",
+       "prompt": "Store 4 in gc_count",
+       "hint": "One = stores a value.",
+       "ok": "One = puts 4 into the box called gc_count.",
+       "code": [
+        "gc_count ___ 4"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "="
+        },
+        {
+         "id": "b",
+         "label": "=="
+        },
+        {
+         "id": "c",
+         "label": "+"
+        },
+        {
+         "id": "d",
+         "label": "->"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "gc_count holds 4"
+       },
+       "fb": {
+        "b": "== asks a question instead of storing.",
+        "c": "+ adds; it does not store.",
+        "d": "-> points the other way: 4 -> gc_count."
+       },
+       "answerLine": "gc_count = 4",
+       "id": "bio_p1_l3_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "The name stands for the value it holds.",
+       "ok": "seq_length holds 6, so R prints 6.",
+       "code": [
+        "seq_length = 6",
+        "print(seq_length)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 6"
+        },
+        {
+         "id": "b",
+         "label": "[1] \"seq_length\""
+        },
+        {
+         "id": "c",
+         "label": "seq_length"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 6"
+       },
+       "fb": {
+        "b": "Without quote marks R prints the value, not the name.",
+        "c": "R prints the value inside.",
+        "d": "The code is valid."
+       },
+       "answerLine": "[1] 6",
+       "id": "bio_p1_l3_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "The newest value replaces the old one.",
+       "ok": "The second line replaces 4 with 5.",
+       "code": [
+        "gc_count = 4",
+        "gc_count = 5",
+        "print(gc_count)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 5"
+        },
+        {
+         "id": "b",
+         "label": "[1] 4"
+        },
+        {
+         "id": "c",
+         "label": "[1] 9"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 5"
+       },
+       "fb": {
+        "b": "4 was replaced on line 2.",
+        "c": "= replaces; it does not add."
+       },
+       "answerLine": "[1] 5",
+       "id": "bio_p1_l3_q3"
+      },
+      {
+       "kind": "build",
+       "prompt": "Work out the GC content from the boxes",
+       "hint": "Divide, then multiply by 100.",
+       "ok": "gc_count / seq_length * 100 = 66.66667.",
+       "code": [
+        "gc_count = 4",
+        "seq_length = 6"
+       ],
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "gc_count"
+        },
+        {
+         "id": "t3",
+         "label": "/"
+        },
+        {
+         "id": "t4",
+         "label": "seq_length"
+        },
+        {
+         "id": "t5",
+         "label": "*"
+        },
+        {
+         "id": "t6",
+         "label": "100"
+        },
+        {
+         "id": "t7",
+         "label": ")"
+        },
+        {
+         "id": "t8",
+         "label": "\"gc_count\""
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7"
+       ],
+       "screen": {
+        "goal": "[1] 66.66667"
+       },
+       "wrongBuild": "print, then gc_count / seq_length * 100 in brackets.",
+       "answerLine": "print ( gc_count / seq_length * 100 )",
+       "fb": {},
+       "id": "bio_p1_l3_q4"
+      },
+      {
+       "lang": "R",
+       "kind": "bug",
+       "prompt": "Which line breaks the AT count?",
+       "hint": "Capital letters matter in R names.",
+       "lines": [
+        {
+         "id": "a",
+         "label": "gc_count = 4"
+        },
+        {
+         "id": "b",
+         "label": "seq_length = 6"
+        },
+        {
+         "id": "c",
+         "label": "print(seq_length - GC_count)"
+        }
+       ],
+       "correct": "c",
+       "screen": {
+        "err": "object 'GC_count' not found",
+        "done": "[1] 2"
+       },
+       "ok": "R is case sensitive, so gc_count and GC_count are different. Fix: print(seq_length - gc_count)",
+       "fb": {
+        "a": "That line saves the GC count. It is fine.",
+        "b": "That line saves the length. It is fine."
+       },
+       "answerLine": "print(seq_length - GC_count)",
+       "id": "bio_p1_l3_q5",
+       "note": "Good to know: R also accepts gc_count <- 4 and 4 -> gc_count. Both do the same job as =, which is what we use in this app."
+      }
+     ]
+    },
+    {
+     "id": "bio_p1_l4",
+     "part": 4,
+     "title": "Both strands",
+     "questions": [
+      {
+       "kind": "fill",
+       "prompt": "Grow the read by 4 bases",
+       "hint": "Add 4 to the old value.",
+       "ok": "6 + 4 = 10, stored back in seq_length.",
+       "code": [
+        "seq_length = 6",
+        "seq_length = seq_length ___ 4",
+        "print(seq_length)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "+"
+        },
+        {
+         "id": "b",
+         "label": "="
+        },
+        {
+         "id": "c",
+         "label": "*"
+        },
+        {
+         "id": "d",
+         "label": "-"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 10"
+       },
+       "fb": {
+        "b": "== or = cannot go there.",
+        "c": "* would give 24.",
+        "d": "- would give 2."
+       },
+       "answerLine": "seq_length = seq_length + 4",
+       "id": "bio_p1_l4_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "Work line by line.",
+       "ok": "4 + 2 = 6, stored back in gc_count.",
+       "code": [
+        "gc_count = 4",
+        "gc_count = gc_count + 2",
+        "print(gc_count)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 6"
+        },
+        {
+         "id": "b",
+         "label": "[1] 4"
+        },
+        {
+         "id": "c",
+         "label": "[1] 2"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 6"
+       },
+       "fb": {
+        "b": "Line 2 updates the value.",
+        "c": "That is only the + 2."
+       },
+       "answerLine": "[1] 6",
+       "id": "bio_p1_l4_q2"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Why is seq_length still 6?",
+       "hint": "A sum must be stored to change the box.",
+       "ok": "seq_length + 4 works out 10 but never stores it. Fix: seq_length = seq_length + 4",
+       "lines": [
+        {
+         "id": "a",
+         "label": "seq_length = 6"
+        },
+        {
+         "id": "b",
+         "label": "seq_length + 4"
+        },
+        {
+         "id": "c",
+         "label": "print(seq_length)"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "Prints 10, then 6: the + 4 was never stored",
+        "done": "[1] 10"
+       },
+       "fb": {
+        "a": "Storing 6 is fine.",
+        "c": "print is fine."
+       },
+       "answerLine": "seq_length + 4",
+       "id": "bio_p1_l4_q3"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "Track at after each line.",
+       "ok": "2 * 3 = 6.",
+       "code": [
+        "at = 2",
+        "at = at * 3",
+        "print(at)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 6"
+        },
+        {
+         "id": "b",
+         "label": "[1] 5"
+        },
+        {
+         "id": "c",
+         "label": "[1] 2"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 6"
+       },
+       "fb": {
+        "b": "* multiplies, not adds.",
+        "c": "Line 2 changes at."
+       },
+       "answerLine": "[1] 6",
+       "id": "bio_p1_l4_q4"
+      },
+      {
+       "lang": "R",
+       "kind": "build",
+       "prompt": "Show the bases on both strands",
+       "hint": "seq_length was updated. Multiply it by 2.",
+       "code": [
+        "seq_length = 6",
+        "seq_length = seq_length + 4"
+       ],
+       "screen": {
+        "goal": "[1] 20"
+       },
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "seq_length"
+        },
+        {
+         "id": "t3",
+         "label": "*"
+        },
+        {
+         "id": "t4",
+         "label": "2"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": "\"seq_length\""
+        },
+        {
+         "id": "t7",
+         "label": "+"
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+       ],
+       "ok": "seq_length is now 10, so both strands hold 10 * 2 = 20 bases.",
+       "wrongBuild": "print, then brackets around seq_length * 2.",
+       "fb": {},
+       "answerLine": "print(seq_length * 2)",
+       "id": "bio_p1_l4_q5"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "id": "bio_p1_cp",
+    "name": "Primer check",
+    "filename": "primer_tm.R",
+    "problem": "Before PCR, labs estimate a primer's melting temperature, Tm. For short primers the Wallace rule gives Tm = 2(A+T) + 4(G+C).",
+    "unlock": [
+     "Phase 2 unlocked",
+     "Genomic processing",
+     "New skill: functions. You'll build a read quality checker."
+    ],
+    "questions": [
+     {
+      "steps": {
+       "a": "Store the primer length: 8",
+       "b": "Store the G and C count: 4",
+       "c": "Work out A + T: length minus G and C",
+       "d": "Work out Tm with the Wallace rule",
+       "e": "Print Tm"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ],
+       [
+        "b",
+        "a",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "d",
+       "b",
+       "e",
+       "a",
+       "c"
+      ],
+      "ok": "Each step only uses numbers worked out before it. The first two can swap, so either order counts.",
+      "wrong": "A step is using a number that does not exist yet. Find the step each one depends on.",
+      "hint": "Look for steps that need a number from an earlier step. Those come later.",
+      "prompt": "Let's do some planning first!",
+      "style": "plan",
+      "id": "bio_p1_cp_q1",
+      "kind": "order",
+      "task": "Before PCR, labs estimate a primer's melting temperature (Tm). For short primers: Tm = 2 × (A + T) + 4 × (G + C). Your primer has 8 bases, and 4 are G or C."
+     },
+     {
+      "steps": {
+       "a": "primer_length = 8",
+       "b": "gc = 4",
+       "c": "at = primer_length - gc",
+       "d": "tm = 2 * at + 4 * gc",
+       "e": "print(tm)"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ],
+       [
+        "b",
+        "a",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "c",
+       "e",
+       "a",
+       "d",
+       "b"
+      ],
+      "goal": "[1] 24",
+      "ok": "R stores primer_length and gc, then works out at, then tm, and prints [1] 24.",
+      "wrong": "R would stop with \"object not found\": a line uses a name before it exists.",
+      "hint": "R runs top to bottom. A name has to be stored before a line can use it.",
+      "prompt": "Order the real R code",
+      "style": "code",
+      "id": "bio_p1_cp_q2",
+      "kind": "order"
+     },
+     {
+      "prompt": "What does R print?",
+      "hint": "Follow primer_length line by line. It changes on line 3.",
+      "code": [
+       "primer_length = 8",
+       "gc = 4",
+       "primer_length = primer_length + 2",
+       "at = primer_length - gc",
+       "print(2 * at + 4 * gc)"
+      ],
+      "screen": {
+       "done": "[1] 28"
+      },
+      "opts": [
+       {
+        "id": "a",
+        "label": "[1] 28"
+       },
+       {
+        "id": "b",
+        "label": "[1] 24"
+       },
+       {
+        "id": "c",
+        "label": "[1] 32"
+       },
+       {
+        "id": "d",
+        "label": "An error"
+       }
+      ],
+      "correct": "a",
+      "ok": "After the update the primer has 10 bases, so at = 6 and 2 × 6 + 4 × 4 = 28.",
+      "fb": {
+       "b": "That skips the update. primer_length became 10, so at is 6.",
+       "c": "That counts all 10 bases as A or T. Subtract gc first.",
+       "d": "Every line is valid R."
+      },
+      "answerLine": "[1] 28",
+      "style": "predict",
+      "id": "bio_p1_cp_q3",
+      "kind": "predict"
+     },
+     {
+      "prompt": "Find the line that causes the error",
+      "hint": "R stops on line 3, but the cause can be on an earlier line.",
+      "lines": [
+       {
+        "id": "a",
+        "label": "at = 4"
+       },
+       {
+        "id": "b",
+        "label": "gc = \"4\""
+       },
+       {
+        "id": "c",
+        "label": "tm = 2 * at + 4 * gc"
+       },
+       {
+        "id": "d",
+        "label": "print(tm)"
+       }
+      ],
+      "correct": "b",
+      "screen": {
+       "err": "Error in 4 * gc : non-numeric argument to binary operator",
+       "done": "[1] 24"
+      },
+      "ok": "The quote marks make gc the text \"4\", so R cannot multiply it on line 3. Fix: gc = 4",
+      "fb": {
+       "a": "at holds the number 4. It is fine.",
+       "c": "R stops here, but the cause is earlier. What does gc hold?",
+       "d": "print(tm) is fine once tm exists."
+      },
+      "answerLine": "gc = \"4\"",
+      "style": "debug",
+      "id": "bio_p1_cp_q4",
+      "kind": "bug"
+     },
+     {
+      "prompt": "PCR anneals about 5 °C below Tm. Show that temperature",
+      "hint": "Subtract 5 from tm inside print().",
+      "code": [
+       "tm = 24"
+      ],
+      "screen": {
+       "goal": "[1] 19"
+      },
+      "opts": [
+       {
+        "id": "t0",
+        "label": "print"
+       },
+       {
+        "id": "t1",
+        "label": "("
+       },
+       {
+        "id": "t2",
+        "label": "tm"
+       },
+       {
+        "id": "t3",
+        "label": "-"
+       },
+       {
+        "id": "t4",
+        "label": "5"
+       },
+       {
+        "id": "t5",
+        "label": ")"
+       },
+       {
+        "id": "t6",
+        "label": "+"
+       },
+       {
+        "id": "t7",
+        "label": "\"tm\""
+       }
+      ],
+      "correct": [
+       "t0",
+       "t1",
+       "t2",
+       "t3",
+       "t4",
+       "t5"
+      ],
+      "ok": "Annealing runs about 5 °C below the melting temperature: 24 - 5 = 19.",
+      "wrongBuild": "print, then brackets around tm - 5.",
+      "fb": {},
+      "answerLine": "print(tm - 5)",
+      "report": [
+       [
+        "Primer",
+        "8 bases, 4 G or C"
+       ],
+       [
+        "Tm",
+        "24 °C"
+       ]
+      ],
+      "reportTitle": "Primer report",
+      "slot": "Annealing temperature",
+      "style": "build",
+      "id": "bio_p1_cp_q5",
+      "kind": "build"
+     }
+    ]
+   }
+  },
+  {
+   "number": 2,
+   "area": "Genomic processing",
+   "project": "Read quality checker",
+   "picture": "quality",
+   "skill": "Functions",
+   "parts": [
+    [
+     "Scores",
+     "38 36 30 12"
+    ],
+    [
+     "Average",
+     "29"
+    ],
+    [
+     "avg_quality()",
+     "works"
+    ],
+    [
+     "Second read",
+     "32.66667"
+    ]
+   ],
+   "code": [
+    "scores = c(38, 36, 30, 12)",
+    "print(mean(scores))",
+    "avg_quality = function(s) {",
+    "  return(mean(s))",
+    "}",
+    "read2 = c(40, 38, 20)",
+    "print(avg_quality(read2))"
+   ],
+   "lessons": [
+    {
+     "id": "bio_p2_l1",
+     "part": 1,
+     "title": "Store the scores",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "c() keeps every value.",
+       "ok": "c() combines the values into a vector, and R prints both.",
+       "code": [
+        "scores = c(30, 20)",
+        "print(scores)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 30 20"
+        },
+        {
+         "id": "b",
+         "label": "[1] 50"
+        },
+        {
+         "id": "c",
+         "label": "[1] 3020"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 30 20"
+       },
+       "fb": {
+        "b": "c() does not add.",
+        "c": "The values stay separate.",
+        "d": "The code is valid."
+       },
+       "answerLine": "[1] 30 20",
+       "id": "bio_p2_l1_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "How many scores are there?",
+       "hint": "One function counts items.",
+       "ok": "length() counts the items: 4 scores.",
+       "code": [
+        "scores = c(38, 36, 30, 12)",
+        "print(___(scores))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "length"
+        },
+        {
+         "id": "b",
+         "label": "sum"
+        },
+        {
+         "id": "c",
+         "label": "mean"
+        },
+        {
+         "id": "d",
+         "label": "max"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 4"
+       },
+       "fb": {
+        "b": "sum() adds them: 116.",
+        "c": "mean() averages them: 29.",
+        "d": "max() finds the biggest: 38."
+       },
+       "answerLine": "print(length(scores))",
+       "id": "bio_p2_l1_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "R counts positions from 1.",
+       "ok": "[2] picks the second value: 36.",
+       "code": [
+        "scores = c(38, 36, 30, 12)",
+        "print(scores[2])"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 36"
+        },
+        {
+         "id": "b",
+         "label": "[1] 38"
+        },
+        {
+         "id": "c",
+         "label": "[1] 2"
+        },
+        {
+         "id": "d",
+         "label": "[1] 30"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 36"
+       },
+       "fb": {
+        "b": "That is position 1.",
+        "c": "R prints the value, not the position.",
+        "d": "That is position 3."
+       },
+       "answerLine": "[1] 36",
+       "id": "bio_p2_l1_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "Every value needs a comma.",
+       "ok": "Each value needs a comma between it. Fix: c(38, 36, 30, 12)",
+       "lines": [
+        {
+         "id": "a",
+         "label": "scores = c(38, 36, 30 12)"
+        },
+        {
+         "id": "b",
+         "label": "print(scores)"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "err": "unexpected numeric constant",
+        "done": "[1] 38 36 30 12"
+       },
+       "fb": {
+        "b": "print is fine."
+       },
+       "answerLine": "scores = c(38, 36, 30 12)",
+       "id": "bio_p2_l1_q4"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Store the quality scores",
+       "hint": "c() combines values into one vector.",
+       "code": [
+        "scores = ___(38, 36, 30, 12)",
+        "print(scores)"
+       ],
+       "screen": {
+        "goal": "[1] 38 36 30 12"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "c"
+        },
+        {
+         "id": "b",
+         "label": "print"
+        },
+        {
+         "id": "c",
+         "label": "mean"
+        },
+        {
+         "id": "d",
+         "label": "sum"
+        }
+       ],
+       "correct": "a",
+       "ok": "c() combines the four scores into one vector, so scores holds all of them.",
+       "fb": {
+        "b": "print() shows values, but it does not store them together.",
+        "c": "mean() gives back one number, not the four scores.",
+        "d": "sum() adds them up into one number."
+       },
+       "answerLine": "scores = c(38, 36, 30, 12)",
+       "id": "bio_p2_l1_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p2_l2",
+     "part": 2,
+     "title": "Average with mean()",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "max() finds the biggest.",
+       "ok": "The biggest score is 38.",
+       "code": [
+        "scores = c(38, 36, 30, 12)",
+        "print(max(scores))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 38"
+        },
+        {
+         "id": "b",
+         "label": "[1] 12"
+        },
+        {
+         "id": "c",
+         "label": "[1] 116"
+        },
+        {
+         "id": "d",
+         "label": "[1] 4"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 38"
+       },
+       "fb": {
+        "b": "That is the smallest.",
+        "c": "That is the total.",
+        "d": "That is the count."
+       },
+       "answerLine": "[1] 38",
+       "id": "bio_p2_l2_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Add up all the scores",
+       "hint": "One function adds a vector.",
+       "ok": "sum() adds them: 116.",
+       "code": [
+        "scores = c(38, 36, 30, 12)",
+        "print(___(scores))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "sum"
+        },
+        {
+         "id": "b",
+         "label": "mean"
+        },
+        {
+         "id": "c",
+         "label": "length"
+        },
+        {
+         "id": "d",
+         "label": "c"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 116"
+       },
+       "fb": {
+        "b": "mean() gives 29.",
+        "c": "length() gives 4.",
+        "d": "c() just shows the scores."
+       },
+       "answerLine": "print(sum(scores))",
+       "id": "bio_p2_l2_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "One score is missing (NA). What does R print?",
+       "hint": "NA means a missing value.",
+       "ok": "A missing value makes the mean unknown, so R gives NA.",
+       "code": [
+        "q = c(30, NA, 20)",
+        "print(mean(q))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] NA"
+        },
+        {
+         "id": "b",
+         "label": "[1] 25"
+        },
+        {
+         "id": "c",
+         "label": "[1] 16.66667"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] NA"
+       },
+       "fb": {
+        "b": "That skips the NA, which R does not do by itself.",
+        "c": "That counts NA as 0.",
+        "d": "R does not stop; it returns NA."
+       },
+       "answerLine": "[1] NA",
+       "id": "bio_p2_l2_q3"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Skip the missing score",
+       "hint": "An optional argument removes NA.",
+       "ok": "na.rm = TRUE removes the NA first: (30 + 20) / 2 = 25.",
+       "code": [
+        "q = c(30, NA, 20)",
+        "print(mean(q, ___))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "na.rm = TRUE"
+        },
+        {
+         "id": "b",
+         "label": "NA = FALSE"
+        },
+        {
+         "id": "c",
+         "label": "rm.na = TRUE"
+        },
+        {
+         "id": "d",
+         "label": "skip = NA"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 25"
+       },
+       "fb": {
+        "b": "That is not an argument of mean().",
+        "c": "The name is na.rm, not rm.na.",
+        "d": "That is not an argument of mean()."
+       },
+       "answerLine": "print(mean(q, na.rm = TRUE))",
+       "id": "bio_p2_l2_q4"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What average does the checker show?",
+       "hint": "mean() adds the values and divides by how many there are.",
+       "code": [
+        "scores = c(38, 36, 30, 12)",
+        "print(mean(scores))"
+       ],
+       "screen": {
+        "done": "[1] 29"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 29"
+        },
+        {
+         "id": "b",
+         "label": "[1] 116"
+        },
+        {
+         "id": "c",
+         "label": "[1] 38"
+        },
+        {
+         "id": "d",
+         "label": "[1] 4"
+        }
+       ],
+       "correct": "a",
+       "ok": "38 + 36 + 30 + 12 = 116, and 116 / 4 = 29.",
+       "fb": {
+        "b": "That is the total. mean() also divides by 4.",
+        "c": "That is only the first score.",
+        "d": "That is how many scores there are."
+       },
+       "answerLine": "[1] 29",
+       "id": "bio_p2_l2_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p2_l3",
+     "part": 3,
+     "title": "Write avg_quality()",
+     "questions": [
+      {
+       "kind": "fill",
+       "prompt": "Start a function",
+       "hint": "R makes functions with one keyword.",
+       "ok": "function(x) creates a function that takes x.",
+       "code": [
+        "double_it = ___(x) {",
+        "  return(x * 2)",
+        "}",
+        "print(double_it(5))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "function"
+        },
+        {
+         "id": "b",
+         "label": "def"
+        },
+        {
+         "id": "c",
+         "label": "func"
+        },
+        {
+         "id": "d",
+         "label": "fn"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 10"
+       },
+       "fb": {
+        "b": "def is Python.",
+        "c": "R spells it out: function.",
+        "d": "R spells it out: function."
+       },
+       "answerLine": "double_it = function(x) {",
+       "id": "bio_p2_l3_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "Follow x through the function.",
+       "ok": "x is 29, so return(x + 1) gives 30.",
+       "code": [
+        "add_one = function(x) {",
+        "  return(x + 1)",
+        "}",
+        "print(add_one(29))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 30"
+        },
+        {
+         "id": "b",
+         "label": "[1] 29"
+        },
+        {
+         "id": "c",
+         "label": "[1] 1"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 30"
+       },
+       "fb": {
+        "b": "The function adds 1.",
+        "c": "1 is only what gets added."
+       },
+       "answerLine": "[1] 30",
+       "id": "bio_p2_l3_q2"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Give back the average",
+       "hint": "One word sends a value out of a function.",
+       "ok": "return() sends the answer back to whoever called the function.",
+       "code": [
+        "avg_quality = function(s) {",
+        "  ___(mean(s))",
+        "}"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "return"
+        },
+        {
+         "id": "b",
+         "label": "print"
+        },
+        {
+         "id": "c",
+         "label": "give"
+        },
+        {
+         "id": "d",
+         "label": "mean"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "avg_quality() gives back the mean"
+       },
+       "fb": {
+        "b": "print() shows it but does not give it back.",
+        "c": "R has no give().",
+        "d": "mean() is already inside."
+       },
+       "answerLine": "  return(mean(s))",
+       "id": "bio_p2_l3_q3"
+      },
+      {
+       "kind": "build",
+       "prompt": "Build the first line of avg_quality()",
+       "hint": "name = function(argument) {",
+       "ok": "The first line names the function and its input s.",
+       "code": [],
+       "opts": [
+        {
+         "id": "t0",
+         "label": "avg_quality"
+        },
+        {
+         "id": "t1",
+         "label": "="
+        },
+        {
+         "id": "t2",
+         "label": "function"
+        },
+        {
+         "id": "t3",
+         "label": "("
+        },
+        {
+         "id": "t4",
+         "label": "s"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": "{"
+        },
+        {
+         "id": "t7",
+         "label": "def"
+        },
+        {
+         "id": "t8",
+         "label": "["
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+       ],
+       "screen": {
+        "goal": "Starts avg_quality()"
+       },
+       "wrongBuild": "avg_quality = function(s) {",
+       "answerLine": "avg_quality = function ( s ) {",
+       "fb": {},
+       "id": "bio_p2_l3_q4"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line stops avg_quality() working?",
+       "hint": "Functions are run with round brackets.",
+       "lines": [
+        {
+         "id": "a",
+         "label": "avg_quality = function(s) {"
+        },
+        {
+         "id": "b",
+         "label": "  return(mean(s))"
+        },
+        {
+         "id": "c",
+         "label": "}"
+        },
+        {
+         "id": "d",
+         "label": "print(avg_quality[scores])"
+        }
+       ],
+       "correct": "d",
+       "screen": {
+        "err": "object of type 'closure' is not subsettable",
+        "done": "[1] 29"
+       },
+       "ok": "Square brackets pick items out of a vector. To run a function, use round brackets: avg_quality(scores).",
+       "fb": {
+        "a": "That line starts the function. It is fine.",
+        "b": "That line gives back the average. It is fine.",
+        "c": "That closes the function. It is fine."
+       },
+       "answerLine": "print(avg_quality[scores])",
+       "id": "bio_p2_l3_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p2_l4",
+     "part": 4,
+     "title": "Check a second read",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "Run the function on c(10, 20).",
+       "ok": "(10 + 20) / 2 = 15.",
+       "code": [
+        "avg_quality = function(s) {",
+        "  return(mean(s))",
+        "}",
+        "print(avg_quality(c(10, 20)))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 15"
+        },
+        {
+         "id": "b",
+         "label": "[1] 30"
+        },
+        {
+         "id": "c",
+         "label": "[1] 10"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 15"
+       },
+       "fb": {
+        "b": "That is the sum.",
+        "c": "That is the first value."
+       },
+       "answerLine": "[1] 15",
+       "id": "bio_p2_l4_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Check read3",
+       "hint": "Give the function the vector itself.",
+       "ok": "Passing read3 gives the function both scores.",
+       "code": [
+        "read3 = c(30, 30)",
+        "print(avg_quality(___))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "read3"
+        },
+        {
+         "id": "b",
+         "label": "\"read3\""
+        },
+        {
+         "id": "c",
+         "label": "read3[]"
+        },
+        {
+         "id": "d",
+         "label": "mean"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 30"
+       },
+       "fb": {
+        "b": "Quote marks make it text, not the vector.",
+        "c": "Empty brackets are not needed.",
+        "d": "mean is a function, not data."
+       },
+       "answerLine": "print(avg_quality(read3))",
+       "id": "bio_p2_l4_q2"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "A call needs round brackets around its input.",
+       "ok": "Fix: print(avg_quality(read2))",
+       "lines": [
+        {
+         "id": "a",
+         "label": "read2 = c(40, 38, 20)"
+        },
+        {
+         "id": "b",
+         "label": "print(avg_quality read2)"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "unexpected symbol",
+        "done": "[1] 32.66667"
+       },
+       "fb": {
+        "a": "The vector is fine."
+       },
+       "answerLine": "print(avg_quality read2)",
+       "id": "bio_p2_l4_q3"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "A function result can be stored.",
+       "ok": "(38 + 36) / 2 = 37, stored in good.",
+       "code": [
+        "good = avg_quality(c(38, 36))",
+        "print(good)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 37"
+        },
+        {
+         "id": "b",
+         "label": "[1] 74"
+        },
+        {
+         "id": "c",
+         "label": "[1] 38"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 37"
+       },
+       "fb": {
+        "b": "That is the sum.",
+        "c": "That is only the first score."
+       },
+       "answerLine": "[1] 37",
+       "id": "bio_p2_l4_q4"
+      },
+      {
+       "kind": "build",
+       "prompt": "Check a second read with your function",
+       "hint": "Run avg_quality() on read2, then print the result.",
+       "code": [
+        "read2 = c(40, 38, 20)"
+       ],
+       "screen": {
+        "goal": "[1] 32.66667"
+       },
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "avg_quality"
+        },
+        {
+         "id": "t3",
+         "label": "("
+        },
+        {
+         "id": "t4",
+         "label": "read2"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": ")"
+        },
+        {
+         "id": "t7",
+         "label": "mean"
+        },
+        {
+         "id": "t8",
+         "label": "["
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+       ],
+       "ok": "avg_quality(read2) works out (40 + 38 + 20) / 3, which is 32.66667. One function, any read.",
+       "wrongBuild": "print, then avg_quality, with read2 in round brackets.",
+       "fb": {},
+       "answerLine": "print(avg_quality(read2))",
+       "id": "bio_p2_l4_q5"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "id": "bio_p2_cp",
+    "name": "Protein mass",
+    "filename": "protein_mass.R",
+    "problem": "Biochemists estimate a protein's mass from its length: each amino acid adds about 110 daltons on average.",
+    "unlock": [
+     "Phase 3 unlocked",
+     "Automation and lab efficiency",
+     "New skill: decisions. You'll build a plate dilution planner."
+    ],
+    "questions": [
+     {
+      "steps": {
+       "a": "Name the function protein_kda",
+       "b": "Take the number of amino acids, n",
+       "c": "Multiply n by 110 to get daltons",
+       "d": "Divide by 1000 to get kilodaltons",
+       "e": "Give back the result with return()"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "d",
+       "a",
+       "e",
+       "c",
+       "b"
+      ],
+      "ok": "A function is named, takes its input, works on it step by step, then gives back the answer.",
+      "wrong": "Something is used before it exists. You need n before you can multiply it.",
+      "hint": "Name and input come first. return() always comes last.",
+      "prompt": "Plan the function",
+      "style": "plan",
+      "id": "bio_p2_cp_q1",
+      "kind": "order",
+      "task": "Biochemists estimate a protein's mass from its length: each amino acid adds about 110 daltons (Da). Plan a function that turns a number of amino acids into kilodaltons."
+     },
+     {
+      "steps": {
+       "a": "protein_kda = function(n) {",
+       "b": "  daltons = n * 110",
+       "c": "  kda = daltons / 1000",
+       "d": "  return(kda)",
+       "e": "}"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "c",
+       "e",
+       "a",
+       "d",
+       "b"
+      ],
+      "goal": "protein_kda(140): [1] 15.4",
+      "ok": "The function opens, works out daltons, converts to kDa, returns it, then closes.",
+      "wrong": "Check the braces: the function opens first and closes last, with return() just before the }.",
+      "hint": "A function opens with { and closes with }. Everything else sits between.",
+      "prompt": "Order the function code",
+      "style": "code",
+      "id": "bio_p2_cp_q2",
+      "kind": "order"
+     },
+     {
+      "prompt": "What does R print?",
+      "hint": "Work through return() with n = 250.",
+      "code": [
+       "protein_kda = function(n) {",
+       "  return(n * 110 / 1000)",
+       "}",
+       "print(protein_kda(250))"
+      ],
+      "screen": {
+       "done": "[1] 27.5"
+      },
+      "opts": [
+       {
+        "id": "a",
+        "label": "[1] 27.5"
+       },
+       {
+        "id": "b",
+        "label": "[1] 27500"
+       },
+       {
+        "id": "c",
+        "label": "[1] 250"
+       },
+       {
+        "id": "d",
+        "label": "An error"
+       }
+      ],
+      "correct": "a",
+      "ok": "250 × 110 = 27,500 Da, and / 1000 gives 27.5 kDa.",
+      "fb": {
+       "b": "That is daltons. The function also divides by 1000.",
+       "c": "250 is the input, not the result.",
+       "d": "The function exists before it is called, so it runs."
+      },
+      "answerLine": "[1] 27.5",
+      "style": "predict",
+      "id": "bio_p2_cp_q3",
+      "kind": "predict"
+     },
+     {
+      "prompt": "Which line causes the error?",
+      "hint": "R reads from the top. What does it know about on line 1?",
+      "lines": [
+       {
+        "id": "a",
+        "label": "print(protein_kda(300))"
+       },
+       {
+        "id": "b",
+        "label": "protein_kda = function(n) {"
+       },
+       {
+        "id": "c",
+        "label": "  return(n * 110 / 1000)"
+       },
+       {
+        "id": "d",
+        "label": "}"
+       }
+      ],
+      "correct": "a",
+      "screen": {
+       "err": "Error: could not find function \"protein_kda\"",
+       "done": "[1] 33"
+      },
+      "ok": "R runs top to bottom, so the function must exist before it is called. Move the print() line to the end.",
+      "fb": {
+       "b": "This line creates the function. It is fine.",
+       "c": "The maths inside is right.",
+       "d": "That closes the function."
+      },
+      "answerLine": "print(protein_kda(300))",
+      "style": "debug",
+      "id": "bio_p2_cp_q4",
+      "kind": "bug"
+     },
+     {
+      "prompt": "Estimate alpha-synuclein's mass (140 amino acids)",
+      "hint": "Call protein_kda() on synuclein inside print().",
+      "code": [
+       "# protein_kda() is ready",
+       "synuclein = 140"
+      ],
+      "screen": {
+       "goal": "[1] 15.4"
+      },
+      "opts": [
+       {
+        "id": "t0",
+        "label": "print"
+       },
+       {
+        "id": "t1",
+        "label": "("
+       },
+       {
+        "id": "t2",
+        "label": "protein_kda"
+       },
+       {
+        "id": "t3",
+        "label": "("
+       },
+       {
+        "id": "t4",
+        "label": "synuclein"
+       },
+       {
+        "id": "t5",
+        "label": ")"
+       },
+       {
+        "id": "t6",
+        "label": ")"
+       },
+       {
+        "id": "t7",
+        "label": "mean"
+       },
+       {
+        "id": "t8",
+        "label": "\"140\""
+       }
+      ],
+      "correct": [
+       "t0",
+       "t1",
+       "t2",
+       "t3",
+       "t4",
+       "t5",
+       "t6"
+      ],
+      "ok": "140 × 110 / 1000 = 15.4 kDa. The protein is listed at about 14 kDa, so the quick estimate is close.",
+      "wrongBuild": "print, then protein_kda with synuclein in round brackets.",
+      "fb": {},
+      "answerLine": "print(protein_kda(synuclein))",
+      "report": [
+       [
+        "Rule",
+        "110 Da per amino acid"
+       ],
+       [
+        "Function",
+        "protein_kda(n)"
+       ]
+      ],
+      "reportTitle": "Mass estimate",
+      "slot": "alpha-synuclein",
+      "style": "build",
+      "id": "bio_p2_cp_q5",
+      "kind": "build"
+     }
+    ]
+   }
+  },
+  {
+   "number": 3,
+   "area": "Automation and lab efficiency",
+   "project": "Plate dilution planner",
+   "picture": "plate",
+   "skill": "Decisions",
+   "parts": [
+    [
+     "Too big for a well?",
+     "FALSE"
+    ],
+    [
+     "Big sample",
+     "Two wells"
+    ],
+    [
+     "Small sample",
+     "One well"
+    ],
+    [
+     "Buffer to add",
+     "190 µL"
+    ]
+   ],
+   "code": [
+    "v1 = 10",
+    "if (v1 > 200) {",
+    "  print(\"Two wells\")",
+    "} else {",
+    "  print(\"One well\")",
+    "}",
+    "print(200 - v1)"
+   ],
+   "lessons": [
+    {
+     "id": "bio_p3_l1",
+     "part": 1,
+     "title": "Too big for a well?",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "> asks \"is it bigger?\"",
+       "ok": "250 is more than 200, so R answers TRUE.",
+       "code": [
+        "print(250 > 200)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] TRUE"
+        },
+        {
+         "id": "b",
+         "label": "[1] FALSE"
+        },
+        {
+         "id": "c",
+         "label": "[1] 50"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] TRUE"
+       },
+       "fb": {
+        "b": "250 is bigger.",
+        "c": "> compares; it does not subtract.",
+        "d": "The line is valid."
+       },
+       "answerLine": "[1] TRUE",
+       "id": "bio_p3_l1_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "== asks \"are they equal?\"",
+       "ok": "The two values are equal, so R answers TRUE.",
+       "code": [
+        "print(200 == 200)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] TRUE"
+        },
+        {
+         "id": "b",
+         "label": "[1] FALSE"
+        },
+        {
+         "id": "c",
+         "label": "[1] 200"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] TRUE"
+       },
+       "fb": {
+        "b": "They are the same.",
+        "c": "== compares.",
+        "d": "The line is valid."
+       },
+       "answerLine": "[1] TRUE",
+       "id": "bio_p3_l1_q2"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Does 200 µL fit exactly?",
+       "hint": "<= means less than or equal.",
+       "ok": "200 is less than or equal to 200, so it fits.",
+       "code": [
+        "v1 = 200",
+        "print(v1 ___ 200)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "<="
+        },
+        {
+         "id": "b",
+         "label": "<"
+        },
+        {
+         "id": "c",
+         "label": ">"
+        },
+        {
+         "id": "d",
+         "label": "!="
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] TRUE"
+       },
+       "fb": {
+        "b": "200 is not less than 200.",
+        "c": "200 is not more than 200.",
+        "d": "!= means \"not equal\"."
+       },
+       "answerLine": "print(v1 <= 200)",
+       "id": "bio_p3_l1_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "One = stores; two == compares.",
+       "ok": "Inside print(), v1 = 200 is read as a setting, not a question. Compare with ==: print(v1 == 200)",
+       "lines": [
+        {
+         "id": "a",
+         "label": "v1 = 10"
+        },
+        {
+         "id": "b",
+         "label": "print(v1 = 200)"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "argument \"x\" is missing, with no default",
+        "done": "[1] FALSE"
+       },
+       "fb": {
+        "a": "Storing 10 is fine."
+       },
+       "answerLine": "print(v1 = 200)",
+       "id": "bio_p3_l1_q4"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Is 10 µL too much for one well?",
+       "hint": "A well holds 200 µL. Comparisons like > give back TRUE or FALSE.",
+       "code": [
+        "v1 = 10",
+        "print(v1 ___ 200)"
+       ],
+       "screen": {
+        "goal": "[1] FALSE"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": ">"
+        },
+        {
+         "id": "b",
+         "label": "="
+        },
+        {
+         "id": "c",
+         "label": "+"
+        },
+        {
+         "id": "d",
+         "label": "=>"
+        }
+       ],
+       "correct": "a",
+       "ok": "v1 > 200 asks a question. 10 is not more than 200, so R answers FALSE: it fits.",
+       "fb": {
+        "b": "= stores a value. To compare, use >.",
+        "c": "+ adds the numbers. The question needs a comparison.",
+        "d": "R has no =>. Greater than is written >."
+       },
+       "answerLine": "print(v1 > 200)",
+       "id": "bio_p3_l1_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p3_l2",
+     "part": 2,
+     "title": "Big or small sample",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does it print for 150 µL?",
+       "hint": "Only one branch runs.",
+       "ok": "150 is not more than 200, so the else branch runs.",
+       "code": [
+        "v1 = 150",
+        "if (v1 > 200) {",
+        "  print(\"Two wells\")",
+        "} else print(\"One well\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"One well\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"Two wells\""
+        },
+        {
+         "id": "c",
+         "label": "Both lines"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"One well\""
+       },
+       "fb": {
+        "b": "That needs more than 200.",
+        "c": "Only one branch runs."
+       },
+       "answerLine": "[1] \"One well\"",
+       "id": "bio_p3_l2_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Start the decision",
+       "hint": "One word starts a decision.",
+       "ok": "if (check) runs the next part only when the check is TRUE.",
+       "code": [
+        "v1 = 300",
+        "___ (v1 > 200) print(\"Two wells\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "if"
+        },
+        {
+         "id": "b",
+         "label": "when"
+        },
+        {
+         "id": "c",
+         "label": "check"
+        },
+        {
+         "id": "d",
+         "label": "while"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] \"Two wells\""
+       },
+       "fb": {
+        "b": "R has no when.",
+        "c": "R has no check.",
+        "d": "while repeats; it does not decide once."
+       },
+       "answerLine": "if (v1 > 200) print(\"Two wells\")",
+       "id": "bio_p3_l2_q2"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Add the other branch",
+       "hint": "One word catches everything else.",
+       "ok": "else runs when the if check is FALSE.",
+       "code": [
+        "v1 = 150",
+        "if (v1 > 200) print(\"Two wells\") ___ print(\"One well\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "else"
+        },
+        {
+         "id": "b",
+         "label": "otherwise"
+        },
+        {
+         "id": "c",
+         "label": "or"
+        },
+        {
+         "id": "d",
+         "label": "if"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] \"One well\""
+       },
+       "fb": {
+        "b": "R has no otherwise.",
+        "c": "or is not an R word.",
+        "d": "if would start a new check."
+       },
+       "answerLine": "... else print(\"One well\")",
+       "id": "bio_p3_l2_q3"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does it print for exactly 200 µL?",
+       "hint": "> does not include the number itself.",
+       "ok": "200 is not more than 200, so it fits in one well.",
+       "code": [
+        "v1 = 200",
+        "if (v1 > 200) {",
+        "  print(\"Two wells\")",
+        "} else print(\"One well\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"One well\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"Two wells\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"One well\""
+       },
+       "fb": {
+        "b": "> means strictly more than."
+       },
+       "answerLine": "[1] \"One well\"",
+       "id": "bio_p3_l2_q4"
+      },
+      {
+       "kind": "predict",
+       "prompt": "v1 is 250 µL. What prints?",
+       "hint": "Only one branch of if / else runs.",
+       "code": [
+        "if (v1 > 200) {",
+        "  print(\"Two wells\")",
+        "} else print(\"One well\")"
+       ],
+       "screen": {
+        "done": "[1] \"Two wells\""
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"Two wells\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"One well\""
+        },
+        {
+         "id": "c",
+         "label": "Both lines"
+        },
+        {
+         "id": "d",
+         "label": "[1] TRUE"
+        }
+       ],
+       "correct": "a",
+       "ok": "250 is more than 200, so R runs the first branch and skips the else.",
+       "fb": {
+        "b": "That is the else branch. It only runs when the check is FALSE.",
+        "c": "if and else never both run.",
+        "d": "if uses TRUE to choose a branch; it does not print it."
+       },
+       "answerLine": "[1] \"Two wells\"",
+       "id": "bio_p3_l2_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p3_l3",
+     "part": 3,
+     "title": "Fix the else line",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does it print for 450 µL?",
+       "hint": "Checks run top to bottom.",
+       "ok": "450 passes the first check, so R stops there.",
+       "code": [
+        "v1 = 450",
+        "if (v1 > 400) {",
+        "  print(\"Three wells\")",
+        "} else if (v1 > 200) {",
+        "  print(\"Two wells\")",
+        "} else print(\"One well\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"Three wells\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"Two wells\""
+        },
+        {
+         "id": "c",
+         "label": "[1] \"One well\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"Three wells\""
+       },
+       "fb": {
+        "b": "The first check already passed.",
+        "c": "450 is more than 400."
+       },
+       "answerLine": "[1] \"Three wells\"",
+       "id": "bio_p3_l3_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does it print for 250 µL?",
+       "hint": "Checks run top to bottom.",
+       "ok": "250 fails the first check but passes the second.",
+       "code": [
+        "v1 = 250",
+        "if (v1 > 400) {",
+        "  print(\"Three wells\")",
+        "} else if (v1 > 200) {",
+        "  print(\"Two wells\")",
+        "} else print(\"One well\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"Two wells\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"Three wells\""
+        },
+        {
+         "id": "c",
+         "label": "[1] \"One well\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"Two wells\""
+       },
+       "fb": {
+        "b": "250 is not more than 400.",
+        "c": "250 is more than 200."
+       },
+       "answerLine": "[1] \"Two wells\"",
+       "id": "bio_p3_l3_q2"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Add a second check",
+       "hint": "Two words: a second check after the first fails.",
+       "ok": "else if adds another check that runs only when the first fails.",
+       "code": [
+        "if (v1 > 400) {",
+        "  print(\"Three wells\")",
+        "} ___ (v1 > 200) {",
+        "  print(\"Two wells\")",
+        "}"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "else if"
+        },
+        {
+         "id": "b",
+         "label": "if else"
+        },
+        {
+         "id": "c",
+         "label": "elif"
+        },
+        {
+         "id": "d",
+         "label": "else"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "Checks 200 only if 400 fails"
+       },
+       "fb": {
+        "b": "The order is else if.",
+        "c": "elif is Python.",
+        "d": "else cannot take a check."
+       },
+       "answerLine": "} else if (v1 > 200) {",
+       "id": "bio_p3_l3_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "else needs a curly brace.",
+       "ok": "else needs a curly brace {, not a round one. Fix: } else {",
+       "lines": [
+        {
+         "id": "a",
+         "label": "if (v1 > 200) {"
+        },
+        {
+         "id": "b",
+         "label": "  print(\"Two wells\")"
+        },
+        {
+         "id": "c",
+         "label": "} else ("
+        },
+        {
+         "id": "d",
+         "label": "  print(\"One well\")"
+        },
+        {
+         "id": "e",
+         "label": "}"
+        }
+       ],
+       "correct": "c",
+       "screen": {
+        "err": "unexpected '}'",
+        "done": "[1] \"One well\""
+       },
+       "fb": {
+        "a": "The check is fine.",
+        "b": "The message is fine.",
+        "d": "The message is fine.",
+        "e": "The brace is fine once else uses {."
+       },
+       "answerLine": "} else (",
+       "id": "bio_p3_l3_q4"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line makes R stop?",
+       "hint": "In a script, else has to sit on the same line as the end of the if.",
+       "lines": [
+        {
+         "id": "a",
+         "label": "v1 = 10"
+        },
+        {
+         "id": "b",
+         "label": "if (v1 > 200) print(\"Two wells\")"
+        },
+        {
+         "id": "c",
+         "label": "else print(\"One well\")"
+        }
+       ],
+       "correct": "c",
+       "screen": {
+        "err": "Error: unexpected 'else'",
+        "done": "[1] \"One well\""
+       },
+       "ok": "R finishes the if at the end of line 2, so a new line starting with else confuses it. Join them: print(\"Two wells\") else print(\"One well\")",
+       "fb": {
+        "a": "Storing 10 is fine.",
+        "b": "The if line is fine on its own. The problem is what comes next."
+       },
+       "answerLine": "else print(\"One well\")",
+       "id": "bio_p3_l3_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p3_l4",
+     "part": 4,
+     "title": "Buffer to add",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "The well holds 200 µL.",
+       "ok": "200 - 25 = 175 µL of buffer.",
+       "code": [
+        "v1 = 25",
+        "buffer = 200 - v1",
+        "print(buffer)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 175"
+        },
+        {
+         "id": "b",
+         "label": "[1] 225"
+        },
+        {
+         "id": "c",
+         "label": "[1] 25"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 175"
+       },
+       "fb": {
+        "b": "That adds.",
+        "c": "That is the sample."
+       },
+       "answerLine": "[1] 175",
+       "id": "bio_p3_l4_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Only add a sample that exists",
+       "hint": "Check it is more than 0.",
+       "ok": "10 > 0 is TRUE, so the message prints.",
+       "code": [
+        "v1 = 10",
+        "if (v1 ___ 0) print(\"Add the sample\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": ">"
+        },
+        {
+         "id": "b",
+         "label": "<"
+        },
+        {
+         "id": "c",
+         "label": "=="
+        },
+        {
+         "id": "d",
+         "label": "="
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] \"Add the sample\""
+       },
+       "fb": {
+        "b": "10 is not less than 0.",
+        "c": "10 is not 0.",
+        "d": "One = stores; it cannot check."
+       },
+       "answerLine": "if (v1 > 0) print(\"Add the sample\")",
+       "id": "bio_p3_l4_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does it print for an empty well?",
+       "hint": "== checks for an exact match.",
+       "ok": "v1 is exactly 0, so the first branch runs.",
+       "code": [
+        "v1 = 0",
+        "if (v1 == 0) {",
+        "  print(\"Skip this well\")",
+        "} else print(\"Add the sample\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"Skip this well\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"Add the sample\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"Skip this well\""
+       },
+       "fb": {
+        "b": "The check is TRUE."
+       },
+       "answerLine": "[1] \"Skip this well\"",
+       "id": "bio_p3_l4_q3"
+      },
+      {
+       "kind": "build",
+       "prompt": "Fill two wells with the same volume",
+       "hint": "Multiply v1 by 2.",
+       "ok": "10 * 2 = 20 µL across two wells.",
+       "code": [
+        "v1 = 10"
+       ],
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "v1"
+        },
+        {
+         "id": "t3",
+         "label": "*"
+        },
+        {
+         "id": "t4",
+         "label": "2"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": "\"v1\""
+        },
+        {
+         "id": "t7",
+         "label": "+"
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+       ],
+       "screen": {
+        "goal": "[1] 20"
+       },
+       "wrongBuild": "print, then v1 * 2 in brackets.",
+       "answerLine": "print ( v1 * 2 )",
+       "fb": {},
+       "id": "bio_p3_l4_q4"
+      },
+      {
+       "kind": "build",
+       "prompt": "Show how much buffer tops the well up",
+       "hint": "The well holds 200 µL in total.",
+       "code": [
+        "v1 = 10"
+       ],
+       "screen": {
+        "goal": "[1] 190"
+       },
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "200"
+        },
+        {
+         "id": "t3",
+         "label": "-"
+        },
+        {
+         "id": "t4",
+         "label": "v1"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": "+"
+        },
+        {
+         "id": "t7",
+         "label": "\"v1\""
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5"
+       ],
+       "ok": "200 - 10 = 190 µL of buffer fills the well.",
+       "wrongBuild": "print, then brackets around 200 - v1.",
+       "fb": {},
+       "answerLine": "print(200 - v1)",
+       "id": "bio_p3_l4_q5"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "id": "bio_p3_cp",
+    "name": "Disk test",
+    "filename": "disk_test.R",
+    "problem": "Labs measure the clear zone around an antibiotic disk. For a 5 µg ciprofloxacin disk, proposed cut-offs are 21 mm or more susceptible, 16 to 20 intermediate, 15 or less resistant.",
+    "unlock": [
+     "Phase 4 unlocked",
+     "Modelling and simulation",
+     "New skill: loops. You'll build a bacterial growth simulator."
+    ],
+    "questions": [
+     {
+      "steps": {
+       "a": "Measure the zone diameter in mm",
+       "b": "Check: is it 21 mm or more?",
+       "c": "If yes, report susceptible",
+       "d": "If not, check: is it 16 mm or more?",
+       "e": "If yes, intermediate. If not, resistant"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "c",
+       "e",
+       "a",
+       "d",
+       "b"
+      ],
+      "ok": "Measure first, then test from the highest cut-off down, so each zone lands in exactly one category.",
+      "wrong": "Check the order of the tests. The 16 mm check only makes sense after the 21 mm check fails.",
+      "hint": "Start with the measurement, then the strictest check.",
+      "prompt": "Plan the decision",
+      "style": "plan",
+      "id": "bio_p3_cp_q1",
+      "kind": "order",
+      "task": "Labs measure the clear zone around an antibiotic disk. Proposed cut-offs for a 5 µg ciprofloxacin disk: 21 mm or more is susceptible, 16 to 20 mm intermediate, 15 mm or less resistant."
+     },
+     {
+      "steps": {
+       "a": "zone = 23",
+       "b": "if (zone >= 21) {",
+       "c": "  print(\"Susceptible\")",
+       "d": "} else if (zone >= 16) {",
+       "e": "  print(\"Intermediate\")",
+       "f": "} else print(\"Resistant\")"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f"
+       ]
+      ],
+      "start": [
+       "d",
+       "a",
+       "f",
+       "c",
+       "b",
+       "e"
+      ],
+      "goal": "[1] \"Susceptible\"",
+      "ok": "zone is stored, then the if, else if and else run from the strictest check down.",
+      "wrong": "Each branch needs its check first, then its print line, with else at the end.",
+      "hint": "Each print() sits right under the check it belongs to.",
+      "prompt": "Order the decision code",
+      "style": "code",
+      "id": "bio_p3_cp_q2",
+      "kind": "order"
+     },
+     {
+      "prompt": "What does R print for a 16 mm zone?",
+      "hint": ">= includes the number itself.",
+      "code": [
+       "zone = 16",
+       "if (zone >= 21) {",
+       "  print(\"Susceptible\")",
+       "} else if (zone >= 16) {",
+       "  print(\"Intermediate\")",
+       "} else print(\"Resistant\")"
+      ],
+      "screen": {
+       "done": "[1] \"Intermediate\""
+      },
+      "opts": [
+       {
+        "id": "a",
+        "label": "[1] \"Intermediate\""
+       },
+       {
+        "id": "b",
+        "label": "[1] \"Resistant\""
+       },
+       {
+        "id": "c",
+        "label": "[1] \"Susceptible\""
+       },
+       {
+        "id": "d",
+        "label": "Nothing prints"
+       }
+      ],
+      "correct": "a",
+      "ok": "16 is not 21 or more, but it is 16 or more, so R prints Intermediate.",
+      "fb": {
+       "b": "Resistant needs 15 or less. 16 passes the second check.",
+       "c": "16 is less than 21, so the first check fails.",
+       "d": "One branch always runs, because of the final else."
+      },
+      "answerLine": "[1] \"Intermediate\"",
+      "style": "predict",
+      "id": "bio_p3_cp_q3",
+      "kind": "predict"
+     },
+     {
+      "prompt": "Which line makes R stop?",
+      "hint": "Look closely at how the comparison is written.",
+      "lines": [
+       {
+        "id": "a",
+        "label": "zone = 25"
+       },
+       {
+        "id": "b",
+        "label": "if (zone => 21) {"
+       },
+       {
+        "id": "c",
+        "label": "  print(\"Susceptible\")"
+       },
+       {
+        "id": "d",
+        "label": "}"
+       }
+      ],
+      "correct": "b",
+      "screen": {
+       "err": "Error: unexpected '>' in \"if (zone =>\"",
+       "done": "[1] \"Susceptible\""
+      },
+      "ok": "R writes \"greater than or equal\" as >=, with the > first. Fix: if (zone >= 21) {",
+      "fb": {
+       "a": "Storing 25 is fine.",
+       "c": "The print line is fine.",
+       "d": "The closing brace is fine."
+      },
+      "answerLine": "if (zone => 21) {",
+      "style": "debug",
+      "id": "bio_p3_cp_q4",
+      "kind": "bug"
+     },
+     {
+      "prompt": "Print Resistant for zones of 15 mm or less",
+      "hint": "Start with if, then the check in brackets, then print().",
+      "code": [
+       "zone = 12"
+      ],
+      "screen": {
+       "goal": "[1] \"Resistant\""
+      },
+      "opts": [
+       {
+        "id": "t0",
+        "label": "if"
+       },
+       {
+        "id": "t1",
+        "label": "("
+       },
+       {
+        "id": "t2",
+        "label": "zone"
+       },
+       {
+        "id": "t3",
+        "label": "<="
+       },
+       {
+        "id": "t4",
+        "label": "15"
+       },
+       {
+        "id": "t5",
+        "label": ")"
+       },
+       {
+        "id": "t6",
+        "label": "print"
+       },
+       {
+        "id": "t7",
+        "label": "("
+       },
+       {
+        "id": "t8",
+        "label": "\"Resistant\""
+       },
+       {
+        "id": "t9",
+        "label": ")"
+       },
+       {
+        "id": "t10",
+        "label": ">="
+       },
+       {
+        "id": "t11",
+        "label": "\"15\""
+       }
+      ],
+      "correct": [
+       "t0",
+       "t1",
+       "t2",
+       "t3",
+       "t4",
+       "t5",
+       "t6",
+       "t7",
+       "t8",
+       "t9"
+      ],
+      "ok": "12 is 15 or less, so the check is TRUE and R prints Resistant.",
+      "wrongBuild": "if, then (zone <= 15), then print(\"Resistant\").",
+      "fb": {},
+      "answerLine": "if (zone <= 15) print(\"Resistant\")",
+      "report": [
+       [
+        "Susceptible",
+        "21 mm or more"
+       ],
+       [
+        "Intermediate",
+        "16 to 20 mm"
+       ]
+      ],
+      "reportTitle": "Disk report",
+      "slot": "Resistant rule",
+      "style": "build",
+      "id": "bio_p3_cp_q5",
+      "kind": "build"
+     }
+    ]
+   }
+  },
+  {
+   "number": 4,
+   "area": "Modelling and simulation",
+   "project": "Bacterial growth simulator",
+   "picture": "growth",
+   "skill": "Loops",
+   "parts": [
+    [
+     "Hours",
+     "1 2 3"
+    ],
+    [
+     "After 4 hours",
+     "16 cells"
+    ],
+    [
+     "Hours to 100",
+     "7"
+    ],
+    [
+     "Last count",
+     "16"
+    ]
+   ],
+   "code": [
+    "cells = 1",
+    "hours = 0",
+    "while (cells < 100) {",
+    "  cells = cells * 2",
+    "  hours = hours + 1",
+    "}",
+    "print(hours)"
+   ],
+   "lessons": [
+    {
+     "id": "bio_p4_l1",
+     "part": 1,
+     "title": "Loop over hours",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What prints?",
+       "hint": "The loop runs once per value.",
+       "ok": "1:3 has three values, so the loop runs three times.",
+       "code": [
+        "for (i in 1:3) print(\"tick\")"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"tick\" three times"
+        },
+        {
+         "id": "b",
+         "label": "[1] \"tick\" once"
+        },
+        {
+         "id": "c",
+         "label": "[1] 3"
+        },
+        {
+         "id": "d",
+         "label": "Nothing"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"tick\"\n[1] \"tick\"\n[1] \"tick\""
+       },
+       "fb": {
+        "b": "1:3 runs it 3 times.",
+        "c": "It prints the text each time.",
+        "d": "print runs inside the loop."
+       },
+       "answerLine": "[1] \"tick\"\n[1] \"tick\"\n[1] \"tick\"",
+       "id": "bio_p4_l1_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Loop over the first 5 hours",
+       "hint": "1:5 means 1, 2, 3, 4, 5.",
+       "ok": "1:5 runs the loop for hours 1 to 5.",
+       "code": [
+        "for (hour in 1:___) print(hour)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "5"
+        },
+        {
+         "id": "b",
+         "label": "4"
+        },
+        {
+         "id": "c",
+         "label": "6"
+        },
+        {
+         "id": "d",
+         "label": "0"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 1 ... [1] 5"
+       },
+       "fb": {
+        "b": "That stops at 4.",
+        "c": "That goes to 6.",
+        "d": "1:0 counts down: 1, 0."
+       },
+       "answerLine": "for (hour in 1:5) print(hour)",
+       "id": "bio_p4_l1_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "total grows each round.",
+       "ok": "0 + 1 + 2 + 3 = 6.",
+       "code": [
+        "total = 0",
+        "for (n in 1:3) total = total + n",
+        "print(total)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 6"
+        },
+        {
+         "id": "b",
+         "label": "[1] 3"
+        },
+        {
+         "id": "c",
+         "label": "[1] 0"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 6"
+       },
+       "fb": {
+        "b": "That is only the last n.",
+        "c": "The loop changes total."
+       },
+       "answerLine": "[1] 6",
+       "id": "bio_p4_l1_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "for needs brackets around its part.",
+       "ok": "R needs brackets: for (hour in 1:3) {",
+       "lines": [
+        {
+         "id": "a",
+         "label": "for hour in 1:3 {"
+        },
+        {
+         "id": "b",
+         "label": "  print(hour)"
+        },
+        {
+         "id": "c",
+         "label": "}"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "err": "unexpected symbol",
+        "done": "[1] 1  [1] 2  [1] 3"
+       },
+       "fb": {
+        "b": "print is fine.",
+        "c": "The brace is fine."
+       },
+       "answerLine": "for hour in 1:3 {",
+       "id": "bio_p4_l1_q4"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Loop over the first 3 hours",
+       "hint": "R reads: for (name in values).",
+       "code": [
+        "for (hour ___ 1:3) {",
+        "  print(hour)",
+        "}"
+       ],
+       "screen": {
+        "goal": "[1] 1  [1] 2  [1] 3"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "in"
+        },
+        {
+         "id": "b",
+         "label": "="
+        },
+        {
+         "id": "c",
+         "label": "of"
+        },
+        {
+         "id": "d",
+         "label": "to"
+        }
+       ],
+       "correct": "a",
+       "ok": "for (hour in 1:3) runs the loop once for each value: 1, 2, then 3.",
+       "fb": {
+        "b": "for loops use in, not =.",
+        "c": "R uses in. Some other languages use of.",
+        "d": "1:3 already means 1 to 3. The keyword is in."
+       },
+       "answerLine": "for (hour in 1:3) {",
+       "id": "bio_p4_l1_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p4_l2",
+     "part": 2,
+     "title": "Double the cells",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "How many cells after 2 hours?",
+       "hint": "Double each hour.",
+       "ok": "1 doubles to 2, then 4.",
+       "code": [
+        "cells = 1",
+        "for (hour in 1:2) cells = cells * 2",
+        "print(cells)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 4"
+        },
+        {
+         "id": "b",
+         "label": "[1] 2"
+        },
+        {
+         "id": "c",
+         "label": "[1] 3"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 4"
+       },
+       "fb": {
+        "b": "That is one doubling.",
+        "c": "Doubling multiplies."
+       },
+       "answerLine": "[1] 4",
+       "id": "bio_p4_l2_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Double the cells each hour",
+       "hint": "Doubling multiplies by 2.",
+       "ok": "1, 2, 4, 8: three doublings.",
+       "code": [
+        "cells = 1",
+        "for (hour in 1:3) cells = cells ___ 2",
+        "print(cells)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "*"
+        },
+        {
+         "id": "b",
+         "label": "+"
+        },
+        {
+         "id": "c",
+         "label": "^"
+        },
+        {
+         "id": "d",
+         "label": "-"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 8"
+       },
+       "fb": {
+        "b": "+ 2 gives 7.",
+        "c": "^ 2 squares: 1 stays 1.",
+        "d": "- 2 gives -5."
+       },
+       "answerLine": "cells = cells * 2",
+       "id": "bio_p4_l2_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "Start with 5 cells. How many after 3 hours?",
+       "hint": "Double three times.",
+       "ok": "5, 10, 20, 40.",
+       "code": [
+        "cells = 5",
+        "for (hour in 1:3) cells = cells * 2",
+        "print(cells)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 40"
+        },
+        {
+         "id": "b",
+         "label": "[1] 15"
+        },
+        {
+         "id": "c",
+         "label": "[1] 10"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 40"
+       },
+       "fb": {
+        "b": "That adds instead of doubling.",
+        "c": "That is one doubling."
+       },
+       "answerLine": "[1] 40",
+       "id": "bio_p4_l2_q3"
+      },
+      {
+       "kind": "build",
+       "prompt": "Double the cells over 4 hours",
+       "hint": "for (hour in 1:4) then the update.",
+       "ok": "The loop doubles cells 4 times: 16.",
+       "code": [
+        "cells = 1"
+       ],
+       "opts": [
+        {
+         "id": "t0",
+         "label": "for"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "hour"
+        },
+        {
+         "id": "t3",
+         "label": "in"
+        },
+        {
+         "id": "t4",
+         "label": "1:4"
+        },
+        {
+         "id": "t5",
+         "label": ")"
+        },
+        {
+         "id": "t6",
+         "label": "cells"
+        },
+        {
+         "id": "t7",
+         "label": "="
+        },
+        {
+         "id": "t8",
+         "label": "cells"
+        },
+        {
+         "id": "t9",
+         "label": "*"
+        },
+        {
+         "id": "t10",
+         "label": "2"
+        },
+        {
+         "id": "t11",
+         "label": "+"
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6",
+        "t7",
+        "t8",
+        "t9",
+        "t10"
+       ],
+       "screen": {
+        "goal": "cells becomes 16"
+       },
+       "wrongBuild": "for (hour in 1:4) cells = cells * 2",
+       "answerLine": "for ( hour in 1:4 ) cells = cells * 2",
+       "fb": {},
+       "id": "bio_p4_l2_q4"
+      },
+      {
+       "kind": "predict",
+       "prompt": "How many cells after 4 hours?",
+       "hint": "Track cells after each hour.",
+       "code": [
+        "cells = 1",
+        "for (hour in 1:4) cells = cells * 2",
+        "print(cells)"
+       ],
+       "screen": {
+        "done": "[1] 16"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 16"
+        },
+        {
+         "id": "b",
+         "label": "[1] 8"
+        },
+        {
+         "id": "c",
+         "label": "[1] 4"
+        },
+        {
+         "id": "d",
+         "label": "[1] 2"
+        }
+       ],
+       "correct": "a",
+       "ok": "Four doublings: 2, 4, 8, 16.",
+       "fb": {
+        "b": "That is three doublings. 1:4 runs four times.",
+        "c": "The loop doubles four times; it does not multiply by 4 once.",
+        "d": "That is only one doubling."
+       },
+       "answerLine": "[1] 16",
+       "id": "bio_p4_l2_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p4_l3",
+     "part": 3,
+     "title": "Count the hours",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "while keeps going while the check is TRUE.",
+       "ok": "8 is still under 10, so it doubles once more to 16.",
+       "code": [
+        "cells = 1",
+        "while (cells < 10) cells = cells * 2",
+        "print(cells)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 16"
+        },
+        {
+         "id": "b",
+         "label": "[1] 8"
+        },
+        {
+         "id": "c",
+         "label": "[1] 10"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 16"
+       },
+       "fb": {
+        "b": "8 < 10, so the loop runs again.",
+        "c": "Doubling never lands on 10."
+       },
+       "answerLine": "[1] 16",
+       "id": "bio_p4_l3_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Repeat until 100 or more",
+       "hint": "This loop runs while a check is TRUE.",
+       "ok": "while (check) repeats as long as the check is TRUE.",
+       "code": [
+        "cells = 1",
+        "___ (cells < 100) cells = cells * 2"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "while"
+        },
+        {
+         "id": "b",
+         "label": "for"
+        },
+        {
+         "id": "c",
+         "label": "if"
+        },
+        {
+         "id": "d",
+         "label": "repeat"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "Repeats until 100 or more"
+       },
+       "fb": {
+        "b": "for needs a list of values.",
+        "c": "if runs once.",
+        "d": "repeat takes no check here."
+       },
+       "answerLine": "while (cells < 100) cells = cells * 2",
+       "id": "bio_p4_l3_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "n goes up by 1 each round.",
+       "ok": "The loop stops when n reaches 3.",
+       "code": [
+        "n = 0",
+        "while (n < 3) n = n + 1",
+        "print(n)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 3"
+        },
+        {
+         "id": "b",
+         "label": "[1] 2"
+        },
+        {
+         "id": "c",
+         "label": "[1] 0"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 3"
+       },
+       "fb": {
+        "b": "At 2 the check is still TRUE.",
+        "c": "The loop changes n."
+       },
+       "answerLine": "[1] 3",
+       "id": "bio_p4_l3_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "This loop never ends. Which line is wrong?",
+       "hint": "Is cells ever updated?",
+       "ok": "cells * 2 is worked out but never stored. Fix: cells = cells * 2",
+       "lines": [
+        {
+         "id": "a",
+         "label": "cells = 1"
+        },
+        {
+         "id": "b",
+         "label": "while (cells < 100) cells * 2"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "Still running: cells never changes",
+        "done": "Loop ends at 128"
+       },
+       "fb": {
+        "a": "Starting at 1 is fine."
+       },
+       "answerLine": "while (cells < 100) cells * 2",
+       "id": "bio_p4_l3_q4"
+      },
+      {
+       "kind": "bug",
+       "prompt": "cells starts at 1 and hours at 0. Which line is wrong?",
+       "hint": "Each doubling takes one hour.",
+       "lines": [
+        {
+         "id": "a",
+         "label": "while (cells < 100) {"
+        },
+        {
+         "id": "b",
+         "label": "  cells = cells * 2"
+        },
+        {
+         "id": "c",
+         "label": "  hours = hours - 1"
+        },
+        {
+         "id": "d",
+         "label": "}"
+        }
+       ],
+       "correct": "c",
+       "screen": {
+        "err": "[1] -7  (hours cannot be negative)",
+        "done": "[1] 7"
+       },
+       "ok": "Each doubling takes an hour, so hours must go up. Fix: hours = hours + 1",
+       "fb": {
+        "a": "The check is right: keep going while under 100.",
+        "b": "Doubling the cells is right.",
+        "d": "The brace closes the loop."
+       },
+       "answerLine": "  hours = hours - 1",
+       "id": "bio_p4_l3_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p4_l4",
+     "part": 4,
+     "title": "Last count",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "length() counts items.",
+       "ok": "There are 5 values.",
+       "code": [
+        "growth = c(1, 2, 4, 8, 16)",
+        "print(length(growth))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 5"
+        },
+        {
+         "id": "b",
+         "label": "[1] 16"
+        },
+        {
+         "id": "c",
+         "label": "[1] 31"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 5"
+       },
+       "fb": {
+        "b": "That is the last value.",
+        "c": "That is the total."
+       },
+       "answerLine": "[1] 5",
+       "id": "bio_p4_l4_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Show the first count",
+       "hint": "R counts positions from 1.",
+       "ok": "growth[1] is the first value.",
+       "code": [
+        "growth = c(1, 2, 4, 8, 16)",
+        "print(growth[___])"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "1"
+        },
+        {
+         "id": "b",
+         "label": "0"
+        },
+        {
+         "id": "c",
+         "label": "first"
+        },
+        {
+         "id": "d",
+         "label": "-1"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 1"
+       },
+       "fb": {
+        "b": "R positions start at 1.",
+        "c": "Use a number.",
+        "d": "-1 drops the first value."
+       },
+       "answerLine": "print(growth[1])",
+       "id": "bio_p4_l4_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "sum() adds every value.",
+       "ok": "1 + 2 + 4 + 8 + 16 = 31.",
+       "code": [
+        "growth = c(1, 2, 4, 8, 16)",
+        "print(sum(growth))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 31"
+        },
+        {
+         "id": "b",
+         "label": "[1] 16"
+        },
+        {
+         "id": "c",
+         "label": "[1] 5"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 31"
+       },
+       "fb": {
+        "b": "That is the last value.",
+        "c": "That is the count."
+       },
+       "answerLine": "[1] 31",
+       "id": "bio_p4_l4_q3"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "Maths on a vector works on every value.",
+       "ok": "R multiplies every value by 10 at once.",
+       "code": [
+        "growth = c(1, 2, 4, 8, 16)",
+        "print(growth * 10)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1]  10  20  40  80 160"
+        },
+        {
+         "id": "b",
+         "label": "[1] 310"
+        },
+        {
+         "id": "c",
+         "label": "[1] 10"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1]  10  20  40  80 160"
+       },
+       "fb": {
+        "b": "That is the total times 10.",
+        "c": "Every value changes, not just the first.",
+        "d": "Vector maths is valid R."
+       },
+       "answerLine": "[1]  10  20  40  80 160",
+       "id": "bio_p4_l4_q4"
+      },
+      {
+       "kind": "build",
+       "prompt": "Show the count after the last hour",
+       "hint": "Square brackets pick a position in a vector.",
+       "code": [
+        "growth = c(1, 2, 4, 8, 16)"
+       ],
+       "screen": {
+        "goal": "[1] 16"
+       },
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "growth"
+        },
+        {
+         "id": "t3",
+         "label": "["
+        },
+        {
+         "id": "t4",
+         "label": "5"
+        },
+        {
+         "id": "t5",
+         "label": "]"
+        },
+        {
+         "id": "t6",
+         "label": ")"
+        },
+        {
+         "id": "t7",
+         "label": "6"
+        },
+        {
+         "id": "t8",
+         "label": "("
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3",
+        "t4",
+        "t5",
+        "t6"
+       ],
+       "ok": "growth[5] picks the 5th value in the vector: 16.",
+       "wrongBuild": "print, then growth with [5] after it.",
+       "fb": {},
+       "answerLine": "print(growth[5])",
+       "id": "bio_p4_l4_q5"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "id": "bio_p4_cp",
+    "name": "Drug clearance",
+    "filename": "clearance.R",
+    "problem": "After a dose, the level of many drugs halves every half-life. Here, 80 mg/L halves every 6 hours.",
+    "unlock": [
+     "Phase 5 unlocked",
+     "Reproducibility",
+     "New skill: lists and data. You'll build a reproducible analysis report."
+    ],
+    "questions": [
+     {
+      "steps": {
+       "a": "Start with level 80 and a count of 0",
+       "b": "Check: is the level still 10 or more?",
+       "c": "If yes, halve the level",
+       "d": "Add 1 to the count",
+       "e": "Repeat the check; when it fails, print the count"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ],
+       [
+        "a",
+        "b",
+        "d",
+        "c",
+        "e"
+       ]
+      ],
+      "start": [
+       "d",
+       "b",
+       "e",
+       "a",
+       "c"
+      ],
+      "ok": "Set up, check, update, count, repeat. Halving and counting can swap, so both orders count.",
+      "wrong": "A loop needs its starting values first and its check before the work inside.",
+      "hint": "What has to exist before the first check?",
+      "prompt": "Plan the loop",
+      "style": "plan",
+      "id": "bio_p4_cp_q1",
+      "kind": "order",
+      "task": "After a dose, the level of many drugs halves every half-life. A level of 80 mg/L halves every 6 hours. Plan how to count the half-lives until it falls under 10."
+     },
+     {
+      "steps": {
+       "a": "level = 80",
+       "b": "count = 0",
+       "c": "while (level >= 10) {",
+       "d": "  level = level / 2",
+       "e": "  count = count + 1",
+       "f": "}",
+       "g": "print(count)"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+       ],
+       [
+        "b",
+        "a",
+        "c",
+        "d",
+        "e",
+        "f",
+        "g"
+       ],
+       [
+        "a",
+        "b",
+        "c",
+        "e",
+        "d",
+        "f",
+        "g"
+       ],
+       [
+        "b",
+        "a",
+        "c",
+        "e",
+        "d",
+        "f",
+        "g"
+       ]
+      ],
+      "start": [
+       "c",
+       "g",
+       "a",
+       "e",
+       "f",
+       "b",
+       "d"
+      ],
+      "goal": "[1] 4",
+      "ok": "80, 40, 20, 10, then 5 stops the loop: 4 half-lives, so R prints [1] 4.",
+      "wrong": "Starting values go above the loop, the work goes inside the braces, and print() comes after the }.",
+      "hint": "Anything inside the braces repeats. print() should only run once.",
+      "prompt": "Order the loop code",
+      "style": "code",
+      "id": "bio_p4_cp_q2",
+      "kind": "order"
+     },
+     {
+      "prompt": "What does R print?",
+      "hint": "1:3 runs the loop three times.",
+      "code": [
+       "level = 80",
+       "for (i in 1:3) {",
+       "  level = level / 2",
+       "}",
+       "print(level)"
+      ],
+      "screen": {
+       "done": "[1] 10"
+      },
+      "opts": [
+       {
+        "id": "a",
+        "label": "[1] 10"
+       },
+       {
+        "id": "b",
+        "label": "[1] 20"
+       },
+       {
+        "id": "c",
+        "label": "[1] 5"
+       },
+       {
+        "id": "d",
+        "label": "[1] 40"
+       }
+      ],
+      "correct": "a",
+      "ok": "Three halvings: 80, 40, 20, 10.",
+      "fb": {
+       "b": "That is after two halvings.",
+       "c": "That is four halvings.",
+       "d": "That is after one halving."
+      },
+      "answerLine": "[1] 10",
+      "style": "predict",
+      "id": "bio_p4_cp_q3",
+      "kind": "predict"
+     },
+     {
+      "prompt": "This loop never ends. Which line is wrong?",
+      "hint": "Does the level ever get smaller?",
+      "lines": [
+       {
+        "id": "a",
+        "label": "level = 80"
+       },
+       {
+        "id": "b",
+        "label": "count = 0"
+       },
+       {
+        "id": "c",
+        "label": "while (level >= 10) {"
+       },
+       {
+        "id": "d",
+        "label": "  level = level * 2"
+       },
+       {
+        "id": "e",
+        "label": "  count = count + 1"
+       },
+       {
+        "id": "f",
+        "label": "}"
+       }
+      ],
+      "correct": "d",
+      "screen": {
+       "err": "Still running: the loop never ends",
+       "done": "Loop ends after 4 rounds"
+      },
+      "ok": "Multiplying by 2 makes the level grow, so it never drops under 10. Fix: level = level / 2",
+      "fb": {
+       "a": "Starting at 80 is fine.",
+       "b": "Starting the count at 0 is fine.",
+       "c": "The check is fine; the level just never gets smaller.",
+       "e": "Counting each round is fine.",
+       "f": "The brace closes the loop."
+      },
+      "answerLine": "  level = level * 2",
+      "style": "debug",
+      "id": "bio_p4_cp_q4",
+      "kind": "bug"
+     },
+     {
+      "prompt": "Each half-life is 6 hours. Show the total time",
+      "hint": "Multiply count by 6 inside print().",
+      "code": [
+       "count = 4"
+      ],
+      "screen": {
+       "goal": "[1] 24"
+      },
+      "opts": [
+       {
+        "id": "t0",
+        "label": "print"
+       },
+       {
+        "id": "t1",
+        "label": "("
+       },
+       {
+        "id": "t2",
+        "label": "count"
+       },
+       {
+        "id": "t3",
+        "label": "*"
+       },
+       {
+        "id": "t4",
+        "label": "6"
+       },
+       {
+        "id": "t5",
+        "label": ")"
+       },
+       {
+        "id": "t6",
+        "label": "+"
+       },
+       {
+        "id": "t7",
+        "label": "\"count\""
+       }
+      ],
+      "correct": [
+       "t0",
+       "t1",
+       "t2",
+       "t3",
+       "t4",
+       "t5"
+      ],
+      "ok": "4 half-lives × 6 hours = 24 hours until the level is under 10.",
+      "wrongBuild": "print, then brackets around count * 6.",
+      "fb": {},
+      "answerLine": "print(count * 6)",
+      "report": [
+       [
+        "Start level",
+        "80 mg/L"
+       ],
+       [
+        "Half-lives",
+        "4"
+       ]
+      ],
+      "reportTitle": "Clearance report",
+      "slot": "Hours until under 10",
+      "style": "build",
+      "id": "bio_p4_cp_q5",
+      "kind": "build"
+     }
+    ]
+   }
+  },
+  {
+   "number": 5,
+   "area": "Reproducibility",
+   "project": "Reproducible analysis report",
+   "picture": "report",
+   "skill": "Lists and data",
+   "parts": [
+    [
+     "Seed",
+     "42"
+    ],
+    [
+     "Species tally",
+     "ant 2, bee 1"
+    ],
+    [
+     "Seed goes first",
+     "fixed"
+    ],
+    [
+     "Report",
+     "12 ants"
+    ]
+   ],
+   "code": [
+    "set.seed(42)",
+    "species = c(\"ant\", \"bee\", \"ant\")",
+    "print(table(species))",
+    "report = list(site = \"Park\", ants = 12)",
+    "print(report$ants)"
+   ],
+   "lessons": [
+    {
+     "id": "bio_p5_l1",
+     "part": 1,
+     "title": "Set the seed",
+     "questions": [
+      {
+       "kind": "fill",
+       "prompt": "Pick 2 numbers from 1 to 6",
+       "hint": "One function draws at random.",
+       "ok": "sample() draws values at random.",
+       "code": [
+        "x = ___(1:6, 2)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "sample"
+        },
+        {
+         "id": "b",
+         "label": "random"
+        },
+        {
+         "id": "c",
+         "label": "pick"
+        },
+        {
+         "id": "d",
+         "label": "table"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "Picks 2 numbers from 1 to 6"
+       },
+       "fb": {
+        "b": "R has no random().",
+        "c": "R has no pick().",
+        "d": "table() counts values."
+       },
+       "answerLine": "x = sample(1:6, 2)",
+       "id": "bio_p5_l1_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "Same seed twice. What does R print?",
+       "hint": "The same seed gives the same draw.",
+       "ok": "Resetting the seed repeats the same random draw.",
+       "code": [
+        "set.seed(1)",
+        "a = sample(1:6, 1)",
+        "set.seed(1)",
+        "b = sample(1:6, 1)",
+        "print(a == b)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] TRUE"
+        },
+        {
+         "id": "b",
+         "label": "[1] FALSE"
+        },
+        {
+         "id": "c",
+         "label": "[1] 1"
+        },
+        {
+         "id": "d",
+         "label": "An error"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] TRUE"
+       },
+       "fb": {
+        "b": "The seed makes them match.",
+        "c": "== gives TRUE or FALSE.",
+        "d": "The code is valid."
+       },
+       "answerLine": "[1] TRUE",
+       "id": "bio_p5_l1_q2"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Choose a seed",
+       "hint": "Any whole number works.",
+       "ok": "Any whole number works as a seed, such as 42.",
+       "code": [
+        "set.seed(___)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "42"
+        },
+        {
+         "id": "b",
+         "label": "\"forty two\""
+        },
+        {
+         "id": "c",
+         "label": "seed"
+        },
+        {
+         "id": "d",
+         "label": "x"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "Same numbers every run"
+       },
+       "fb": {
+        "b": "The seed must be a number.",
+        "c": "seed is not a number.",
+        "d": "x is not defined."
+       },
+       "answerLine": "set.seed(42)",
+       "id": "bio_p5_l1_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "set.seed() needs a number.",
+       "ok": "set.seed() needs a number. Fix: set.seed(42)",
+       "lines": [
+        {
+         "id": "a",
+         "label": "set.seed()"
+        },
+        {
+         "id": "b",
+         "label": "x = sample(1:6, 2)"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "err": "argument \"seed\" is missing, with no default",
+        "done": "Same 2 numbers every run"
+       },
+       "fb": {
+        "b": "sample() is fine."
+       },
+       "answerLine": "set.seed()",
+       "id": "bio_p5_l1_q4"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Fix the random numbers so the run repeats",
+       "hint": "One function fixes R's random numbers.",
+       "code": [
+        "set.___(42)",
+        "x = sample(1:6, 2)"
+       ],
+       "screen": {
+        "goal": "Same 2 numbers every run"
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "seed"
+        },
+        {
+         "id": "b",
+         "label": "random"
+        },
+        {
+         "id": "c",
+         "label": "fix"
+        },
+        {
+         "id": "d",
+         "label": "same"
+        }
+       ],
+       "correct": "a",
+       "ok": "set.seed(42) fixes the random numbers, so anyone who runs your script gets the same sample.",
+       "fb": {
+        "b": "There is no set.random() in R.",
+        "c": "There is no set.fix() in R.",
+        "d": "There is no set.same() in R."
+       },
+       "answerLine": "set.seed(42)",
+       "id": "bio_p5_l1_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p5_l2",
+     "part": 2,
+     "title": "Tally species",
+     "questions": [
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "length() counts items.",
+       "ok": "There are 3 items.",
+       "code": [
+        "species = c(\"ant\", \"ant\", \"ant\")",
+        "print(length(species))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 3"
+        },
+        {
+         "id": "b",
+         "label": "[1] 1"
+        },
+        {
+         "id": "c",
+         "label": "[1] \"ant\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 3"
+       },
+       "fb": {
+        "b": "length counts every item, even repeats.",
+        "c": "length gives a number."
+       },
+       "answerLine": "[1] 3",
+       "id": "bio_p5_l2_q1"
+      },
+      {
+       "kind": "fill",
+       "prompt": "Tally the species",
+       "hint": "One function counts each value.",
+       "ok": "table() counts how often each value appears.",
+       "code": [
+        "species = c(\"ant\", \"bee\", \"ant\")",
+        "print(___(species))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "table"
+        },
+        {
+         "id": "b",
+         "label": "sum"
+        },
+        {
+         "id": "c",
+         "label": "length"
+        },
+        {
+         "id": "d",
+         "label": "count"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "species\nant bee \n  2   1 "
+       },
+       "fb": {
+        "b": "sum() cannot add text.",
+        "c": "length() gives 3.",
+        "d": "R has no count()."
+       },
+       "answerLine": "print(table(species))",
+       "id": "bio_p5_l2_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "TRUE counts as 1.",
+       "ok": "One item is \"bee\", so sum() counts 1.",
+       "code": [
+        "species = c(\"ant\", \"bee\", \"ant\")",
+        "print(sum(species == \"bee\"))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 1"
+        },
+        {
+         "id": "b",
+         "label": "[1] 2"
+        },
+        {
+         "id": "c",
+         "label": "[1] TRUE"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 1"
+       },
+       "fb": {
+        "b": "That is the ant count.",
+        "c": "sum() turns TRUEs into a count."
+       },
+       "answerLine": "[1] 1",
+       "id": "bio_p5_l2_q3"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "unique() drops repeats.",
+       "ok": "unique() keeps the first of each value, in order.",
+       "code": [
+        "species = c(\"bee\", \"ant\", \"bee\")",
+        "print(unique(species))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"bee\" \"ant\""
+        },
+        {
+         "id": "b",
+         "label": "[1] \"ant\" \"bee\""
+        },
+        {
+         "id": "c",
+         "label": "[1] 2"
+        },
+        {
+         "id": "d",
+         "label": "[1] \"bee\" \"ant\" \"bee\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"bee\" \"ant\""
+       },
+       "fb": {
+        "b": "unique() keeps the original order.",
+        "c": "It gives the values, not a count.",
+        "d": "Repeats are dropped."
+       },
+       "answerLine": "[1] \"bee\" \"ant\"",
+       "id": "bio_p5_l2_q4"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does the tally show?",
+       "hint": "table() counts how often each value appears.",
+       "code": [
+        "species = c(\"ant\", \"bee\", \"ant\")",
+        "print(table(species))"
+       ],
+       "screen": {
+        "done": "species\nant bee \n  2   1 "
+       },
+       "opts": [
+        {
+         "id": "a",
+         "label": "ant 2, bee 1"
+        },
+        {
+         "id": "b",
+         "label": "ant 1, bee 1, ant 1"
+        },
+        {
+         "id": "c",
+         "label": "3"
+        },
+        {
+         "id": "d",
+         "label": "2"
+        }
+       ],
+       "correct": "a",
+       "ok": "table() counts each value: 2 ants and 1 bee.",
+       "fb": {
+        "b": "That lists the values. table() groups and counts them.",
+        "c": "3 is how many values there are, not the tally.",
+        "d": "2 is only the ant count."
+       },
+       "answerLine": "ant 2, bee 1",
+       "id": "bio_p5_l2_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p5_l3",
+     "part": 3,
+     "title": "Seed goes first",
+     "questions": [
+      {
+       "kind": "fill",
+       "prompt": "Make a report with two named items",
+       "hint": "One function holds items of any type.",
+       "ok": "list() keeps \"Park\" as text and 12 as a number.",
+       "code": [
+        "report = ___(site = \"Park\", ants = 12)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "list"
+        },
+        {
+         "id": "b",
+         "label": "c"
+        },
+        {
+         "id": "c",
+         "label": "table"
+        },
+        {
+         "id": "d",
+         "label": "report"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "A list with two named items"
+       },
+       "fb": {
+        "b": "c() would turn 12 into text.",
+        "c": "table() counts values.",
+        "d": "report is the name."
+       },
+       "answerLine": "report = list(site = \"Park\", ants = 12)",
+       "id": "bio_p5_l3_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "$ picks a named item.",
+       "ok": "report$site is the text \"Park\".",
+       "code": [
+        "report = list(site = \"Park\", ants = 12)",
+        "print(report$site)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] \"Park\""
+        },
+        {
+         "id": "b",
+         "label": "[1] 12"
+        },
+        {
+         "id": "c",
+         "label": "[1] \"site\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] \"Park\""
+       },
+       "fb": {
+        "b": "That is ants.",
+        "c": "R prints the value, not the name."
+       },
+       "answerLine": "[1] \"Park\"",
+       "id": "bio_p5_l3_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "A list item works like any number.",
+       "ok": "12 + 3 = 15.",
+       "code": [
+        "report = list(site = \"Park\", ants = 12)",
+        "print(report$ants + 3)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 15"
+        },
+        {
+         "id": "b",
+         "label": "[1] 12"
+        },
+        {
+         "id": "c",
+         "label": "[1] \"123\""
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 15"
+       },
+       "fb": {
+        "b": "The + 3 is added.",
+        "c": "ants is a number, so + adds."
+       },
+       "answerLine": "[1] 15",
+       "id": "bio_p5_l3_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "Items need commas between them.",
+       "ok": "Fix: list(site = \"Park\", ants = 12)",
+       "lines": [
+        {
+         "id": "a",
+         "label": "report = list(site = \"Park\" ants = 12)"
+        },
+        {
+         "id": "b",
+         "label": "print(report$ants)"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "err": "unexpected symbol",
+        "done": "[1] 12"
+       },
+       "fb": {
+        "b": "print is fine."
+       },
+       "answerLine": "report = list(site = \"Park\" ants = 12)",
+       "id": "bio_p5_l3_q4"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line is in the wrong place?",
+       "hint": "set.seed() only affects random numbers drawn after it.",
+       "lines": [
+        {
+         "id": "a",
+         "label": "x = sample(1:6, 2)"
+        },
+        {
+         "id": "b",
+         "label": "set.seed(42)"
+        },
+        {
+         "id": "c",
+         "label": "print(x)"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "Different numbers every run",
+        "done": "Same numbers every run"
+       },
+       "ok": "set.seed() only fixes numbers drawn after it. Move it to the top, above sample().",
+       "fb": {
+        "a": "sample() is fine. It just needs the seed set first.",
+        "c": "print(x) is fine."
+       },
+       "answerLine": "set.seed(42)",
+       "id": "bio_p5_l3_q5"
+      }
+     ]
+    },
+    {
+     "id": "bio_p5_l4",
+     "part": 4,
+     "title": "Report list",
+     "questions": [
+      {
+       "kind": "fill",
+       "prompt": "Pull the ants count out",
+       "hint": "One symbol picks a named item.",
+       "ok": "$ picks a named item from a list.",
+       "code": [
+        "report = list(site = \"Park\", ants = 12)",
+        "print(report___ants)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "$"
+        },
+        {
+         "id": "b",
+         "label": "."
+        },
+        {
+         "id": "c",
+         "label": "@"
+        },
+        {
+         "id": "d",
+         "label": "#"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "goal": "[1] 12"
+       },
+       "fb": {
+        "b": ". is part of names in R, not a picker.",
+        "c": "@ is for a different kind of object.",
+        "d": "# starts a comment."
+       },
+       "answerLine": "print(report$ants)",
+       "id": "bio_p5_l4_q1"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "You can add items to a list.",
+       "ok": "report$bees = 5 adds a new item.",
+       "code": [
+        "report = list(n = 3)",
+        "report$bees = 5",
+        "print(report$bees)"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 5"
+        },
+        {
+         "id": "b",
+         "label": "[1] 3"
+        },
+        {
+         "id": "c",
+         "label": "NULL"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 5"
+       },
+       "fb": {
+        "b": "That is n.",
+        "c": "bees now exists."
+       },
+       "answerLine": "[1] 5",
+       "id": "bio_p5_l4_q2"
+      },
+      {
+       "kind": "predict",
+       "prompt": "What does R print?",
+       "hint": "length() counts the items in a list.",
+       "ok": "The list has 2 items.",
+       "code": [
+        "report = list(ants = 12, bees = 5)",
+        "print(length(report))"
+       ],
+       "opts": [
+        {
+         "id": "a",
+         "label": "[1] 2"
+        },
+        {
+         "id": "b",
+         "label": "[1] 17"
+        },
+        {
+         "id": "c",
+         "label": "[1] 12"
+        }
+       ],
+       "correct": "a",
+       "screen": {
+        "done": "[1] 2"
+       },
+       "fb": {
+        "b": "length counts items, not their total.",
+        "c": "That is ants."
+       },
+       "answerLine": "[1] 2",
+       "id": "bio_p5_l4_q3"
+      },
+      {
+       "kind": "bug",
+       "prompt": "Which line breaks it?",
+       "hint": "Named items use $.",
+       "ok": "R looks for an object called ants. Fix: print(report$ants)",
+       "lines": [
+        {
+         "id": "a",
+         "label": "report = list(ants = 12)"
+        },
+        {
+         "id": "b",
+         "label": "print(report[ants])"
+        }
+       ],
+       "correct": "b",
+       "screen": {
+        "err": "object 'ants' not found",
+        "done": "[1] 12"
+       },
+       "fb": {
+        "a": "The list is fine."
+       },
+       "answerLine": "print(report[ants])",
+       "id": "bio_p5_l4_q4"
+      },
+      {
+       "kind": "build",
+       "prompt": "Show the ant count from the report",
+       "hint": "Use $ and the exact name.",
+       "code": [
+        "report = list(site = \"Park\", ants = 12)"
+       ],
+       "screen": {
+        "goal": "[1] 12"
+       },
+       "opts": [
+        {
+         "id": "t0",
+         "label": "print"
+        },
+        {
+         "id": "t1",
+         "label": "("
+        },
+        {
+         "id": "t2",
+         "label": "report$ants"
+        },
+        {
+         "id": "t3",
+         "label": ")"
+        },
+        {
+         "id": "t4",
+         "label": "report$Ants"
+        },
+        {
+         "id": "t5",
+         "label": "report[ants]"
+        }
+       ],
+       "correct": [
+        "t0",
+        "t1",
+        "t2",
+        "t3"
+       ],
+       "ok": "$ picks a named item out of a list: report$ants is 12.",
+       "wrongBuild": "print, then report$ants in brackets.",
+       "fb": {},
+       "answerLine": "print(report$ants)",
+       "id": "bio_p5_l4_q5"
+      }
+     ]
+    }
+   ],
+   "checkpoint": {
+    "id": "bio_p5_cp",
+    "name": "Blood bank sample",
+    "filename": "blood_bank.R",
+    "problem": "A blood bank tallies the blood groups of a random sample of donors. The script must give the same sample every time it runs.",
+    "unlock": [
+     "Cycle 2 unlocked",
+     "Bioinformatics, round 2",
+     "You've been here before. Now build a batch GC report with everything you know."
+    ],
+    "questions": [
+     {
+      "steps": {
+       "a": "Set a seed so the sample repeats",
+       "b": "Draw 7 donors at random",
+       "c": "Tally the blood groups with table()",
+       "d": "Store the tally in a report list",
+       "e": "Print the report"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "c",
+       "e",
+       "b",
+       "a",
+       "d"
+      ],
+      "ok": "The seed comes before any random draw, and the report is built from the tally before printing.",
+      "wrong": "The seed only works for random numbers drawn after it.",
+      "hint": "What must happen before anything random?",
+      "prompt": "Plan a repeatable script",
+      "style": "plan",
+      "id": "bio_p5_cp_q1",
+      "kind": "order",
+      "task": "A blood bank draws a random sample of donors and tallies their blood groups. Plan a script that anyone can re-run and get exactly the same sample."
+     },
+     {
+      "steps": {
+       "a": "set.seed(7)",
+       "b": "groups = c(\"A\", \"B\", \"AB\", \"O\")",
+       "c": "donors = sample(groups, 7, TRUE)",
+       "d": "report = list(n = 7, tally = table(donors))",
+       "e": "print(report$n)"
+      },
+      "accept": [
+       [
+        "a",
+        "b",
+        "c",
+        "d",
+        "e"
+       ],
+       [
+        "b",
+        "a",
+        "c",
+        "d",
+        "e"
+       ]
+      ],
+      "start": [
+       "d",
+       "e",
+       "c",
+       "b",
+       "a"
+      ],
+      "goal": "[1] 7",
+      "ok": "Seed and groups first, then the random sample, the report, and the print.",
+      "wrong": "sample() needs groups and the seed set above it, and the report needs donors.",
+      "hint": "Find the line every other line depends on.",
+      "prompt": "Order the script",
+      "style": "code",
+      "id": "bio_p5_cp_q2",
+      "kind": "order"
+     },
+     {
+      "prompt": "What does R print?",
+      "hint": "TRUE counts as 1 when you add.",
+      "code": [
+       "groups = c(\"O\", \"A\", \"O\", \"B\", \"O\")",
+       "print(sum(groups == \"O\"))"
+      ],
+      "screen": {
+       "done": "[1] 3"
+      },
+      "opts": [
+       {
+        "id": "a",
+        "label": "[1] 3"
+       },
+       {
+        "id": "b",
+        "label": "[1] 5"
+       },
+       {
+        "id": "c",
+        "label": "[1] TRUE"
+       },
+       {
+        "id": "d",
+        "label": "[1] \"O\""
+       }
+      ],
+      "correct": "a",
+      "ok": "groups == \"O\" gives TRUE or FALSE for each donor, and sum() counts the TRUEs: 3.",
+      "fb": {
+       "b": "5 is how many donors there are.",
+       "c": "== gives one TRUE or FALSE per donor; sum() turns them into a count.",
+       "d": "sum() gives back a number, not text."
+      },
+      "answerLine": "[1] 3",
+      "style": "predict",
+      "id": "bio_p5_cp_q3",
+      "kind": "predict"
+     },
+     {
+      "prompt": "The report prints NULL. Which line is wrong?",
+      "hint": "List names must match exactly, capitals included.",
+      "lines": [
+       {
+        "id": "a",
+        "label": "groups = c(\"O\", \"A\", \"B\")"
+       },
+       {
+        "id": "b",
+        "label": "tally = table(groups)"
+       },
+       {
+        "id": "c",
+        "label": "report = list(tally = tally)"
+       },
+       {
+        "id": "d",
+        "label": "print(report$Tally)"
+       }
+      ],
+      "correct": "d",
+      "screen": {
+       "err": "[1] NULL  (nothing called Tally)",
+       "done": "groups\nA B O \n1 1 1 "
+      },
+      "ok": "report has tally, not Tally, so R gives back NULL. Fix: print(report$tally)",
+      "fb": {
+       "a": "The vector is fine.",
+       "b": "table() is fine.",
+       "c": "The list stores the tally as tally."
+      },
+      "answerLine": "print(report$Tally)",
+      "style": "debug",
+      "id": "bio_p5_cp_q4",
+      "kind": "bug"
+     },
+     {
+      "prompt": "Show how many donors are in the sample",
+      "hint": "length() counts the items in a vector.",
+      "code": [
+       "donors = c(\"A\", \"O\", \"O\", \"B\", \"AB\")"
+      ],
+      "screen": {
+       "goal": "[1] 5"
+      },
+      "opts": [
+       {
+        "id": "t0",
+        "label": "print"
+       },
+       {
+        "id": "t1",
+        "label": "("
+       },
+       {
+        "id": "t2",
+        "label": "length"
+       },
+       {
+        "id": "t3",
+        "label": "("
+       },
+       {
+        "id": "t4",
+        "label": "donors"
+       },
+       {
+        "id": "t5",
+        "label": ")"
+       },
+       {
+        "id": "t6",
+        "label": ")"
+       },
+       {
+        "id": "t7",
+        "label": "nchar"
+       },
+       {
+        "id": "t8",
+        "label": "\"donors\""
+       }
+      ],
+      "correct": [
+       "t0",
+       "t1",
+       "t2",
+       "t3",
+       "t4",
+       "t5",
+       "t6"
+      ],
+      "ok": "length(donors) counts the 5 donors in the vector.",
+      "wrongBuild": "print, then length with donors in round brackets.",
+      "fb": {},
+      "answerLine": "print(length(donors))",
+      "report": [
+       [
+        "Seed",
+        "7"
+       ],
+       [
+        "Groups tallied",
+        "A, AB, B, O"
+       ]
+      ],
+      "reportTitle": "Blood bank report",
+      "slot": "Donors",
+      "style": "build",
+      "id": "bio_p5_cp_q5",
+      "kind": "build"
+     }
+    ]
+   }
+  }
+ ],
+ "cycle2": {
+  "area": "Bioinformatics, round 2",
+  "project": "Batch GC report",
+  "picture": "batch",
+  "titles": [
+   "Loop over samples",
+   "Flag unusual GC",
+   "Wrap it in a function",
+   "Sort the results"
+  ],
+  "later": [
+   [
+    "Genomic processing, round 2",
+    "Genetic fingerprint picker",
+    "Sorting"
+   ],
+   [
+    "Automation, round 2",
+    "Batch plate planner",
+    "Lists"
+   ],
+   [
+    "Modelling, round 2",
+    "Biodiversity simulation",
+    "Random numbers"
+   ]
+  ]
+ }
+}

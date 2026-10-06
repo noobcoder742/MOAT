@@ -1,0 +1,1145 @@
+{
+  "version": 2,
+  "area": "Arts & humanities",
+  "phases": [
+    {
+      "id": "p1",
+      "number": 1,
+      "title": "Say hello",
+      "subtitle": "Show messages and store numbers",
+      "unlocksForm": "builder",
+      "lessons": [
+        {
+          "id": "p1l1",
+          "title": "Theatre board",
+          "questions": [
+            {
+              "id": "p1l1q1",
+              "kind": "choice",
+              "prompt": "Make the theatre board say hello",
+              "hint": "print() shows whatever is inside the brackets.",
+              "code": "print(___)",
+              "picture": "🎭",
+              "explanation": "Words go inside quote marks. Then print shows them on the theatre board.",
+              "options": [
+                "Hello, audience!",
+                "(Hello, audience!)",
+                "\"Hello, audience!\"",
+                "hello, audience!"
+              ],
+              "answer": [
+                "\"Hello, audience!\""
+              ]
+            },
+            {
+              "id": "p1l1q2",
+              "kind": "choice",
+              "prompt": "What does the theatre board show?",
+              "code": "print(\"Overture\")",
+              "explanation": "print shows the words between the quote marks. The quote marks themselves are not shown.",
+              "options": [
+                "\"Overture\"",
+                "print",
+                "Overture",
+                "Nothing"
+              ],
+              "answer": [
+                "Overture"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l1q3",
+              "kind": "build",
+              "prompt": "Build the line that shows: Curtain up!",
+              "picture": "🖋️",
+              "explanation": "Start with print, then brackets, and put the words inside quote marks.",
+              "options": [
+                "[",
+                "(",
+                ")",
+                "print",
+                "Curtain up!",
+                "\"Curtain up!\""
+              ],
+              "answer": [
+                "print",
+                "(",
+                "\"Curtain up!\"",
+                ")"
+              ]
+            },
+            {
+              "id": "p1l1q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "Words need quote marks. Fix: print(\"Bravo!\")",
+              "options": [
+                "print(\"Overture\")",
+                "print(\"Finale\")",
+                "print(Bravo!)"
+              ],
+              "answer": [
+                "print(Bravo!)"
+              ],
+              "fix": "print(\"Bravo!\")",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l1q5",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "print(\"Overture\")\nprint(\"Finale\")",
+              "explanation": "The computer runs the lines from top to bottom, so the first message shows first.",
+              "options": [
+                "Overture, Finale",
+                "Overture",
+                "Finale, Overture"
+              ],
+              "answer": [
+                "Overture, Finale"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p1l2",
+          "title": "Counting chapters",
+          "questions": [
+            {
+              "id": "p1l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "Without quote marks, Python does the maths.",
+              "code": "print(4 + 3)",
+              "picture": "📖",
+              "explanation": "Without quote marks, Python does the maths: 4 + 3 = 7.",
+              "options": [
+                "4 + 3",
+                "7",
+                "43"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q2",
+              "kind": "judge",
+              "prompt": "True or false: this shows 4 + 3.",
+              "code": "print(\"4 + 3\")",
+              "explanation": "Quote marks make it a message. The words show, and no adding happens.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "4 + 3"
+            },
+            {
+              "id": "p1l2q3",
+              "kind": "choice",
+              "prompt": "There are 4 chapters, then 3 more come. Which line shows 7?",
+              "explanation": "Leave off the quote marks so Python adds: 4 + 3 = 7.",
+              "options": [
+                "print(4 - 3)",
+                "print(\"4 + 3\")",
+                "print(4 + 3)"
+              ],
+              "answer": [
+                "print(4 + 3)"
+              ]
+            },
+            {
+              "id": "p1l2q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(12 - 5)",
+              "explanation": "12 - 5 = 7.",
+              "options": [
+                "17",
+                "12 - 5",
+                "7"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l2q5",
+              "kind": "build",
+              "prompt": "Build a line that shows 2 times 8",
+              "hint": "Python uses * for times.",
+              "explanation": "Python uses * for times. 2 * 8 = 16.",
+              "options": [
+                ")",
+                "(",
+                "x",
+                "print",
+                "*",
+                "2",
+                "8"
+              ],
+              "answer": [
+                "print",
+                "(",
+                "2",
+                "*",
+                "8",
+                ")"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l3",
+          "title": "Labelled notebooks",
+          "questions": [
+            {
+              "id": "p1l3q1",
+              "kind": "choice",
+              "prompt": "Put 3 pages in the notebook labelled pages",
+              "hint": "A variable is a labelled box that holds a value.",
+              "code": "pages ___ 3",
+              "picture": "🖼️",
+              "explanation": "One = puts a value into the box. Two == would ask a question instead.",
+              "options": [
+                "==",
+                "=",
+                "+"
+              ],
+              "answer": [
+                "="
+              ]
+            },
+            {
+              "id": "p1l3q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "pages = 3\nprint(pages)",
+              "explanation": "pages holds 3, so print(pages) shows 3.",
+              "options": [
+                "\"pages\"",
+                "3",
+                "pages"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "pages = 3\npages = 7\nprint(pages)",
+              "explanation": "The newest value replaces the old one. The box now holds 7.",
+              "options": [
+                "3",
+                "10",
+                "7"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l3q4",
+              "kind": "judge",
+              "prompt": "True or false: this shows 4.",
+              "code": "verses = 4\nprint(\"verses\")",
+              "explanation": "Quote marks make verses a word, so the word shows and not what the box holds.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "4"
+            },
+            {
+              "id": "p1l3q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does.",
+              "explanation": "= stores a value. print(name) shows the value. Quote marks show the name itself.",
+              "options": [
+                "pages = 3",
+                "print(pages)",
+                "pages = 7",
+                "print(\"pages\")"
+              ],
+              "answer": [
+                "Store 3 in the box",
+                "Show what the box holds",
+                "Swap in 7",
+                "Show the name as a word"
+              ],
+              "right": [
+                "Swap in 7",
+                "Show what the box holds",
+                "Store 3 in the box",
+                "Show the name as a word"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p1l4",
+          "title": "Writing day",
+          "questions": [
+            {
+              "id": "p1l4q1",
+              "kind": "choice",
+              "prompt": "You write 10 more pages. Which line updates pages?",
+              "hint": "Take the old value, change it, and put it back in the same box.",
+              "code": "pages = 40",
+              "picture": "🎼",
+              "explanation": "Take the old value, add 10, and put it back in the same box.",
+              "options": [
+                "pages = 10",
+                "pages = pages + 10",
+                "pages + 10"
+              ],
+              "answer": [
+                "pages = pages + 10"
+              ]
+            },
+            {
+              "id": "p1l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "pages = 9\npages = pages - 2\nprint(pages)",
+              "explanation": "9 - 2 = 7.",
+              "options": [
+                "11",
+                "9",
+                "7"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p1l4q3",
+              "kind": "build",
+              "prompt": "You cut 2 pages. Build the line.",
+              "explanation": "Take the old value, subtract 2, and put it back in the box.",
+              "options": [
+                "=",
+                "pages",
+                "-",
+                "pages",
+                "2",
+                "+"
+              ],
+              "answer": [
+                "pages",
+                "=",
+                "pages",
+                "-",
+                "2"
+              ]
+            },
+            {
+              "id": "p1l4q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "explanation": "The + needs a number after it. Fix: words = words + 50",
+              "options": [
+                "words = 100",
+                "words = words +",
+                "print(words)"
+              ],
+              "answer": [
+                "words = words +"
+              ],
+              "fix": "words = words + 50",
+              "verify": "bug"
+            },
+            {
+              "id": "p1l4q5",
+              "kind": "match",
+              "prompt": "Match each line to what it does to lines.",
+              "explanation": "+ adds, - takes away, and * multiplies. The new value goes back in the box.",
+              "options": [
+                "lines = lines + 1",
+                "lines = lines - 1",
+                "lines = lines * 2",
+                "lines = lines + 10"
+              ],
+              "answer": [
+                "Add 1",
+                "Take away 1",
+                "Double it",
+                "Add 10"
+              ],
+              "right": [
+                "Add 10",
+                "Take away 1",
+                "Add 1",
+                "Double it"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p2",
+      "number": 2,
+      "title": "Loops: repeat a step",
+      "subtitle": "Repeat a scene chapter after chapter",
+      "lessons": [
+        {
+          "id": "p2l1",
+          "title": "Chapters pass",
+          "questions": [
+            {
+              "id": "p2l1q1",
+              "kind": "choice",
+              "prompt": "How many times does Read show?",
+              "hint": "The indented line repeats each time round.",
+              "code": "for chapter in range(3):\n    print(\"Read\")",
+              "picture": "🗓️",
+              "explanation": "The indented line runs once each time round. range(3) means 3 times.",
+              "options": [
+                "3",
+                "1",
+                "4"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "lines"
+            },
+            {
+              "id": "p2l1q2",
+              "kind": "choice",
+              "prompt": "The choir sings the chorus 4 times. Fill the blank.",
+              "code": "for chapter in range(___):\n    print(\"Reread\")",
+              "explanation": "range(4) repeats 4 times.",
+              "options": [
+                "3",
+                "4",
+                "5"
+              ],
+              "answer": [
+                "4"
+              ]
+            },
+            {
+              "id": "p2l1q3",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for chapter in range(2):\n    print(\"Act\")\nprint(\"Bow\")",
+              "explanation": "Only the indented line repeats. The last line runs once, after the loop.",
+              "options": [
+                "Act, Bow, Act, Bow",
+                "Act, Bow",
+                "Act, Act, Bow"
+              ],
+              "answer": [
+                "Act, Act, Bow"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l1q4",
+              "kind": "build",
+              "prompt": "Build the first line of a loop that runs 5 times",
+              "explanation": "A loop starts with for, a name, in, range(5) and a colon.",
+              "options": [
+                "chapter",
+                "in",
+                "range(5)",
+                ":",
+                "range(6)",
+                "for"
+              ],
+              "answer": [
+                "for",
+                "chapter",
+                "in",
+                "range(5)",
+                ":"
+              ]
+            },
+            {
+              "id": "p2l1q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows Clap, Clap, Clap, Done.",
+              "code": "for chapter in range(3):\n    print(\"Clap\")\nprint(\"Done\")",
+              "explanation": "Only the indented line repeats. Clap shows 3 times, then Done shows once.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Clap, Clap, Clap, Done"
+            }
+          ]
+        },
+        {
+          "id": "p2l2",
+          "title": "Watch it grow",
+          "questions": [
+            {
+              "id": "p2l2q1",
+              "kind": "choice",
+              "prompt": "A story gains 1 page every chapter, starting at 1 page. How long is it at the end?",
+              "hint": "Follow the loop one round at a time.",
+              "code": "length = 1\nfor chapter in range(4):\n    length = length + 1\nprint(length)",
+              "picture": "📚",
+              "explanation": "Each round adds 1: 1 → 2 → 3 → 4 → 5.",
+              "options": [
+                "4",
+                "2",
+                "5"
+              ],
+              "answer": [
+                "5"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q2",
+              "kind": "choice",
+              "prompt": "You have 9 pages left to read and read 2 every chapter. How many are left?",
+              "code": "unread = 9\nfor chapter in range(3):\n    unread = unread - 2\nprint(unread)",
+              "explanation": "Each round takes away 2: 9 → 7 → 5 → 3.",
+              "options": [
+                "9",
+                "7",
+                "3"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q3",
+              "kind": "choice",
+              "prompt": "A rumour doubles its listeners every chapter. What shows at the end?",
+              "code": "listeners = 1\nfor chapter in range(3):\n    listeners = listeners * 2\nprint(listeners)",
+              "picture": "🎨",
+              "explanation": "Each round doubles it: 1 → 2 → 4 → 8.",
+              "options": [
+                "4",
+                "8",
+                "6"
+              ],
+              "answer": [
+                "8"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l2q4",
+              "kind": "choice",
+              "prompt": "The story should gain 2 pages every chapter. Fill the blank.",
+              "code": "length = 1\nfor chapter in range(3):\n    length = length + ___",
+              "explanation": "Each round adds the blank. To go up by 2, the blank must be 2.",
+              "options": [
+                "1",
+                "2",
+                "3"
+              ],
+              "answer": [
+                "2"
+              ]
+            },
+            {
+              "id": "p2l2q5",
+              "kind": "judge",
+              "prompt": "True or false: this shows 5.",
+              "code": "total = 0\nfor chapter in range(4):\n    total = total + 1\nprint(total)",
+              "explanation": "total goes up by 1 each round, and the loop runs 4 times, so it ends at 4.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "False"
+              ],
+              "verify": "judge",
+              "claim": "5"
+            }
+          ]
+        },
+        {
+          "id": "p2l3",
+          "title": "Counting scenes",
+          "questions": [
+            {
+              "id": "p2l3q1",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "hint": "range(3) starts counting at 0, not 1.",
+              "code": "for chapter in range(3):\n    print(chapter)",
+              "explanation": "range(3) starts at 0 and stops before 3: 0, 1, 2.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3",
+                "0, 1, 2"
+              ],
+              "answer": [
+                "0, 1, 2"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q2",
+              "kind": "match",
+              "prompt": "Match each range to the numbers it gives.",
+              "explanation": "range(n) starts at 0. range(a, b) starts at a and stops just before b.",
+              "options": [
+                "range(1, 5)",
+                "range(5)",
+                "range(3)",
+                "range(4)"
+              ],
+              "answer": [
+                "1, 2, 3, 4",
+                "0, 1, 2, 3, 4",
+                "0, 1, 2",
+                "0, 1, 2, 3"
+              ],
+              "right": [
+                "0, 1, 2, 3, 4",
+                "1, 2, 3, 4",
+                "0, 1, 2",
+                "0, 1, 2, 3"
+              ]
+            },
+            {
+              "id": "p2l3q3",
+              "kind": "choice",
+              "prompt": "What numbers show?",
+              "code": "for chapter in range(1, 4):\n    print(chapter)",
+              "picture": "🗓️",
+              "explanation": "range(1, 4) starts at 1 and stops before 4.",
+              "options": [
+                "0, 1, 2, 3",
+                "1, 2, 3, 4",
+                "1, 2, 3"
+              ],
+              "answer": [
+                "1, 2, 3"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "total = 0\nfor chapter in range(1, 4):\n    total = total + chapter\nprint(total)",
+              "explanation": "1 + 2 + 3 = 6.",
+              "options": [
+                "10",
+                "3",
+                "6"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l3q5",
+              "kind": "build",
+              "prompt": "Show chapters 1 to 5. Build the first line of the loop.",
+              "explanation": "range(1, 6) starts at 1 and stops before 6, so it counts 1 to 5.",
+              "options": [
+                "for",
+                "range(1, 5)",
+                ":",
+                "in",
+                "range(1, 6)",
+                "chapter"
+              ],
+              "answer": [
+                "for",
+                "chapter",
+                "in",
+                "range(1, 6)",
+                ":"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p2l4",
+          "title": "Rehearsal routine",
+          "questions": [
+            {
+              "id": "p2l4q1",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for chapter in range(2):\n    print(\"Scene\")\n    print(\"Song\")",
+              "explanation": "Both indented lines repeat together, in order, every round.",
+              "options": [
+                "Scene, Song",
+                "Scene, Scene, Song, Song",
+                "Scene, Song, Scene, Song"
+              ],
+              "answer": [
+                "Scene, Song, Scene, Song"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q2",
+              "kind": "choice",
+              "prompt": "The book club reads 4 chapters in a row. Which loop fits?",
+              "explanation": "range(4) repeats 4 times.",
+              "options": [
+                "for chapter in range(5):",
+                "for chapter in range(4):",
+                "for chapter in range(3):"
+              ],
+              "answer": [
+                "for chapter in range(4):"
+              ]
+            },
+            {
+              "id": "p2l4q3",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "tickets = 40\nfor chapter in range(3):\n    tickets = tickets + 10\nprint(tickets)",
+              "explanation": "Each round adds 10: 40 → 50 → 60 → 70.",
+              "options": [
+                "50",
+                "80",
+                "70"
+              ],
+              "answer": [
+                "70"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p2l4q4",
+              "kind": "bug",
+              "prompt": "This should show Read 3 times. Tap the line with the mistake.",
+              "hint": "The first line of a loop ends with a colon.",
+              "explanation": "The first line of a loop must end with a colon. Fix: for chapter in range(3):",
+              "options": [
+                "for chapter in range(3)",
+                "    print(\"Read\")"
+              ],
+              "answer": [
+                "for chapter in range(3)"
+              ],
+              "fix": "for chapter in range(3):",
+              "verify": "bug"
+            },
+            {
+              "id": "p2l4q5",
+              "kind": "choice",
+              "prompt": "How many lines show in total?",
+              "code": "for chapter in range(3):\n    print(\"Scene\")\n    print(\"Song\")",
+              "explanation": "3 rounds with 2 lines each is 6 lines.",
+              "options": [
+                "6",
+                "4",
+                "3"
+              ],
+              "answer": [
+                "6"
+              ],
+              "verify": "lines"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "p3",
+      "number": 3,
+      "title": "Decisions: if / else",
+      "subtitle": "Curtain open or curtain closed",
+      "lessons": [
+        {
+          "id": "p3l1",
+          "title": "Open or closed",
+          "questions": [
+            {
+              "id": "p3l1q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "The indented line runs only when the check is true.",
+              "code": "curtain = \"open\"\nif curtain == \"open\":\n    print(\"Show starts\")",
+              "picture": "🎬",
+              "explanation": "The curtain is open, so the indented line runs.",
+              "options": [
+                "Nothing",
+                "Show starts",
+                "open"
+              ],
+              "answer": [
+                "Show starts"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "curtain = \"closed\"\nif curtain == \"open\":\n    print(\"Show starts\")\nelse:\n    print(\"Wait\")",
+              "explanation": "The curtain is not open, so the else line runs.",
+              "options": [
+                "Show starts",
+                "closed",
+                "Wait"
+              ],
+              "answer": [
+                "Wait"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l1q3",
+              "kind": "judge",
+              "prompt": "True or false: == asks \"are these the same?\"",
+              "code": "if curtain == \"open\":",
+              "explanation": "== asks a question: are these the same? A single = stores a value.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ]
+            },
+            {
+              "id": "p3l1q4",
+              "kind": "build",
+              "prompt": "Build: if the curtain is open",
+              "explanation": "Start with if, then the name, ==, the word in quote marks, and a colon.",
+              "options": [
+                "==",
+                ":",
+                "if",
+                "curtain",
+                "\"open\"",
+                "="
+              ],
+              "answer": [
+                "if",
+                "curtain",
+                "==",
+                "\"open\"",
+                ":"
+              ]
+            },
+            {
+              "id": "p3l1q5",
+              "kind": "choice",
+              "prompt": "Fill the blank so it checks the curtain",
+              "code": "curtain = \"open\"\nif curtain ___ \"open\":\n    print(\"Show starts\")",
+              "explanation": "== asks whether the two things are the same.",
+              "options": [
+                "+",
+                "==",
+                "="
+              ],
+              "answer": [
+                "=="
+              ]
+            }
+          ]
+        },
+        {
+          "id": "p3l2",
+          "title": "Loud or soft",
+          "questions": [
+            {
+              "id": "p3l2q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "hint": "> means more than. < means less than.",
+              "code": "crowd = 300\nif crowd > 200:\n    print(\"Sold out\")",
+              "picture": "🎟️",
+              "explanation": "300 is more than 200, so the message shows.",
+              "options": [
+                "Nothing",
+                "300",
+                "Sold out"
+              ],
+              "answer": [
+                "Sold out"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "stars = 2\nif stars < 3:\n    print(\"Poor review\")\nelse:\n    print(\"Good review\")",
+              "explanation": "2 is less than 3, so the first message runs.",
+              "options": [
+                "Good review",
+                "Poor review",
+                "2"
+              ],
+              "answer": [
+                "Poor review"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l2q3",
+              "kind": "match",
+              "prompt": "Match each sign to its meaning.",
+              "explanation": "> and < compare sizes. == checks for the same. >= also counts when they are equal.",
+              "options": [
+                ">",
+                "<",
+                "==",
+                ">="
+              ],
+              "answer": [
+                "is more than",
+                "is less than",
+                "is the same as",
+                "is more than or the same as"
+              ],
+              "right": [
+                "is more than",
+                "is more than or the same as",
+                "is less than",
+                "is the same as"
+              ]
+            },
+            {
+              "id": "p3l2q4",
+              "kind": "choice",
+              "prompt": "Show Long book when pages is over 300. Fill the blank.",
+              "code": "pages = 305\nif pages ___ 300:\n    print(\"Long book\")",
+              "explanation": "> means more than.",
+              "options": [
+                "=",
+                ">",
+                "<"
+              ],
+              "answer": [
+                ">"
+              ]
+            },
+            {
+              "id": "p3l2q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "verses = 8\nif verses >= 8:\n    print(\"Complete\")\nelse:\n    print(\"Unfinished\")",
+              "explanation": ">= is also true when the two are equal, and 8 equals 8.",
+              "options": [
+                "Nothing",
+                "Unfinished",
+                "Complete"
+              ],
+              "answer": [
+                "Complete"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l3",
+          "title": "Nightly check",
+          "questions": [
+            {
+              "id": "p3l3q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "ink = 0\nfor chapter in range(3):\n    if ink < 1:\n        ink = ink + 1\nprint(ink)",
+              "picture": "🖼️",
+              "explanation": "It goes up only while it is below 1: 0 → 1 → 1 → 1.",
+              "options": [
+                "2",
+                "3",
+                "1"
+              ],
+              "answer": [
+                "1"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q2",
+              "kind": "choice",
+              "prompt": "What shows, in order?",
+              "code": "for chapter in range(1, 4):\n    if chapter == 2:\n        print(\"Perform\")\n    else:\n        print(\"Rehearse\")",
+              "explanation": "The loop counts 1, 2, 3. Only 2 matches, so Perform shows once.",
+              "options": [
+                "Perform, Rehearse, Perform",
+                "Rehearse, Rehearse, Rehearse",
+                "Rehearse, Perform, Rehearse"
+              ],
+              "answer": [
+                "Rehearse, Perform, Rehearse"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q3",
+              "kind": "choice",
+              "prompt": "Applause fades by 1 decibel every second until the volume reaches 40. What shows?",
+              "code": "volume = 42\nfor step in range(3):\n    if volume > 40:\n        volume = volume - 1\nprint(volume)",
+              "picture": "👏",
+              "explanation": "It drops by 1 while it is above 40, then stops: 42 → 41 → 40.",
+              "options": [
+                "39",
+                "41",
+                "40"
+              ],
+              "answer": [
+                "40"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l3q4",
+              "kind": "bug",
+              "prompt": "Tap the line with the mistake.",
+              "hint": "Asking a question needs two equals signs.",
+              "explanation": "One = stores a value. To ask a question, use ==. Fix: if curtain == \"open\":",
+              "options": [
+                "curtain = \"open\"",
+                "if curtain = \"open\":",
+                "    print(\"Show starts\")"
+              ],
+              "answer": [
+                "if curtain = \"open\":"
+              ],
+              "fix": "if curtain == \"open\":",
+              "verify": "bug"
+            },
+            {
+              "id": "p3l3q5",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "count = 0\nfor chapter in range(4):\n    if chapter > 0:\n        count = count + 1\nprint(count)",
+              "explanation": "The loop counts 0 to 3. Only 1, 2, 3 are more than 0, so count is 3.",
+              "options": [
+                "3",
+                "2",
+                "4"
+              ],
+              "answer": [
+                "3"
+              ],
+              "verify": "output"
+            }
+          ]
+        },
+        {
+          "id": "p3l4",
+          "title": "Show review",
+          "questions": [
+            {
+              "id": "p3l4q1",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "print(\"Finale\")",
+              "picture": "🎨",
+              "explanation": "print shows the words between the quote marks.",
+              "options": [
+                "print",
+                "\"Finale\"",
+                "Finale"
+              ],
+              "answer": [
+                "Finale"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q2",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "audience = 5\naudience = audience + 2\nprint(audience)",
+              "explanation": "5 + 2 = 7, and the new value goes back in the box.",
+              "options": [
+                "2",
+                "5",
+                "7"
+              ],
+              "answer": [
+                "7"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q3",
+              "kind": "judge",
+              "prompt": "True or false: this shows Read, Read.",
+              "code": "for chapter in range(2):\n    print(\"Read\")",
+              "explanation": "range(2) repeats the line twice, so Read shows 2 times.",
+              "options": [
+                "True",
+                "False"
+              ],
+              "answer": [
+                "True"
+              ],
+              "verify": "judge",
+              "claim": "Read, Read"
+            },
+            {
+              "id": "p3l4q4",
+              "kind": "choice",
+              "prompt": "What shows?",
+              "code": "curtain = \"closed\"\nif curtain == \"closed\":\n    print(\"Wait\")\nelse:\n    print(\"Show starts\")",
+              "explanation": "The curtain is closed, so the first message shows.",
+              "options": [
+                "Wait",
+                "closed",
+                "Show starts"
+              ],
+              "answer": [
+                "Wait"
+              ],
+              "verify": "output"
+            },
+            {
+              "id": "p3l4q5",
+              "kind": "build",
+              "prompt": "Build a line that checks if crowd is more than 200",
+              "explanation": "Start with if, then the name, >, the number, and a colon.",
+              "options": [
+                "crowd",
+                "<",
+                "200",
+                "if",
+                ":",
+                ">"
+              ],
+              "answer": [
+                "if",
+                "crowd",
+                ">",
+                "200",
+                ":"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
