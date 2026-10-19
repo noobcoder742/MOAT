@@ -1,0 +1,12 @@
+# Dependencies
+node_modules/
+
+# Expo / build output
+.expo/
+dist/
+
+# macOS
+.DS_Store
+
+# Xcode per-user state
+xcuserdata/
